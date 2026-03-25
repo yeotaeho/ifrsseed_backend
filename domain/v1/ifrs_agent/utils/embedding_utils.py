@@ -7,14 +7,15 @@
 """
 from typing import Dict, List, Any, Optional
 import warnings
-from ifrs_agent.model.models import (
-    DataPoint, Glossary,
-    Rulebook, Standard, UnifiedColumnMapping,
-    SynonymGlossary  # 하위 호환성
+from backend.domain.v1.ifrs_agent.service.embedding_text_service import EmbeddingTextService
+from backend.domain.v1.esg_data.models.bases import (
+    DataPoint,
+    Glossary,
+    Rulebook,
+    Standard,
+    SynonymGlossary,
+    UnifiedColumnMapping,
 )
-
-# 새로운 Service 사용
-from ifrs_agent.service.embedding_text_service import EmbeddingTextService
 
 # 싱글톤 인스턴스
 _embedding_text_service = EmbeddingTextService()

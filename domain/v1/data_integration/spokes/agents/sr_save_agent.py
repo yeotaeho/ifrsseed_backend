@@ -13,6 +13,7 @@ from langchain_openai import ChatOpenAI
 from langchain_core.messages import HumanMessage, SystemMessage
 from loguru import logger
 
+from backend.core.config.settings import get_settings
 from backend.domain.shared.tool.sr_report_tools import SR_PARSE_TOOLS
 from backend.domain.shared.tool.sr_report.save.sr_save_tools import SR_SAVE_TOOLS
 
@@ -31,8 +32,7 @@ class SRSaveAgent:
         model_name: str = "gpt-5-mini",
         max_iterations: int = 100,
     ):
-        import os
-        self.api_key = openai_api_key or os.getenv("OPENAI_API_KEY", "")
+        self.api_key = openai_api_key or get_settings().openai_api_key
         if not self.api_key:
             raise ValueError("OPENAI_API_KEY가 설정되지 않았습니다.")
         

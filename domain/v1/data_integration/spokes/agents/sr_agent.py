@@ -9,9 +9,10 @@ import asyncio
 import base64
 import builtins
 import json
-import os
 from typing import Any, Dict, List, Optional
 from loguru import logger
+
+from backend.core.config.settings import get_settings
 
 try:
     from langchain_groq import ChatGroq
@@ -44,7 +45,7 @@ class SRAgent:
         if not LANGCHAIN_AVAILABLE:
             raise ImportError("langchain_groq, langchain_core 패키지가 필요합니다.")
         
-        self.api_key = groq_api_key or os.getenv("GROQ_API_KEY", "")
+        self.api_key = groq_api_key or get_settings().groq_api_key
         if not self.api_key:
             raise ValueError("GROQ_API_KEY가 설정되지 않았습니다.")
         

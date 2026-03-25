@@ -12,6 +12,8 @@
 | [SR_BODY_PARSING_QUICKSTART.md](./SR_BODY_PARSING_QUICKSTART.md) | API·환경변수·체크리스트 스타일 |
 | [DATABASE_TABLES_STRUCTURE.md](../../ifrs_agent/docs/DATABASE_TABLES_STRUCTURE.md) | `sr_report_images` 스키마·인덱스 |
 | [HISTORICAL_REPORT_PARSING.md](../../ifrs_agent/docs/HISTORICAL_REPORT_PARSING.md) | 전체 SR 파싱 플로우·RAG에서 이미지 활용 |
+| [SR_IMAGES_MEMORY_BLOB_OBJECT_STORAGE.md](./SR_IMAGES_MEMORY_BLOB_OBJECT_STORAGE.md) | 디스크 없이 메모리/BYTEA/S3로 전환하는 **구현 단계별 가이드** |
+| [SR_IMAGES_VLM_ENRICHMENT.md](./SR_IMAGES_VLM_ENRICHMENT.md) | VLM으로 `image_type`·`caption_text`·`caption_confidence` 보강 — **설계 vs 구현 단계** |
 
 **현재 구현 상태 (요약)**
 
@@ -38,7 +40,7 @@
 
 - **에이전트는 LLM 없이 결정적 파이프라인 우선** (`SRBodyAgent`와 동일 철학): 대용량 PDF에서 불필요한 토큰 사용 방지.
 - **저장 진입점**: 워크플로 노드에서 에이전트 호출 후, 실제 INSERT는 **`sr_save_tools`**(또는 repository)로 통일하는 것이 바람직.
-- **파일은 디스크, 메타는 DB**: `image_file_path`는 서버가 접근 가능한 경로(또는 이후 객체 스토리지 URL)로 저장.
+- **파일은 디스크(추출 파이프라인), DB에는 경로 미저장**: 임베디드 이미지는 `output_dir`에만 쓰고, `sr_report_images`에는 크기·캡션·메타만 저장.
 
 ### 1.3 제약·주의
 
@@ -58,8 +60,9 @@
 | `report_id` | FK → `historical_sr_reports.id` |
 | `page_number` | 1-based 페이지 |
 | `image_index` | 페이지 내 순서 (0-based 권장) |
-| `image_file_path` | 저장된 파일 경로 (또는 URL) |
-| `image_file_size`, `image_width`, `image_height` | 메타 |
+| *(제거됨)* | `image_file_path` 컬럼은 스키마에서 제거됨 |
+| *(제거됨)* | `image_file_size` 컬럼 제거(Alembic `018_drop_sr_image_file_size`) — 크기는 `extracted_data.size_bytes` 또는 `image_blob` 길이 |
+| `image_width`, `image_height` | 메타 |
 | `image_type` | `chart` / `graph` / `photo` / `diagram` / `table` / `unknown` |
 | `caption_text`, `caption_confidence` | 캡션(후속 LLM/Vision) |
 | `extracted_data` | JSONB (차트 수치 등, 후속) |
@@ -161,8 +164,7 @@ WHERE i.report_id = :report_id
 {
     "page_number": int,
     "image_index": int,
-    "image_file_path": str,
-    "image_file_size": int | None,
+    # image_file_path / image_file_size 컬럼 없음 — 크기는 extracted_data.size_bytes 등
     "image_width": int | None,
     "image_height": int | None,
     "image_type": str | None,       # Phase 1에서는 None 또는 휴리스틱
@@ -178,7 +180,7 @@ WHERE i.report_id = :report_id
 
 - `{image_output_dir}/{report_id_short}/{page_number}_{image_index}.{ext}`
 - 또는 `{base_name}_p{page}_{idx}.{ext}` ([PDF_PARSING_IN_MEMORY.md](./PDF_PARSING_IN_MEMORY.md) 스타일과 호환)
-- **다중 서버/컨테이너**에서는 NFS 또는 S3 + `image_file_path`에 URL 저장으로 확장.
+- **다중 서버/컨테이너**에서는 NFS 또는 S3 등 객체 스토리지 + `extracted_data` 등 메타에 참조 정책을 문서화.
 
 ---
 
@@ -239,7 +241,7 @@ WHERE i.report_id = :report_id
 
 ## 9. 추가 제안 (결정 사항으로 남길 항목)
 
-1. **객체 스토리지 전환**: 온프레미스 디스크 대신 MinIO/S3를 쓰면 `image_file_path`에 `s3://...` 또는 서명 URL 저장 전략을 문서화.
+1. **객체 스토리지 전환**: 온프레미스 디스크 대신 MinIO/S3를 쓰면 메타/URL은 `extracted_data` 등으로 정책을 문서화.
 2. **본문 마크다운의 `<!-- image -->`와의 관계**: LlamaParse 본문에 플레이스홀더만 있고 실제 바이너리는 PDF에서만 나오는 경우가 많음 → **이미지는 PDF xref 추출이 정답에 가깝다**는 전제를 RAG 설계에 명시.
 3. **중복 이미지**: 동일 xref가 여러 페이지에 참조될 수 있음 → `image_index`를 페이지 로컬로 두고, 필요 시 `source_xref` 같은 컬럼을 향후 추가하는 스키마 확장 검토.
 4. **보안**: 업로드 PDF 악성 여부 스캔, 추출 파일 실행 금지(확장자·MIME 고정).
@@ -268,7 +270,7 @@ curl -X POST http://localhost:8000/data-integration/sr-agent/extract-and-save/im
   -d "{\"report_id\": \"<uuid>\", \"pdf_bytes_b64\": null, \"image_output_dir\": null}"
 ```
 
-`pdf_bytes_b64`·`image_output_dir`가 null이면 각각 DB `pdf_file_path`·`SR_IMAGE_OUTPUT_DIR` 사용.
+`image_output_dir`가 null이면 환경변수 `SR_IMAGE_OUTPUT_DIR` 사용. `pdf_bytes_b64`는 agentic 경로에서 필수(DB에 PDF 경로 없음).
 
 - **LangGraph + SRAgent fetch**: `POST .../extract-and-save/images` — body에 `image_output_dir`로 저장 경로 전달 가능.
 

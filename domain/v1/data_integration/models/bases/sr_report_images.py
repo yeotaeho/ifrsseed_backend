@@ -2,7 +2,7 @@
 from __future__ import annotations
 
 import uuid
-from sqlalchemy import Column, Text, Integer, BigInteger, ForeignKey
+from sqlalchemy import Column, Text, Integer, ForeignKey, LargeBinary
 from sqlalchemy.dialects.postgresql import UUID, JSONB, NUMERIC
 from sqlalchemy.sql import func
 from sqlalchemy.types import TIMESTAMP
@@ -21,8 +21,8 @@ class SrReportImage(Base):
     report_id = Column(UUID(as_uuid=True), ForeignKey("historical_sr_reports.id", ondelete="CASCADE"), nullable=False, index=True)
     page_number = Column(Integer, nullable=False)
     image_index = Column(Integer, nullable=True)
-    image_file_path = Column(Text, nullable=False)
-    image_file_size = Column(BigInteger, nullable=True)
+    # 선택: 메모리/Blob 모드에서 래스터 바이너리 (PostgreSQL BYTEA)
+    image_blob = Column(LargeBinary, nullable=True)
     image_width = Column(Integer, nullable=True)
     image_height = Column(Integer, nullable=True)
     image_type = Column(Text, nullable=True)

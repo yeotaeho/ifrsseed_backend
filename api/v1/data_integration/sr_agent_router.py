@@ -4,6 +4,7 @@ HTTP 레이어: 라우트·쿼리·응답만 정의. 비즈니스 로직은 Orch
 """
 import asyncio
 import base64
+import os
 import uuid
 from pathlib import Path
 from typing import Any, Dict, List, Optional
@@ -12,6 +13,7 @@ from fastapi import APIRouter, Query, HTTPException
 from pydantic import BaseModel, Field
 from loguru import logger
 
+from backend.core.config.settings import get_settings
 from backend.domain.v1.data_integration.hub.orchestrator.sr_orchestrator import SROrchestrator
 from backend.domain.shared.tool.parsing.pdf_metadata import parse_sr_report_metadata
 from backend.domain.shared.tool.sr_report_tools import parse_sr_report_index
@@ -89,39 +91,20 @@ def _ensure_pdf_path(pdf_path: str) -> None:
 
 
 def _resolve_pdf_bytes_for_body_agent(report_id: str, pdf_bytes_b64: Optional[str]) -> bytes:
-    """본문 에이전트용 PDF bytes: base64 우선, 없으면 DB의 pdf_file_path."""
+    """본문/이미지 에이전트용 PDF bytes: 반드시 요청의 pdf_bytes_b64."""
     if pdf_bytes_b64:
         try:
             return base64.b64decode(pdf_bytes_b64)
         except Exception as e:
             raise HTTPException(status_code=400, detail=f"pdf_bytes_b64 디코딩 실패: {e}") from e
     try:
-        rid = uuid.UUID(str(report_id))
+        uuid.UUID(str(report_id))
     except ValueError as e:
         raise HTTPException(status_code=400, detail="report_id가 유효한 UUID가 아닙니다.") from e
-    try:
-        from backend.domain.v1.ifrs_agent.database.base import get_session
-    except ImportError:
-        from ifrs_agent.database.base import get_session  # type: ignore
-    from backend.domain.v1.data_integration.models.bases import HistoricalSRReport
-
-    session = get_session()
-    try:
-        row = session.query(HistoricalSRReport).filter(HistoricalSRReport.id == rid).first()
-        if row is None:
-            raise HTTPException(status_code=404, detail="report_id를 찾을 수 없습니다.")
-        path = row.pdf_file_path
-        if not path:
-            raise HTTPException(
-                status_code=400,
-                detail="pdf_bytes_b64를 제공하거나 DB에 pdf_file_path를 설정하세요.",
-            )
-        p = Path(path)
-        if not p.is_file():
-            raise HTTPException(status_code=400, detail=f"PDF 파일이 없습니다: {path}")
-        return p.read_bytes()
-    finally:
-        session.close()
+    raise HTTPException(
+        status_code=400,
+        detail="pdf_bytes_b64를 제공하세요. (DB에 PDF 파일 경로는 저장하지 않습니다.)",
+    )
 
 
 @sr_agent_router.get("/download", response_model=SRAgentDownloadResponse, deprecated=True)
@@ -375,7 +358,7 @@ class ExtractAndSaveBodyAgenticRequest(BaseModel):
     report_id: str = Field(..., description="historical_sr_reports.id (UUID)")
     pdf_bytes_b64: Optional[str] = Field(
         default=None,
-        description="선택. 없으면 DB historical_sr_reports.pdf_file_path 로컬 파일을 읽습니다.",
+        description="필수에 가깝게 권장. PDF 바이너리 base64 (DB에 로컬 경로는 저장하지 않음).",
     )
 
 
@@ -414,7 +397,17 @@ class ExtractAndSaveImagesRequest(BaseModel):
     company: str = Field(..., description="회사명")
     year: int = Field(..., ge=2015, le=2030, description="연도")
     report_id: str = Field(..., description="저장된 report_id")
-    image_output_dir: Optional[str] = None
+    image_output_dir: Optional[str] = Field(
+        default=None,
+        description="SR_IMAGE_STORAGE=disk 일 때만(또는 SR_IMAGE_OUTPUT_DIR). 기본 memory는 불필요.",
+    )
+    success_includes_vlm: bool = Field(
+        default=False,
+        description=(
+            "True면 저장 성공 후 자동 VLM이 실행되어 images_vlm_auto_success=False인 경우 "
+            "응답 success도 False (미실행/스킵(None)은 저장 성공만으로 판단)."
+        ),
+    )
 
 
 class ExtractAndSaveImagesResponse(BaseModel):
@@ -436,6 +429,13 @@ class ExtractAndSaveImagesResponse(BaseModel):
         default=None,
         description="요청 종료 시점 DB sr_report_images 행 수(해당 report_id)",
     )
+    images_vlm_auto_success: Optional[bool] = Field(
+        default=None,
+        description="저장 직후 자동 VLM 보강 성공 여부(OPENAI_API_KEY·SR_IMAGE_VLM_AUTO_AFTER_SAVE)",
+    )
+    images_vlm_auto_message: Optional[str] = Field(default=None, description="자동 VLM 보강 메시지")
+    images_vlm_auto_updated: Optional[int] = Field(default=None, description="VLM으로 갱신된 행 수")
+    images_vlm_auto_skipped: Optional[int] = Field(default=None, description="바이트 없음 등 스킵 행 수")
 
 
 class ExtractAndSaveImagesAgenticRequest(BaseModel):
@@ -444,12 +444,37 @@ class ExtractAndSaveImagesAgenticRequest(BaseModel):
     report_id: str = Field(..., description="historical_sr_reports.id (UUID)")
     pdf_bytes_b64: Optional[str] = Field(
         default=None,
-        description="선택. 없으면 DB historical_sr_reports.pdf_file_path 로컬 파일을 읽습니다.",
+        description="필수에 가깝게 권장. PDF 바이너리 base64 (DB에 로컬 경로는 저장하지 않음).",
     )
     image_output_dir: Optional[str] = Field(
         default=None,
-        description="이미지 저장 루트. 없으면 환경변수 SR_IMAGE_OUTPUT_DIR 사용.",
+        description="SR_IMAGE_STORAGE=disk 일 때만 필요(또는 SR_IMAGE_OUTPUT_DIR). memory/s3 기본은 무시 가능.",
     )
+    success_includes_vlm: bool = Field(
+        default=False,
+        description=(
+            "True면 자동 VLM이 실행되어 images_vlm_auto_success=False인 경우 응답 success도 False."
+        ),
+    )
+
+
+class EnrichImagesVlmRequest(BaseModel):
+    """sr_report_images 에 OpenAI VLM(gpt-5-mini 등)으로 image_type·caption·confidence 보강."""
+
+    report_id: str = Field(..., description="historical_sr_reports.id (UUID)")
+    skip_if_caption_set: bool = Field(
+        default=False,
+        description="이미 caption_text가 비어 있지 않으면 해당 행 스킵",
+    )
+
+
+class EnrichImagesVlmResponse(BaseModel):
+    success: bool
+    message: str
+    processed: int = 0
+    updated: int = 0
+    skipped: int = 0
+    errors: List[dict] = Field(default_factory=list)
 
 
 @sr_agent_router.post("/extract-and-save/metadata", response_model=ExtractAndSaveMetadataResponse)
@@ -551,7 +576,7 @@ async def extract_and_save_body(req: ExtractAndSaveBodyRequest) -> ExtractAndSav
 
     **SRAgent fetch**: `company`/`year`로 PDF를 다시 검색·다운로드한 뒤, 기존 `report_id`에 본문을 넣습니다.
     `report_id`가 state에 있으면 **메타데이터 INSERT 없이** fetch → `save_body`만 수행합니다
-    (`pdf_bytes_b64`·로컬 `pdf_file_path` 불필요).
+    (`pdf_bytes_b64` 불필요 — 워크플로가 fetch로 PDF를 채움).
     """
     try:
         from backend.domain.v1.data_integration.models.langgraph import SRWorkflowState
@@ -622,7 +647,7 @@ async def extract_and_save_body_agentic(req: ExtractAndSaveBodyAgenticRequest) -
     SRBodyAgent(결정적 파이프라인: 메타데이터→파싱→매핑→저장)으로 페이지별 본문을 추출해 `sr_report_body`에 저장합니다.
     **SRAgent로 PDF를 다시 받아 저장**하려면 `POST .../extract-and-save/body`(company, year, report_id)를 사용하세요.
 
-    이 엔드포인트는 LangGraph·재검색 없이 `report_id`와(선택) `pdf_bytes_b64` 또는 DB `pdf_file_path`만 사용합니다.
+    이 엔드포인트는 LangGraph·재검색 없이 `report_id`와 `pdf_bytes_b64`(필수)만 사용합니다.
     """
     try:
         pdf_bytes = _resolve_pdf_bytes_for_body_agent(req.report_id, req.pdf_bytes_b64)
@@ -666,8 +691,8 @@ async def extract_and_save_body_agentic(req: ExtractAndSaveBodyAgenticRequest) -
 async def extract_and_save_images(req: ExtractAndSaveImagesRequest) -> ExtractAndSaveImagesResponse:
     """
     4단계: SR 보고서의 이미지를 파싱하고 DB에 저장합니다.
-    LangGraph로 fetch → save_images 노드만 실행.
-    `image_output_dir`를 주면 해당 경로에 파일 저장(에이전트에 전달). 미지정 시 `SR_IMAGE_OUTPUT_DIR` 필요.
+    LangGraph로 fetch → save_images 노드만 실행. 저장 성공 후 `OPENAI_API_KEY`가 있으면 자동 VLM 보강.
+    `SR_IMAGE_STORAGE=disk`일 때만 이미지 파일 경로가 필요합니다. 기본(memory)은 메타만 DB에 저장합니다.
     """
     try:
         from backend.domain.v1.data_integration.models.langgraph import SRWorkflowState
@@ -720,8 +745,15 @@ async def extract_and_save_images(req: ExtractAndSaveImagesRequest) -> ExtractAn
         else:
             summary = fetch_msg or "PDF fetch 실패 또는 이미지 단계 미실행"
 
+        vlm_msg = (final_state.get("images_vlm_auto_message") or "").strip()
+        if vlm_msg:
+            summary = f"{summary} VLM: {vlm_msg}"
+
+        save_ok = fetch_ok and saved > 0
+        vlm_ok = not req.success_includes_vlm or final_state.get("images_vlm_auto_success") is not False
+
         return ExtractAndSaveImagesResponse(
-            success=fetch_ok and saved > 0,
+            success=save_ok and vlm_ok,
             message=summary,
             saved_count=saved,
             errors=err_list,
@@ -731,6 +763,10 @@ async def extract_and_save_images(req: ExtractAndSaveImagesRequest) -> ExtractAn
             images_agent_success=img_ok,
             images_agent_message=img_msg or None,
             db_sr_report_images_row_count=db_out,
+            images_vlm_auto_success=final_state.get("images_vlm_auto_success"),
+            images_vlm_auto_message=final_state.get("images_vlm_auto_message"),
+            images_vlm_auto_updated=final_state.get("images_vlm_auto_updated"),
+            images_vlm_auto_skipped=final_state.get("images_vlm_auto_skipped"),
         )
     except Exception as e:
         logger.error(f"[API] 이미지 저장 실패: {e}")
@@ -741,7 +777,7 @@ async def extract_and_save_images(req: ExtractAndSaveImagesRequest) -> ExtractAn
 async def extract_and_save_images_agentic(req: ExtractAndSaveImagesAgenticRequest) -> ExtractAndSaveImagesResponse:
     """
     SRImagesAgent(결정적: 메타 조회 → PyMuPDF 추출 → 배치 저장)으로 `sr_report_images`에 저장합니다.
-    LangGraph·재검색 없이 `report_id`와(선택) `pdf_bytes_b64` 또는 DB `pdf_file_path`를 사용합니다.
+    LangGraph·재검색 없이 `report_id`와 `pdf_bytes_b64`(필수)를 사용합니다. 저장 성공 후 자동 VLM 보강(키 있을 때).
     """
     try:
         pdf_bytes = _resolve_pdf_bytes_for_body_agent(req.report_id, req.pdf_bytes_b64)
@@ -764,9 +800,31 @@ async def extract_and_save_images_agentic(req: ExtractAndSaveImagesAgenticReques
         db_rows = await asyncio.to_thread(count_sr_report_images_rows, req.report_id)
         agent_success = bool(result.get("success"))
 
+        vlm_s: Optional[bool] = None
+        vlm_m: Optional[str] = None
+        vlm_u: Optional[int] = None
+        vlm_sk: Optional[int] = None
+        base_msg = str(result.get("message", ""))
+        if agent_success and saved > 0:
+            from backend.domain.v1.data_integration.spokes.infra.sr_image_vlm_enrichment import (
+                maybe_auto_enrich_after_image_save,
+            )
+
+            vlm_result = await asyncio.to_thread(maybe_auto_enrich_after_image_save, req.report_id)
+            if vlm_result is not None:
+                vlm_s = bool(vlm_result.get("success"))
+                vlm_m = str(vlm_result.get("message", "")) or None
+                vlm_u = int(vlm_result.get("updated", 0) or 0)
+                vlm_sk = int(vlm_result.get("skipped", 0) or 0)
+                if vlm_m:
+                    base_msg = f"{base_msg} VLM: {vlm_m}"
+
+        save_ok = saved > 0
+        vlm_ok_row = not req.success_includes_vlm or vlm_s is not False
+
         return ExtractAndSaveImagesResponse(
-            success=saved > 0,
-            message=str(result.get("message", "")),
+            success=save_ok and vlm_ok_row,
+            message=base_msg,
             saved_count=saved,
             errors=err_list,
             report_id=req.report_id,
@@ -775,9 +833,45 @@ async def extract_and_save_images_agentic(req: ExtractAndSaveImagesAgenticReques
             images_agent_success=agent_success,
             images_agent_message=str(result.get("message", "")) or None,
             db_sr_report_images_row_count=db_rows,
+            images_vlm_auto_success=vlm_s,
+            images_vlm_auto_message=vlm_m,
+            images_vlm_auto_updated=vlm_u,
+            images_vlm_auto_skipped=vlm_sk,
         )
     except HTTPException:
         raise
     except Exception as e:
         logger.error(f"[API] images-agentic 실패: {e}")
         raise HTTPException(status_code=500, detail=str(e)) from e
+
+
+@sr_agent_router.post("/enrich-images-vlm", response_model=EnrichImagesVlmResponse)
+async def enrich_images_vlm(req: EnrichImagesVlmRequest) -> EnrichImagesVlmResponse:
+    """
+    `sr_report_images` 행에 대해 VLM으로 `image_type`, `caption_text`, `caption_confidence` 를 채웁니다.
+    이미지 바이트는 `image_blob` 또는 S3(`extracted_data`)에서 로드합니다. [SR_IMAGES_VLM_ENRICHMENT.md]
+
+    모델은 코드 상수 `gpt-5-mini` 고정. `OPENAI_API_KEY` 필요.
+    """
+    from backend.domain.v1.data_integration.spokes.infra.sr_image_vlm_enrichment import (
+        enrich_sr_report_images_vlm,
+    )
+
+    if not get_settings().openai_api_key.strip():
+        raise HTTPException(status_code=400, detail="OPENAI_API_KEY가 필요합니다.")
+
+    result = await asyncio.to_thread(
+        enrich_sr_report_images_vlm,
+        req.report_id,
+        skip_if_caption_set=req.skip_if_caption_set,
+    )
+    errs = result.get("errors")
+    err_list: List[dict] = [e for e in errs if isinstance(e, dict)] if isinstance(errs, list) else []
+    return EnrichImagesVlmResponse(
+        success=bool(result.get("success")),
+        message=str(result.get("message", "")),
+        processed=int(result.get("processed", 0) or 0),
+        updated=int(result.get("updated", 0) or 0),
+        skipped=int(result.get("skipped", 0) or 0),
+        errors=err_list,
+    )

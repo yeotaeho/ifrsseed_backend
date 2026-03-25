@@ -45,7 +45,7 @@ def _open_pdf(pdf_path_or_bytes: Union[str, bytes]):
 
 - **메서드**: `parse(self, pdf_path_or_bytes: Union[str, bytes], company: str, year: int)`
 - **동작**: `str`이면 기존처럼 경로로 열고, `bytes`면 `fitz.open(stream=..., filetype="pdf")`로 열어 메타데이터·인덱스 페이지 추출.
-- **반환**: `pdf_file_path`는 bytes일 때 `None`으로 설정.
+- **반환**: `historical_sr_reports`용 dict에는 로컬 `pdf_file_path` 키를 넣지 않습니다(bytes/경로 모두).
 
 ### 3.3 파싱 진입점 (메타·인덱스·본문·이미지)
 

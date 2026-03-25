@@ -38,13 +38,14 @@ if config.config_file_name is not None:
     fileConfig(config.config_file_name)
 
 # Import models (제안 6개 테이블 구조)
-from backend.domain.v1.ifrs_agent.database.base import Base
-from backend.domain.v1.ifrs_agent.model.models import (
-    # 제안 6개 테이블
-    DataPoint, Standard, Rulebook, UnifiedColumnMapping,
+from backend.core.db import Base
+from backend.domain.v1.esg_data.models.bases import (
+    DataPoint,
     Glossary,
-    # 하위 호환성
-    SynonymGlossary
+    Rulebook,
+    Standard,
+    SynonymGlossary,
+    UnifiedColumnMapping,
 )
 
 target_metadata = Base.metadata

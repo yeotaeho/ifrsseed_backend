@@ -1,0 +1,4318 @@
+{
+    "rulebooks": [
+        {
+            "rulebook_id": "RULE_GRI102",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102",
+            "section_name": "GRI 102: 기후 변화",
+            "rulebook_title": "GRI 102: Climate Change",
+            "section_content": "GRI 102: Climate Change는 조직이 기후 변화를 중요 주제(material topic)로 결정한 경우 보고해야 하는 공시를 제공합니다.\n\nGRI 표준에 따라 보고하는 조직은 각 중요 주제를 어떻게 관리하는지 보고해야 합니다. 기후 변화를 중요 주제로 결정한 조직은 GRI 3: 중요 주제 2021의 공개 3-3을 사용하여 해당 주제를 어떻게 관리하는지 보고해야 합니다.",
+            "paragraph_reference": "GRI 102 Introduction",
+            "validation_rules": {
+                "section_type": "standard_introduction",
+                "key_terms": [
+                    "climate change",
+                    "material topic",
+                    "중요 주제",
+                    "기후 변화 완화",
+                    "전환 계획",
+                    "적응 계획",
+                    "정의로운 전환"
+                ],
+                "related_concepts": [
+                    "GRI 3: Material Topics 2021",
+                    "Disclosure 3-3",
+                    "climate change mitigation",
+                    "climate change adaptation",
+                    "just transition"
+                ],
+                "required_actions": [
+                    {
+                        "action": "determine_materiality",
+                        "description": "기후 변화가 중요 주제인지 결정해야 함"
+                    },
+                    {
+                        "action": "report_using_disclosure_3_3",
+                        "description": "중요 주제인 경우 GRI 3 공개 3-3을 사용하여 관리 방식 보고"
+                    },
+                    {
+                        "action": "report_climate_disclosures",
+                        "description": "공개 102-1부터 102-2까지의 모든 관련 공시 보고"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI102_MATERIALITY_ASSESSED",
+                        "description": "기후 변화 중요성 평가 수행 여부 확인",
+                        "expected": "materiality_assessment_conducted"
+                    },
+                    {
+                        "check_id": "GRI102_DISCLOSURE_3_3_COMPLIANCE",
+                        "description": "GRI 3 공개 3-3 준수 여부 확인",
+                        "expected": "disclosure_3_3_reported"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102",
+                "GRI102-SEC-1",
+                "GRI102-SEC-2",
+                "GRI102-1",
+                "GRI102-2",
+                "GRI102-3",
+                "GRI102-5",
+                "GRI102-6",
+                "GRI102-7",
+                "GRI102-8"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "GRI 3과 함께 사용되며, GRI 3의 공개 3-3을 대체하는 것이 아니라 보완함",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1",
+            "section_name": "공개 102-1: 기후 변화 완화를 위한 전환 계획",
+            "rulebook_title": "Disclosure 102-1: Transition plan for climate change mitigation",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 기후변화 완화를 위한 정책 및 조치를 포함한 전환 계획을 기술하고;\n\nb. 전환 계획이 지구 온난화를 1.5°C로 제한하기 위해 필요한 글로벌 노력에 관한 최신 과학적 증거와 어떻게 부합하는지 설명해야 하며, 여기에는 사용된 기후 변화 관련 시나리오의 출처와 전환 계획 수립에 사용된 방법론 및 가정을 포함해야 합니다;\n\nc. 전환 계획 실행으로 발생한 총 지출액을 금전적 가치와 보고 기간 중 발생한 총 지출액 대비 비율로 보고하십시오;\n\nd. 전환 계획의 감독 및 실행을 담당하는 거버넌스 기관 또는 개인의 역할과 책임을 보고하십시오;\n\ne. 전환 계획이 사업 전략에 어떻게 통합되었는지 설명하십시오;\n\nf. 전환 계획 달성 목표 및 진행 상황을 보고하며, 다음을 포함한다:\n  i. 공개 102-4에 따라 보고된 온실가스 배출 감축 목표;\n  ii. 화석 연료 단계적 폐지 목표, 기준 연도, 목표 설정 시 적용된 기준, 방법론 및 가정;\n  iii. 기타 기후변화 완화 목표, 해당 목표 설정 방식, 적용 범위, 기준 연도 및 전환 계획 내에서의 역할;\n\ng. 전환 계획이 공정 전환 원칙과 어떻게 부합하는지, 그리고 이해관계자 참여가 계획 수립 및 실행에 어떻게 반영되는지 설명하십시오;\n\nh. 전환 계획 실행이 사람과 환경에 미치는 영향 및 이를 관리하기 위한 조치들을 설명하며, 다음을 포함한다:\n  i. 근로자, 지역 사회, 원주민;\n  ii. 생물다양성;\n\ni. 로비 활동을 포함한 공공 정책 활동이 전환 계획과 어떻게 일관성을 유지하는지 설명하십시오;\n\nj. 전환 계획이 없는 경우 그 이유를 설명하고, 이를 수립하기 위해 취하고 있는 조치와 예상되는 시간표를 기술하십시오.\n\n본 공개 자료는 기후 변화 완화를 위한 조직의 전환 계획에 관한 정보를 제공합니다. 이는 조직의 활동과 상·하류 가치 사슬을 포괄합니다.",
+            "paragraph_reference": "Disclosure 102-1 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "transition plan",
+                    "전환 계획",
+                    "climate change mitigation",
+                    "기후 변화 완화",
+                    "1.5°C",
+                    "Paris Agreement",
+                    "파리 협정",
+                    "mitigation hierarchy",
+                    "완화 계층 구조",
+                    "just transition",
+                    "정의로운 전환"
+                ],
+                "related_concepts": [
+                    "UNFCCC",
+                    "기후변화협약",
+                    "greenhouse gas reduction",
+                    "온실가스 감축",
+                    "fossil fuel phase-out",
+                    "화석 연료 폐지",
+                    "renewable energy",
+                    "재생에너지",
+                    "net-zero",
+                    "순배출 제로"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_transition_plan",
+                        "description": "전환 계획 및 정책, 조치 기술",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_1_5c_alignment",
+                        "description": "1.5°C 목표와의 정렬 설명, 시나리오 출처 명시",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_expenditure",
+                        "description": "전환 계획 지출액 및 비율 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_governance",
+                        "description": "거버넌스 역할 및 책임 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_business_integration",
+                        "description": "사업 전략 통합 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_targets_progress",
+                        "description": "목표 및 진행 상황 보고(GHG, 화석연료 폐지, 기타)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_just_transition",
+                        "description": "정의로운 전환 원칙 및 이해관계자 참여 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_impacts",
+                        "description": "사람과 환경 영향 및 관리 조치 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_policy_alignment",
+                        "description": "공공 정책 활동 일관성 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_no_plan",
+                        "description": "계획이 없는 경우 이유 및 수립 조치 설명",
+                        "mandatory": true,
+                        "condition": "if_no_transition_plan"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_TRANSITION_PLAN_DESCRIBED",
+                        "description": "전환 계획이 기술되었는지 확인",
+                        "expected": "transition_plan_described_or_reason_provided"
+                    },
+                    {
+                        "check_id": "102_1_1_5C_ALIGNMENT_EXPLAINED",
+                        "description": "1.5°C 목표 정렬이 설명되었는지 확인",
+                        "expected": "1_5c_alignment_explained_with_scenarios"
+                    },
+                    {
+                        "check_id": "102_1_EXPENDITURE_REPORTED",
+                        "description": "지출액과 비율이 보고되었는지 확인",
+                        "expected": "expenditure_amount_and_percentage_reported"
+                    },
+                    {
+                        "check_id": "102_1_GOVERNANCE_REPORTED",
+                        "description": "거버넌스 역할이 보고되었는지 확인",
+                        "expected": "governance_roles_and_responsibilities_reported"
+                    },
+                    {
+                        "check_id": "102_1_TARGETS_REPORTED",
+                        "description": "GHG 감축 목표, 화석연료 폐지 목표 보고 확인",
+                        "expected": "ghg_and_fossil_fuel_targets_reported"
+                    },
+                    {
+                        "check_id": "102_1_JUST_TRANSITION_EXPLAINED",
+                        "description": "정의로운 전환 원칙 설명 확인",
+                        "expected": "just_transition_and_stakeholder_engagement_explained"
+                    },
+                    {
+                        "check_id": "102_1_IMPACTS_DESCRIBED",
+                        "description": "사람과 환경 영향 설명 확인",
+                        "expected": "impacts_on_people_and_biodiversity_described"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1",
+                "GRI102-1-a",
+                "GRI102-1-b",
+                "GRI102-1-c",
+                "GRI102-1-d",
+                "GRI102-1-e",
+                "GRI102-1-f",
+                "GRI102-1-g",
+                "GRI102-1-h",
+                "GRI102-1-i",
+                "GRI102-1-j"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "공개 102-1은 전환 계획의 종합적인 보고를 요구하며, 10개 하위 항목(a-j)으로 구성됨. GRI 3 공개 3-3을 보완하는 역할.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-a",
+            "section_name": "공개 102-1-a: 전환 계획 정책 및 조치",
+            "rulebook_title": "Disclosure 102-1-a: Transition plan policies and actions - Guidance",
+            "section_content": "102-1-a에 대한 지침\n\n기후변화 완화 정책의 예시에는 다음에 관한 정책이 포함될 수 있습니다:\n• 에너지 소비;\n• 토지 이용 변화(예: 산림 벌채)\n• 공급업체와 협력하여 온실가스 배출량 감축 추진;\n• 바이오경제 또는 순환경제;\n• 정의로운 전환 및 인권.\n\n조직은 전환 계획 수정 정책(수정 주기 포함)을 기술해야 합니다. 전환 계획을 검토할 때는 이전 보고 기간 대비 변경 사항을 기술해야 합니다.\n\n조직이 GRI 2: 일반 공시 2021의 공시 2-23 또는 GRI 3: 중요 주제 2021의 공시 3-3-c에 기후 변화 완화 정책을 기술한 경우, 요구사항 102-1-a에서 해당 정보에 대한 참조를 제공할 수 있으며 정보를 반복할 필요가 없습니다.\n\n전환 계획에는 단기, 중기, 장기적으로 시행될 조치가 포함됩니다. 요구사항 102-1-a는 조치에 대한 상세한 설명을 요구하지 않습니다. 대신 조직은 조치에 대한 개요를 제공할 수 있습니다.\n\n또한 조직은 전환 계획이 전환 위험 및 기회에 따른 사람과 환경에 미치는 영향을 어떻게 다루는지 설명해야 합니다.\n\n전환 위험은 사람들에게 부정적인 영향을 미칠 수 있습니다. 예를 들어, 소비자들이 더 지속 가능한 제품을 선호하는 방향으로 변화하면 조직의 매출 감소와 수익 손실로 이어져 일자리 손실을 초래할 수 있습니다. 온실가스 배출 집약도가 낮은 경제 활동을 위한 새로운 규제도 근로자들이 자신의 기술 역량을 전환하는 데 어려움을 겪게 할 수 있습니다. 이러한 잠재적 영향을 완화하기 위해 조직은 제품을 지속 가능한 대안으로 대체하거나 교육을 통해 근로자의 역량을 강화할 수 있습니다.\n\n전환 위험은 환경에도 부정적인 영향을 미칠 수 있습니다. 예를 들어, 규제 변화로 인해 조직이 대규모 태양광 발전 단지에 투자해야 할 경우 토지 이용 변화와 생물 다양성 손실을 초래할 수 있습니다.\n\n전환 기회는 사업 활동 다각화, 효율적인 생산 및 운송 공정 활용, 신기술 도입, 자원 소비 감소, 신규 시장 진출 등을 포함할 수 있습니다.\n\n조직이 다른 규제 프레임워크나 기준을 사용하여 기후 관련 전환 위험과 기회를 식별한 경우, 이를 활용하여 경제, 환경 및 사람에 대한 영향을 파악할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-1-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "policies",
+                    "정책",
+                    "actions",
+                    "조치",
+                    "energy consumption",
+                    "에너지 소비",
+                    "land use change",
+                    "토지 이용 변화",
+                    "supply chain",
+                    "공급망",
+                    "circular economy",
+                    "순환경제",
+                    "transition risks",
+                    "전환 위험",
+                    "transition opportunities",
+                    "전환 기회"
+                ],
+                "related_concepts": [
+                    "GRI 2-23",
+                    "GRI 3-3-c",
+                    "short-term actions",
+                    "단기 조치",
+                    "medium-term actions",
+                    "중기 조치",
+                    "long-term actions",
+                    "장기 조치"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_climate_policies",
+                        "description": "에너지, 토지 이용, 공급망, 순환경제, 정의로운 전환 관련 정책 기술",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_modification_policy",
+                        "description": "전환 계획 수정 정책 및 주기 기술",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_changes_from_prior_period",
+                        "description": "이전 보고 기간 대비 변경 사항 기술",
+                        "mandatory": true,
+                        "condition": "if_plan_reviewed"
+                    },
+                    {
+                        "action": "provide_overview_of_actions",
+                        "description": "단기/중기/장기 조치 개요 제공 (상세 불필요)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_risk_opportunity_impacts",
+                        "description": "전환 위험 및 기회에 따른 사람과 환경 영향 설명",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_A_POLICIES_DESCRIBED",
+                        "description": "정책이 충분히 기술되었는지 확인",
+                        "expected": "at_least_3_policy_areas_covered"
+                    },
+                    {
+                        "check_id": "102_1_A_ACTIONS_TIMEFRAME",
+                        "description": "단기/중기/장기 조치가 포함되었는지 확인",
+                        "expected": "all_timeframes_covered"
+                    },
+                    {
+                        "check_id": "102_1_A_IMPACTS_EXPLAINED",
+                        "description": "전환 위험/기회 영향이 설명되었는지 확인",
+                        "expected": "impacts_on_people_and_environment_explained"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-23",
+                        "description": "GRI 2-23에 정책을 기술한 경우 참조 가능"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-c",
+                        "description": "GRI 3-3-c에 정책을 기술한 경우 참조 가능"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-a",
+                "GRI-2-23",
+                "GRI-3-3-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "조치에 대한 상세 설명은 불필요하며, 개요만 제공하면 됨. GRI 2-23 또는 3-3-c에서 이미 보고한 경우 참조 가능.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-b",
+            "section_name": "공개 102-1-b: 1.5°C 목표와의 정렬",
+            "rulebook_title": "Disclosure 102-1-b: Alignment with 1.5°C - Guidance",
+            "section_content": "102-1-b에 대한 지침\n\n전환 계획이 지구 온난화를 1.5°C로 제한하기 위해 필요한 글로벌 노력에 관한 최신 과학적 증거와 어떻게 부합하는지 설명할 때, 조직은 완화 계층 구조와 어떻게 부합하는지 보고해야 하며, 다음을 포함한 조치를 포함해야 합니다:\n\n• 화석 연료에서 재생 에너지와 같은 비배출 에너지원으로 전환하여 온실가스 배출을 방지하고;\n• 에너지 효율 개선 및 일회용 재료 대신 재사용 가능한 재료 사용 등 온실가스 배출량 감축\n• 조직의 총 온실가스 배출량을 최소 90% 이상 감축한 후 추가 감축이 불가능한 경우 잔여 온실가스 배출량을 상쇄하는 온실가스 제거 방법 도입. 온실가스 배출 감축 목표 및 온실가스 제거에 대한 자세한 내용은 102-4-a-iii 및 102-9-c 지침을 참조하십시오.\n\n조직은 파리 협정과 호환되는 시나리오를 최소 한 가지 이상 포함해야 합니다. 파리 협정과 호환되는 시나리오는 1.5ºC로 온도 상승을 제한하기 위한 노력을 추구하면서 2ºC보다 훨씬 낮은 온도 상승을 요구합니다. 기후변화에 관한 정부간 협의체(IPCC)는 최신 과학에 기반한 시나리오를 제시합니다. 조직이 IPCC 시나리오를 사용하지 않는 경우, 다른 출처를 선택한 이유를 보고하고 최신 과학과 어떻게 부합하는지 설명해야 합니다.\n\n시나리오 분석은 미래 상태의 다양한 형태를 동시에 고려할 수 있게 하며, 조직의 기후변화 관련 위험을 탐색하는 데 활용될 수 있습니다. 조직들은 일반적으로 전환 속도에 따라 시나리오를 정의하며, 이는 결과적인 평균 지구 온도 변화로 표현됩니다.\n\n기후변화 시나리오 분석에 대한 자세한 내용은 참고문헌 [1] 및 [21]을 참조하십시오.\n\n해당 기관은 또한 판매량 변화나 인수합병과 같은 전환 위험 및 향후 발전이 1.5°C 경로와의 전환 계획 호환성에 미치는 영향에 대한 평가를 설명해야 합니다.",
+            "paragraph_reference": "Guidance for 102-1-b",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "1.5°C",
+                    "Paris Agreement",
+                    "파리 협정",
+                    "mitigation hierarchy",
+                    "완화 계층 구조",
+                    "avoid emissions",
+                    "배출 방지",
+                    "reduce emissions",
+                    "배출 감축",
+                    "remove emissions",
+                    "배출 제거",
+                    "IPCC",
+                    "기후변화에 관한 정부간 협의체",
+                    "scenario analysis",
+                    "시나리오 분석"
+                ],
+                "related_concepts": [
+                    "renewable energy",
+                    "재생에너지",
+                    "energy efficiency",
+                    "에너지 효율",
+                    "90% reduction",
+                    "90% 감축",
+                    "residual emissions",
+                    "잔여 배출",
+                    "carbon removal",
+                    "탄소 제거"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_mitigation_hierarchy_alignment",
+                        "description": "완화 계층 구조(방지-감축-제거) 부합 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "include_paris_compatible_scenario",
+                        "description": "파리 협정 호환 시나리오 최소 1개 이상 포함",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "use_ipcc_scenarios_or_explain",
+                        "description": "IPCC 시나리오 사용, 또는 다른 출처 선택 이유 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_scenario_sources",
+                        "description": "사용된 시나리오의 출처 명시",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_methodology_assumptions",
+                        "description": "전환 계획 수립 방법론 및 가정 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "assess_future_developments_impact",
+                        "description": "판매량 변화, 인수합병 등 향후 발전이 1.5°C 경로 호환성에 미치는 영향 평가",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_B_MITIGATION_HIERARCHY_REPORTED",
+                        "description": "완화 계층 구조(방지-감축-제거) 부합 여부 확인",
+                        "expected": "mitigation_hierarchy_alignment_explained"
+                    },
+                    {
+                        "check_id": "102_1_B_PARIS_SCENARIO_INCLUDED",
+                        "description": "파리 협정 호환 시나리오 포함 확인",
+                        "expected": "at_least_one_paris_compatible_scenario"
+                    },
+                    {
+                        "check_id": "102_1_B_IPCC_OR_ALTERNATIVE_EXPLAINED",
+                        "description": "IPCC 시나리오 사용 또는 대안 이유 설명 확인",
+                        "expected": "ipcc_used_or_alternative_justified"
+                    },
+                    {
+                        "check_id": "102_1_B_90_PERCENT_REDUCTION_TARGET",
+                        "description": "90% 이상 감축 후 잔여 배출 상쇄 계획 확인",
+                        "expected": "90_percent_reduction_before_removal"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-4-a-iii",
+                        "description": "온실가스 배출 감축 목표 상세"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-9-c",
+                        "description": "온실가스 제거 방법 상세"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [1]",
+                        "description": "기후변화 시나리오 분석 참고문헌"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [21]",
+                        "description": "시나리오 분석 방법론 참고문헌"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-b"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "완화 계층 구조(방지-감축-제거) 순서 필수. 90% 감축 후에만 제거/상쇄 가능. 파리 협정 호환 시나리오 최소 1개 필수.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-c",
+            "section_name": "공개 102-1-c: 전환 계획 지출",
+            "rulebook_title": "Disclosure 102-1-c: Transition plan expenditure - Guidance",
+            "section_content": "102-1-c에 대한 지침\n\n전환 계획 실행으로 발생한 총 지출의 비율은 다음 공식으로 계산합니다:\n\n전환 계획 지출 % = (전환 계획 지출 / 총 지출액) × 100\n\n해당 조직은 총 지출 금액을 감사받은 연결 재무제표(해당되는 경우) 또는 보고 기간에 공개 기록으로 제출된 재무 정보와 대조해야 합니다. 보고된 데이터가 감사받은 연결 재무제표 또는 공개 기록으로 제출된 재무 정보와 일치하지 않는 경우, 해당 조직은 이 차이에 대해 설명해야 합니다.\n\n조직은 전환 계획에 따른 계획된 지출을 보고하고 최고 의사 결정 기관 및 고위 경영진이 자금 조달을 승인했는지 여부를 보고함으로써 전환 계획이 조직의 재무 계획에 어떻게 반영되는지 설명해야 합니다.\n\n조직은 보고 기간 동안 전환 계획 실행으로 발생한 총 지출을 자본 지출(CapEx)과 운영 지출(OpEx)로 구분하여 보고해야 합니다.\n\n또한 조직은 다음을 보고해야 합니다:\n• 보고 기간 내 화석 연료 관련 활동으로 발생한 지출;\n• 보고 기간 동안 발생한 총 지출액.\n\n기후 변화 완화 목표를 포함하는 지속가능 경제 활동에 대한 지역적 또는 국가적 분류 체계가 적용되는 경우, 해당 조직은 완화 활동에 발생한 자본 지출(CapEx) 및 운영 지출(OpEx) 금액과 해당 분류 체계가 의무적인지 자발적인지 여부를 지출로 보고할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-1-c",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "expenditure",
+                    "지출",
+                    "CapEx",
+                    "자본 지출",
+                    "OpEx",
+                    "운영 지출",
+                    "fossil fuel expenditure",
+                    "화석 연료 지출",
+                    "audited financial statements",
+                    "감사받은 재무제표",
+                    "taxonomy",
+                    "분류 체계"
+                ],
+                "related_concepts": [
+                    "financial planning",
+                    "재무 계획",
+                    "board approval",
+                    "이사회 승인",
+                    "reconciliation",
+                    "대조",
+                    "sustainable finance taxonomy",
+                    "지속가능 금융 분류 체계"
+                ],
+                "required_actions": [
+                    {
+                        "action": "calculate_expenditure_percentage",
+                        "description": "전환 계획 지출 비율 계산 (지출/총지출 × 100)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "reconcile_with_audited_statements",
+                        "description": "감사받은 재무제표와 대조",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_discrepancies",
+                        "description": "재무제표와 불일치 시 차이 설명",
+                        "mandatory": true,
+                        "condition": "if_discrepancies_exist"
+                    },
+                    {
+                        "action": "report_planned_expenditure",
+                        "description": "계획된 지출 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_board_approval",
+                        "description": "최고 의사결정 기관 및 고위 경영진 자금 조달 승인 여부 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "separate_capex_opex",
+                        "description": "CapEx와 OpEx로 구분하여 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_fossil_fuel_expenditure",
+                        "description": "화석 연료 관련 활동 지출 별도 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_total_expenditure",
+                        "description": "보고 기간 총 지출액 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_taxonomy_expenditure",
+                        "description": "지속가능 경제 활동 분류 체계 적용 시 CapEx/OpEx 및 의무/자발 여부 보고",
+                        "mandatory": false,
+                        "condition": "if_taxonomy_applies"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_C_PERCENTAGE_CALCULATED",
+                        "description": "지출 비율이 올바르게 계산되었는지 확인",
+                        "expected": "percentage_formula_correctly_applied"
+                    },
+                    {
+                        "check_id": "102_1_C_AUDITED_RECONCILIATION",
+                        "description": "감사받은 재무제표와 대조 여부 확인",
+                        "expected": "reconciled_with_audited_statements"
+                    },
+                    {
+                        "check_id": "102_1_C_CAPEX_OPEX_SEPARATED",
+                        "description": "CapEx와 OpEx 구분 보고 확인",
+                        "expected": "capex_and_opex_separated"
+                    },
+                    {
+                        "check_id": "102_1_C_FOSSIL_FUEL_REPORTED",
+                        "description": "화석 연료 지출 별도 보고 확인",
+                        "expected": "fossil_fuel_expenditure_reported_separately"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "CapEx/OpEx 구분 필수. 화석 연료 지출 별도 보고 필수. 감사받은 재무제표와 대조 필수.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_G",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-g",
+            "section_name": "공개 102-1-g: 정의로운 전환 원칙 정렬",
+            "rulebook_title": "Disclosure 102-1-g: Just transition alignment - Guidance",
+            "section_content": "102-1-g에 대한 지침\n\n국제노동기구(ILO)에 따르면, 공정한 전환은 관련자 모두에게 가능한 한 공정하고 포용적인 방식으로 경제를 녹색화하고, 양질의 일자리 기회를 창출하며, 누구도 소외되지 않도록 하는 것을 의미합니다. 공정한 전환은 기후 행동의 사회적·경제적 기회를 극대화하는 동시에 부정적 영향을 최소화하고 신중하게 관리하는 것을 포함합니다. 이는 효과적인 이해관계자 참여와 기본 노동 원칙 및 권리 존중을 통해 달성됩니다.\n\n공정한 전환의 핵심 원칙은 국제노동기구(ILO)의 '모두를 위한 환경적으로 지속 가능한 경제 및 사회로의 공정한 전환을 위한 지침'[9], 유엔기후변화협약(UNFCCC)의 '노동력의 공정한 전환 및 양질의 일자리 창출'[13], 그리고 유엔 원주민 권리 선언[2]에 포함되어 있습니다. 이러한 문서들은 양질의 일자리, 사회적 대화 및 보호, 노동권 인정, 그리고 위험에 처하거나 취약한 집단을 공정 전환의 중심에 두고 있습니다.\n\n조직은 다음 사항을 보고해야 합니다:\n\n• 전환 계획 실행으로 인해 인권, 건강, 사회경제적 복지 또는 기타 이익이 영향을 받거나 받을 수 있는 이해관계자(위험에 처한 집단 또는 취약 계층 포함)를 식별하는 방법(사회적 영향 평가 수행 여부 포함);\n\n• 이해관계자, 신뢰할 수 있는 이해관계자 대표자 또는 대리 기관과 어떻게 소통하여 그들의 우려와 이익을 이해하는지;\n\n• 노동자, 노동조합, 노동자 대표, 공급업체, 원주민, 지역 사회 및 정부를 포함한 이해관계자 참여를 통해 얻은 통찰이 전환 계획으로 인한 부정적 영향을 방지하거나 완화하고 긍정적 영향을 극대화하기 위한 조치에 어떻게 반영되었는지;\n\n• 전환 계획에 대해 영향을 받는 이해관계자와의 소통 빈도.\n\nGRI 2: 일반 공시 2021의 공시 2-29는 조직의 이해관계자 참여 접근법을 다룹니다. 조직이 공시 2-29에 따라 이해관계자 참여가 전환 계획의 수립 및 실행에 어떻게 반영되었는지 기술한 경우, 해당 정보에 대한 참조를 제공할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-1-g",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "just transition",
+                    "정의로운 전환",
+                    "ILO",
+                    "국제노동기구",
+                    "UNFCCC",
+                    "유엔기후변화협약",
+                    "stakeholder engagement",
+                    "이해관계자 참여",
+                    "decent work",
+                    "양질의 일자리",
+                    "social dialogue",
+                    "사회적 대화",
+                    "indigenous peoples",
+                    "원주민",
+                    "vulnerable groups",
+                    "취약 계층"
+                ],
+                "related_concepts": [
+                    "ILO Guidelines for a just transition",
+                    "ILO 공정 전환 지침",
+                    "UN Declaration on the Rights of Indigenous Peoples",
+                    "유엔 원주민 권리 선언",
+                    "labor rights",
+                    "노동권",
+                    "social impact assessment",
+                    "사회적 영향 평가"
+                ],
+                "required_actions": [
+                    {
+                        "action": "identify_affected_stakeholders",
+                        "description": "영향받는 이해관계자 식별 방법 설명 (사회적 영향 평가 포함)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_stakeholder_communication",
+                        "description": "이해관계자와의 소통 방법 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_insights_integration",
+                        "description": "이해관계자 참여를 통해 얻은 통찰이 조치에 어떻게 반영되었는지 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_communication_frequency",
+                        "description": "이해관계자와의 소통 빈도 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_G_STAKEHOLDERS_IDENTIFIED",
+                        "description": "영향받는 이해관계자가 식별되었는지 확인",
+                        "expected": "stakeholders_identified_including_vulnerable_groups"
+                    },
+                    {
+                        "check_id": "102_1_G_SOCIAL_IMPACT_ASSESSMENT",
+                        "description": "사회적 영향 평가 수행 여부 확인",
+                        "expected": "social_impact_assessment_conducted_or_explained"
+                    },
+                    {
+                        "check_id": "102_1_G_STAKEHOLDER_ENGAGEMENT_EXPLAINED",
+                        "description": "이해관계자 참여 방법 및 통찰 반영 확인",
+                        "expected": "stakeholder_engagement_and_insights_integration_explained"
+                    },
+                    {
+                        "check_id": "102_1_G_COMMUNICATION_FREQUENCY",
+                        "description": "소통 빈도가 보고되었는지 확인",
+                        "expected": "communication_frequency_reported"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-29",
+                        "description": "GRI 2-29에 이해관계자 참여를 기술한 경우 참조 가능"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "ILO Guidelines [9]",
+                        "description": "ILO 공정 전환 지침 참고"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "UNFCCC [13]",
+                        "description": "UNFCCC 공정 전환 및 양질의 일자리 참고"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "UN Declaration on Indigenous Rights [2]",
+                        "description": "유엔 원주민 권리 선언 참고"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-g",
+                "GRI-2-29"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "ILO, UNFCCC, UN 원주민 권리 선언 원칙 참조. 취약 계층 포함 필수. 사회적 영향 평가 권장.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_F",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-f",
+            "section_name": "공개 102-1-f: 목표 및 진행 상황",
+            "rulebook_title": "Disclosure 102-1-f: Targets and progress - Guidance",
+            "section_content": "102-1-f에 대한 지침\n\n목표 달성 진척도를 보고할 때, 조직은 목표 달성에 알려진 장애물과 해당되는 경우 고정된 온실가스 배출량의 역할을 설명해야 합니다.\n\n고정된 온실가스 배출량(Locked-in GHG emissions)은 조직의 주요 자산 또는 운영 수명 기간 내에 판매된 제품에서 향후 배출될 것으로 추정되는 온실가스 배출량을 의미합니다. 조직은 다음을 수행해야 합니다:\n\n• 핵심 자산 및 제품으로부터 발생하는 고정된 온실가스 배출량에 대한 정성적 평가를 보고해야 합니다;\n\n• 해당되는 경우(예: 석유 및 가스 부문) 주요 자산 및 제품으로부터의 고정된 온실가스 배출량에 대한 정량적 평가를 보고해야 합니다;\n\n• 이러한 배출량이 온실가스 배출 감축 목표 달성에 어떻게 위협이 될 수 있는지, 그리고 온실가스 집약적 자산 및 제품을 관리하기 위한 계획을 설명해야 합니다.\n\n102-1-f-ii에 대한 지침\n\n화석 연료 단계적 폐지 목표에는 다음이 포함될 수 있습니다:\n• 재생에너지 조달 목표;\n• 화석 연료 기반 소재 단계적 폐지 목표;\n• 신규 화석 연료 탐사, 기존 화석 연료 매장량 확장 및 화석 연료 채굴 중단 목표.\n\n화석 연료 단계적 폐지 목표에 대한 자세한 내용은 참고문헌 [12]를 참조하십시오.\n\n102-1-f-iii에 대한 지침\n\n다른 기후 변화 완화 목표가 존재하지 않아 본 요건을 준수할 수 없는 경우, 해당 사실을 보고함으로써 요건을 충족할 수 있습니다.\n\n기타 기후 변화 완화 목표에는 전환 계획의 추진 및 진도 모니터링에 활용되는 모든 사업, 운영, 참여, 거버넌스 목표가 포함되며, 여기에는 순배출 제로 목표 및 에너지 효율 목표가 포함됩니다. 기타 기후 완화 목표에 포함되는 사항을 보고하는 예시로는 에너지 효율 및 거버넌스 목표에 포함된 대상 기관, 이해관계자 참여 목표의 이해관계자 범주, 순배출 제로 목표에 포함된 온실가스 배출 범위 등이 있습니다.\n\n순배출 제로 목표의 맥락에서, 기후변화 완화 계층 구조에 부합하도록 조직들은 지구 온난화를 1.5°C로 제한하기 위한 글로벌 노력과 조화를 이루며 가치 사슬 전반에 걸쳐 온실가스 배출을 방지하고 감축하기 위한 모든 실행 가능한 기술적·과학적 조치를 우선적으로 시행해야 합니다. 최신 과학적 증거에 따르면, 가치 사슬 내외의 온실가스 제거는 완화 계층 구조의 마지막 단계로서 잔여 온실가스 배출을 상쇄하는 데에만 활용될 수 있습니다[11]. 잔여 온실가스 배출이란 조직이 온실가스 배출량의 최소 90%를 감축한 후에도 추가 감축이 불가능한 상태에서 발생하는 미감축 온실가스 배출을 의미합니다.\n\n조직이 부문별 탈탄소화 경로[11][12]의 적용을 받는 경우, 다른 비율의 온실가스 배출 감축 의무를 부과받을 수 있습니다. 예를 들어 일부 부문은 잔여 온실가스 배출 없이 순배출 제로 목표를 달성해야 할 것으로 예상됩니다.\n\n기타 기후변화 완화 목표에 대한 자세한 내용은 참고문헌 [11] 및 [12]를 참조하십시오.\n\n가치 사슬을 넘어선 완화(BVCM, Beyond Value Chain Mitigation), 즉 기후 기여는 순 제로 배출 목표 달성을 위한 잔여 온실가스 배출을 상쇄하는 데 사용될 수 없습니다. 가치 사슬을 넘어선 완화에 대한 자세한 내용은 102-10-d에 대한 지침 및 참고문헌 [20]을 참조하십시오.\n\n온실가스 제거 및 탄소 크레딧에 대한 자세한 내용은 공개 사항 102-9 및 102-10을 참조하십시오.",
+            "paragraph_reference": "Guidance for 102-1-f, 102-1-f-ii, 102-1-f-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "targets",
+                    "목표",
+                    "progress",
+                    "진행 상황",
+                    "locked-in emissions",
+                    "고정된 배출량",
+                    "fossil fuel phase-out",
+                    "화석 연료 폐지",
+                    "net-zero",
+                    "순배출 제로",
+                    "residual emissions",
+                    "잔여 배출",
+                    "90% reduction",
+                    "90% 감축",
+                    "mitigation hierarchy",
+                    "완화 계층 구조",
+                    "BVCM",
+                    "Beyond Value Chain Mitigation",
+                    "가치 사슬 넘어선 완화"
+                ],
+                "related_concepts": [
+                    "renewable energy targets",
+                    "재생에너지 목표",
+                    "energy efficiency targets",
+                    "에너지 효율 목표",
+                    "sectoral decarbonization pathways",
+                    "부문별 탈탄소화 경로",
+                    "carbon removal",
+                    "탄소 제거",
+                    "carbon credits",
+                    "탄소 크레딧"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_target_obstacles",
+                        "description": "목표 달성 장애물 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_locked_in_emissions_qualitative",
+                        "description": "고정된 배출량 정성적 평가 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_locked_in_emissions_quantitative",
+                        "description": "고정된 배출량 정량적 평가 보고",
+                        "mandatory": true,
+                        "condition": "if_applicable_sector_e.g._oil_gas"
+                    },
+                    {
+                        "action": "explain_locked_in_threat_to_targets",
+                        "description": "고정 배출량이 목표 달성에 미치는 위협 및 관리 계획 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_fossil_fuel_phaseout_targets",
+                        "description": "화석 연료 폐지 목표 보고 (재생에너지, 신규 탐사 중단 등)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_other_mitigation_targets",
+                        "description": "기타 완화 목표 보고 (순배출 제로, 에너지 효율 등), 없으면 그 사실 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "prioritize_avoidance_reduction_before_removal",
+                        "description": "제거 전 방지 및 감축 우선 (완화 계층 구조 준수)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "achieve_90_percent_reduction_before_offsetting",
+                        "description": "잔여 배출 상쇄 전 최소 90% 감축 달성",
+                        "mandatory": true,
+                        "condition": "if_net_zero_target_exists"
+                    },
+                    {
+                        "action": "clarify_bvcm_not_for_offsetting",
+                        "description": "BVCM(가치 사슬 넘어선 완화)은 상쇄에 사용 불가 명시",
+                        "mandatory": true,
+                        "condition": "if_bvcm_mentioned"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_F_OBSTACLES_REPORTED",
+                        "description": "목표 달성 장애물이 설명되었는지 확인",
+                        "expected": "obstacles_to_targets_explained"
+                    },
+                    {
+                        "check_id": "102_1_F_LOCKED_IN_ASSESSED",
+                        "description": "고정된 배출량 평가(정성적, 해당시 정량적) 확인",
+                        "expected": "locked_in_emissions_assessed"
+                    },
+                    {
+                        "check_id": "102_1_F_II_FOSSIL_FUEL_TARGETS",
+                        "description": "화석 연료 폐지 목표 보고 확인",
+                        "expected": "fossil_fuel_phaseout_targets_reported"
+                    },
+                    {
+                        "check_id": "102_1_F_III_OTHER_TARGETS_OR_NONE",
+                        "description": "기타 완화 목표 또는 없음 보고 확인",
+                        "expected": "other_mitigation_targets_reported_or_none_stated"
+                    },
+                    {
+                        "check_id": "102_1_F_III_MITIGATION_HIERARCHY_COMPLIANCE",
+                        "description": "완화 계층 구조 준수 (방지-감축-제거) 확인",
+                        "expected": "mitigation_hierarchy_followed"
+                    },
+                    {
+                        "check_id": "102_1_F_III_90_PERCENT_BEFORE_REMOVAL",
+                        "description": "잔여 배출 제거/상쇄 전 90% 감축 확인",
+                        "expected": "90_percent_reduction_before_offsetting"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-4",
+                        "description": "온실가스 배출 감축 목표 상세"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-9",
+                        "description": "온실가스 제거 방법"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-10",
+                        "description": "탄소 크레딧"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-10-d",
+                        "description": "BVCM(가치 사슬 넘어선 완화) 지침"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [11]",
+                        "description": "부문별 탈탄소화 경로"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [12]",
+                        "description": "화석 연료 폐지 목표 상세"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [20]",
+                        "description": "BVCM 참고문헌"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-f",
+                "GRI102-1-f-i",
+                "GRI102-1-f-ii",
+                "GRI102-1-f-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "고정 배출량 평가 필수. 완화 계층 구조(방지-감축-제거) 준수 필수. 잔여 배출 상쇄는 90% 감축 후에만 가능. BVCM은 상쇄 불가.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_H",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-h",
+            "section_name": "공개 102-1-h: 사람과 환경에 대한 영향",
+            "rulebook_title": "Disclosure 102-1-h: Impacts on people and environment - Guidance",
+            "section_content": "102-1-h에 대한 지침\n\nGRI 3: Material Topics 2021의 요구사항 3-3-a 및 3-3-d는 조직의 영향과 이를 관리하기 위해 취한 조치를 설명합니다. 조직이 3-3-a 및 3-3-d 항목 하에 전환 계획이 사람과 환경에 미치는 영향(계획 실행으로 인한 영향 포함)을 이미 기술한 경우, 해당 정보에 대한 참조를 제공할 수 있습니다.\n\n전환 계획 실행으로 인한 환경 영향에는 오염 관련 영향이 포함될 수 있습니다. 예를 들어, 온실가스 배출 감축을 위한 화석 연료 단계적 폐지는 대기 오염을 줄일 수 있습니다.\n\n조직은 또한 전환 계획 미이행과 관련된 사람 및 환경에 대한 영향도 기술해야 합니다.\n\n102-1-h-i에 대한 지침\n\n전환 계획 이행으로 인한 근로자 영향의 예로는 온실가스 배출량이 높은 경제 활동의 축소 또는 단계적 폐지에 따른 일자리 상실이 있습니다.\n\n공정 전환에 대해 보고할 추가 정보는 공시 102-3을 참조하십시오. 공시 102-3에는 근로자, 지역 사회 및 원주민에 대한 다양한 영향과 관련된 측정 기준이 포함되어 있습니다. 또한 조직은 공시 102-3에 포함되지 않은 기타 관련 정보를 사용하여 전환 계획과 관련된 영향에 대해 보고할 수 있습니다.\n\n102-1-h-ii에 대한 지침\n\n기후 변화 완화 조치는 생물다양성에 긍정적 영향을 미칠 수 있습니다. 예를 들어, 풍력 에너지로의 전환을 위해 해상 풍력 발전 단지를 건설하는 것은 어류 및 해양 포유류의 피난처 역할을 할 수 있습니다. 기후 변화 완화 조치는 생물다양성에 부정적 영향을 초래할 수도 있습니다. 예를 들어, 재생 에너지로의 전환을 위해 재생 에너지 관련 인프라를 건설하는 것은 토지 및 해양 이용 변화로 인해 종의 서식지를 훼손함으로써 생물다양성 손실을 초래할 수 있습니다.\n\nGRI 101: 생물다양성 2024의 공개항목 101-2는 조직이 생물다양성 관리 조치와 기후변화 영향 관리 조치 간의 시너지 효과를 증진하고 상충관계를 줄이는 방법을 기술할 것을 요구합니다. 조직이 공개항목 101-2에 따라 전환 계획으로 인한 생물다양성 영향 관리를 위해 취한 조치를 기술한 경우, 해당 정보에 대한 참조를 제공할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-1-h, 102-1-h-i, 102-1-h-ii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "impacts",
+                    "영향",
+                    "people",
+                    "사람",
+                    "environment",
+                    "환경",
+                    "workers",
+                    "근로자",
+                    "communities",
+                    "지역사회",
+                    "indigenous peoples",
+                    "원주민",
+                    "biodiversity",
+                    "생물다양성",
+                    "job losses",
+                    "일자리 손실",
+                    "pollution",
+                    "오염",
+                    "habitat loss",
+                    "서식지 손실"
+                ],
+                "related_concepts": [
+                    "GRI 3-3-a",
+                    "GRI 3-3-d",
+                    "just transition",
+                    "정의로운 전환",
+                    "GRI 102-3",
+                    "GRI 101-2",
+                    "synergies",
+                    "시너지 효과",
+                    "trade-offs",
+                    "상충관계"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_impacts_on_people_and_environment",
+                        "description": "전환 계획 실행으로 인한 사람과 환경 영향 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_management_actions",
+                        "description": "영향 관리를 위한 조치 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_impacts_if_no_plan",
+                        "description": "전환 계획 미이행 시 사람과 환경 영향 기술",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_worker_impacts",
+                        "description": "근로자 영향 (일자리 손실 등) 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_community_indigenous_impacts",
+                        "description": "지역사회 및 원주민 영향 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_biodiversity_impacts_positive_negative",
+                        "description": "생물다양성에 대한 긍정적·부정적 영향 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_biodiversity_climate_synergies_tradeoffs",
+                        "description": "생물다양성과 기후 조치 간 시너지 및 상충관계 설명",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_H_IMPACTS_DESCRIBED",
+                        "description": "사람과 환경 영향이 설명되었는지 확인",
+                        "expected": "impacts_on_people_and_environment_described"
+                    },
+                    {
+                        "check_id": "102_1_H_MANAGEMENT_ACTIONS_DESCRIBED",
+                        "description": "영향 관리 조치가 설명되었는지 확인",
+                        "expected": "management_actions_for_impacts_described"
+                    },
+                    {
+                        "check_id": "102_1_H_I_WORKER_IMPACTS",
+                        "description": "근로자, 지역사회, 원주민 영향 설명 확인",
+                        "expected": "worker_community_indigenous_impacts_described"
+                    },
+                    {
+                        "check_id": "102_1_H_II_BIODIVERSITY_IMPACTS",
+                        "description": "생물다양성 긍정적·부정적 영향 설명 확인",
+                        "expected": "biodiversity_positive_and_negative_impacts_described"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-a",
+                        "description": "GRI 3-3-a에 영향을 기술한 경우 참조 가능"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-d",
+                        "description": "GRI 3-3-d에 관리 조치를 기술한 경우 참조 가능"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-3",
+                        "description": "공정 전환 측정 기준"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 101-2",
+                        "description": "GRI 101-2에 생물다양성 조치를 기술한 경우 참조 가능"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-h",
+                "GRI102-1-h-i",
+                "GRI102-1-h-ii",
+                "GRI-3-3-a",
+                "GRI-3-3-d",
+                "GRI102-3",
+                "GRI-101-2"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "근로자/지역사회/원주민 영향 및 생물다양성 긍정적·부정적 영향 모두 설명 필수. 전환 계획 미이행 시 영향도 포함.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_1_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-1-i",
+            "section_name": "공개 102-1-i: 공공 정책 활동 일관성",
+            "rulebook_title": "Disclosure 102-1-i: Public policy alignment - Guidance",
+            "section_content": "102-1-i에 대한 지침\n\n조직은 다음 사항을 보고해야 합니다:\n\n• 공공 정책 개발 및 로비 활동 참여의 초점이 되는 전환 계획 관련 주요 쟁점(예: 화석 연료 단계적 폐지)에 대한 입장;\n\n• 전환 계획 관련 사안에 대한 공개 정책 활동과 명시된 정책, 목표 또는 기타 공개 입장 간 차이점;\n\n• 해당 기관이 전환 계획 관련 사안에 대한 공공 정책 개발 및 로비 활동에 참여하는 대표 협회나 위원회의 회원인지 또는 기여하는지 여부. 여기에는 다음이 포함됩니다:\n  -- 본 기여의 성격;\n  -- 해당 기관의 전환 계획과 관련된 주요 사안에 대한 공식 정책, 목표 또는 기타 공개 입장 및 대표 협회나 위원회의 입장 간 차이점.\n\n해당 기관은 기후 변화에 초점을 맞춘 협회 회원 자격과 기후 변화에 대한 입장을 영향력 행사하기 위해 협회와 협력했는지 여부를 보고할 수도 있습니다.",
+            "paragraph_reference": "Guidance for 102-1-i",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "public policy",
+                    "공공 정책",
+                    "lobbying",
+                    "로비 활동",
+                    "policy engagement",
+                    "정책 참여",
+                    "trade associations",
+                    "대표 협회",
+                    "industry groups",
+                    "산업 단체",
+                    "fossil fuel phase-out",
+                    "화석 연료 단계적 폐지",
+                    "position alignment",
+                    "입장 정렬",
+                    "discrepancies",
+                    "차이점"
+                ],
+                "related_concepts": [
+                    "GRI 415",
+                    "climate policy advocacy",
+                    "기후 정책 옹호",
+                    "influence",
+                    "영향력"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_position_on_key_issues",
+                        "description": "전환 계획 관련 주요 쟁점(화석연료 폐지 등)에 대한 입장 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_discrepancies_between_policy_and_activities",
+                        "description": "공개 정책 활동과 명시된 정책/목표 간 차이점 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_association_membership",
+                        "description": "대표 협회/위원회 회원 또는 기여 여부 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_contribution_nature",
+                        "description": "기여의 성격 설명",
+                        "mandatory": true,
+                        "condition": "if_association_member"
+                    },
+                    {
+                        "action": "report_position_differences_with_associations",
+                        "description": "조직과 협회 간 입장 차이점 보고",
+                        "mandatory": true,
+                        "condition": "if_association_member"
+                    },
+                    {
+                        "action": "report_cooperation_with_associations",
+                        "description": "기후 입장 영향력 행사를 위한 협회 협력 여부 보고 (선택)",
+                        "mandatory": false
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_1_I_KEY_ISSUES_POSITION_REPORTED",
+                        "description": "주요 쟁점(예: 화석연료 폐지)에 대한 입장 보고 확인",
+                        "expected": "position_on_key_issues_reported"
+                    },
+                    {
+                        "check_id": "102_1_I_DISCREPANCIES_REPORTED",
+                        "description": "정책 활동과 입장 간 차이점 보고 확인",
+                        "expected": "discrepancies_reported_or_none_stated"
+                    },
+                    {
+                        "check_id": "102_1_I_ASSOCIATION_MEMBERSHIP_REPORTED",
+                        "description": "협회 회원 자격 및 입장 차이 보고 확인",
+                        "expected": "association_membership_and_position_differences_reported"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 415",
+                        "description": "정치 기부 및 로비 활동"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-1-i",
+                "GRI-415"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "주요 쟁점 입장, 정책 활동 차이점, 협회 회원 및 입장 차이 보고 필수.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2",
+            "section_name": "공개 102-2: 기후 변화 적응 계획",
+            "rulebook_title": "Disclosure 102-2: Climate change adaptation plan",
+            "section_content": "본 공개는 기후변화 영향에 대응하기 위한 조직의 계획에 관한 정보를 제공하며, 활동과 상·하류 가치 사슬을 포괄합니다.\n\nUNFCCC에 따르면 기후 변화 적응은 실제 또는 잠재적 기후 관련 사건 및 그 영향에 대응하기 위한 프로세스, 관행 및 구조의 변화를 의미합니다.\n\n조직은 다음을 수행해야 합니다:\n\na. 기후 변화 관련 위험 및 기회에 따른 사람과 환경에 미치는 영향을 설명하고, 이러한 영향이 적응 계획 수립 과정에서 어떻게 고려되었는지 기술합니다.\n\nb. 적응 계획을 설명하며, 다음을 포함합니다:\n  i. 기후변화에 적응하기 위한 정책 및 조치;\n  ii. 사용된 기후변화 관련 시나리오의 출처, 시나리오에 포함된 온도 전망, 적응 계획 수립에 사용된 방법론 및 가정;\n  iii. 적응 계획 이행으로 발생한 총 지출액(보고 기간 중 총 지출액 대비 금액 및 비율);\n  iv. 적응 계획의 감독 및 이행을 담당하는 거버넌스 기관 또는 개인의 역할과 책임;\n  v. 적응 계획 달성을 위한 목표 및 해당 목표에 대한 진척 상황;\n  vi. 적응 계획이 공정한 전환 원칙과 어떻게 부합하는지, 이해관계자 참여가 계획 수립 및 실행에 어떻게 반영되는지.\n\nc. 적응 계획 시행으로 인한 사람과 환경에 미치는 영향을 설명하고 관리 조치를 기술하며, 근로자·지역 사회·원주민(i) 및 생물다양성(ii)을 포함합니다.\n\nd. 적응 계획이 없는 경우 부재 사유, 수립을 위한 진행 단계 및 예상 시기를 기술합니다.",
+            "paragraph_reference": "Disclosure 102-2 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "adaptation plan",
+                    "적응 계획",
+                    "climate change adaptation",
+                    "UNFCCC",
+                    "physical risk",
+                    "물리적 위험",
+                    "transition risk",
+                    "전환 위험",
+                    "just transition",
+                    "정의로운 전환",
+                    "stakeholder engagement",
+                    "CapEx",
+                    "OpEx"
+                ],
+                "related_concepts": [
+                    "acute and chronic hazards",
+                    "급성·만성 위험",
+                    "scenario analysis",
+                    "시나리오 분석",
+                    "value chain",
+                    "가치 사슬"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_impacts_and_planning_integration",
+                        "description": "위험·기회에 따른 사람·환경 영향 및 적응 계획 수립 과정 반영 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_adaptation_plan",
+                        "description": "적응 계획 설명(정책·시나리오·지출·거버넌스·목표·정의로운 전환·이해관계자)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_implementation_impacts",
+                        "description": "적응 시행의 사람·환경 영향 및 관리 조치(근로자·지역사회·원주민·생물다양성)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_no_adaptation_plan",
+                        "description": "계획 부재 시 사유·진행 단계·예상 시기",
+                        "mandatory": true,
+                        "condition": "if_no_adaptation_plan"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_IMPACTS_IN_PLANNING_REPORTED",
+                        "description": "102-2-a 영향 및 계획 수립 반영 여부",
+                        "expected": "impacts_and_planning_integration_described"
+                    },
+                    {
+                        "check_id": "102_2_ADAPTATION_PLAN_DESCRIBED",
+                        "description": "102-2-b 적응 계획 요지 보고",
+                        "expected": "adaptation_plan_described_or_reference_102_1"
+                    },
+                    {
+                        "check_id": "102_2_IMPLEMENTATION_IMPACTS_REPORTED",
+                        "description": "102-2-c 시행 영향 및 관리 조치",
+                        "expected": "implementation_impacts_and_actions_described"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2",
+                "GRI102-2-a",
+                "GRI102-2-b",
+                "GRI102-2-b-i",
+                "GRI102-2-b-ii",
+                "GRI102-2-b-iii",
+                "GRI102-2-b-iv",
+                "GRI102-2-b-v",
+                "GRI102-2-b-vi",
+                "GRI102-2-c",
+                "GRI102-2-c-i",
+                "GRI102-2-c-ii",
+                "GRI102-2-d"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "102-2-a는 위험·기회에 따른 영향과 계획 수립 반영. 102-2-b는 계획 본문. 102-1과 중복 정보는 참조 가능.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-a",
+            "section_name": "공개 102-2-a 지침",
+            "rulebook_title": "Guidance for Disclosure 102-2-a",
+            "section_content": "102-2-a 및 102-2-c에서 영향 보고 방식이 구분됩니다.\n\n• 102-2-a: 기후변화 관련 위험 및 기회에 따른 조직의 사람과 환경에 대한 영향. GRI 3에 기반하여 조직이 유발·기여하거나 직접 연관된 영향이 포함됩니다.\n\n• 102-2-c: 적응 계획 실행과 관련된 사람 및 환경에 대한 영향.\n\n기후 변화 관련 위험은 물리적 위험(급성: 폭풍·홍수 등 극한 기상; 만성: 평균 기온 상승, 폭염·산불·가뭄 등) 또는 전환 위험으로 분류될 수 있습니다. 적응 계획과 관련된 전환 위험의 영향만 보고합니다(규제, 비용 증가, 이전, 시민사회 압력 등).\n\n기후 관련 기회는 사업 다각화, 효율, 신기술, 자원 절감, 신시장 등을 포함할 수 있으며, 일자리 창출·직무 재정의 등 영향이 연계될 수 있습니다.\n\n다른 규제 프레임워크로 위험·기회를 식별한 경우 이를 활용해 사람·환경 영향을 파악할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-2-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "physical risk",
+                    "transition risk",
+                    "acute hazard",
+                    "chronic hazard",
+                    "climate opportunities",
+                    "impacts on people",
+                    "environmental impacts"
+                ],
+                "related_concepts": [
+                    "GRI 3",
+                    "material topics",
+                    "adaptation-related transition risk only"
+                ],
+                "required_actions": [
+                    {
+                        "action": "distinguish_102_2_a_vs_c",
+                        "description": "위험·기회 기반 영향(102-2-a)과 계획 시행 영향(102-2-c)을 구분해 기술",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "classify_physical_risks",
+                        "description": "물리적 위험을 급성·만성으로 구분해 설명 가능",
+                        "mandatory": false
+                    },
+                    {
+                        "action": "limit_transition_risk_to_adaptation",
+                        "description": "전환 위험은 적응 계획과 관련된 영향만 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_A_IMPACTS_LINKED_TO_RISKS_OPPORTUNITIES",
+                        "description": "위험·기회와 사람·환경 영향의 연계 설명 여부",
+                        "expected": "impacts_linked_to_climate_risks_and_opportunities"
+                    },
+                    {
+                        "check_id": "102_2_A_PLANNING_INTEGRATION_EXPLAINED",
+                        "description": "적응 계획 수립 과정에 영향이 반영되었는지 설명",
+                        "expected": "consideration_in_adaptation_planning_explained"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-a",
+                "GRI102-2-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "102-2-a와 102-2-c의 영향 범위를 혼동하지 않도록 지침 준수.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-b",
+            "section_name": "공개 102-2-b, 102-2-b-i, 102-2-b-ii 지침",
+            "rulebook_title": "Guidance for 102-2-b, b-i, b-ii",
+            "section_content": "완화 및 적응 전략은 연결되어 시너지를 낼 수 있습니다. 전환·적응 계획에 공통 요소(정책·투자·거버넌스·정의로운 전환·이해관계자)가 있을 수 있습니다.\n\n동일 정보가 공개 102-1에 이미 보고된 경우 공개 102-2에서 참조할 수 있으며 반복하지 않아도 됩니다.\n\n조직은 적응 계획 검토 빈도를 보고하고 전기 대비 변경 사항을 설명해야 합니다. 국가·지역·부문 적응 계획과의 연계 여부와 출처를 열거할 수 있습니다.\n\n102-2-b-i: GRI 2-23 또는 GRI 3-3-c에 적응 관련 정책을 기술한 경우 참조 가능. 조치에 대한 상세 설명 대신 개괄 설명 가능. 공급망 협력, 기후 대비 시설 설계, 지역사회 재난 대비, 식수·물 부족 적응, 자연 기반·공학·기술 적응 유형별 보고 가능.\n\n102-2-b-ii: 시나리오 분석은 적응 계획 수립의 기초. 최소 고배출 시나리오(2°C 훨씬 초과) 하나와 파리 협정 양립 시나리오 등 다양한 시나리오 포함 권장. IPCC 시나리오 미사용 시 출처 선택 이유와 과학 정합성 설명. 참고문헌 [1], [21] 참조.",
+            "paragraph_reference": "Guidance for 102-2-b, 102-2-b-i, 102-2-b-ii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "mitigation and adaptation synergy",
+                    "cross-reference Disclosure 102-1",
+                    "plan review frequency",
+                    "national adaptation plans",
+                    "NbS",
+                    "scenario analysis",
+                    "high-emissions scenario",
+                    "Paris-aligned scenario",
+                    "IPCC"
+                ],
+                "related_concepts": [
+                    "GRI 2-23",
+                    "GRI 3-3-c",
+                    "temperature outlook",
+                    "methodology and assumptions"
+                ],
+                "required_actions": [
+                    {
+                        "action": "allow_cross_reference_to_102_1",
+                        "description": "102-1과 동일 정보는 102-2에서 참조로 대체 가능",
+                        "mandatory": false
+                    },
+                    {
+                        "action": "report_adaptation_plan_review",
+                        "description": "적응 계획 검토 빈도 및 전기 대비 변경 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_linkage_to_public_plans",
+                        "description": "국가·지역·부문 적응 계획 연계 및 출처(선택적이나 권장)",
+                        "mandatory": false
+                    },
+                    {
+                        "action": "outline_adaptation_actions",
+                        "description": "적응 조치 개괄(상세 불필요)",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "disclose_scenarios_for_adaptation",
+                        "description": "시나리오 출처·온도 전망·방법론·가정, 고배출·파리 양립 등 다양성 권장",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_B_REVIEW_AND_CHANGES_REPORTED",
+                        "description": "검토 빈도 및 변경 사항 보고",
+                        "expected": "review_frequency_and_changes_reported"
+                    },
+                    {
+                        "check_id": "102_2_B_II_SCENARIOS_DISCLOSED",
+                        "description": "시나리오·온도 전망·방법론·가정 보고",
+                        "expected": "scenarios_temperature_methodology_disclosed"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI102-1",
+                        "description": "공개 102-1에 동일 내용이 있으면 참조"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-23",
+                        "description": "적응 정책"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-c",
+                        "description": "적응 정책"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [1]",
+                        "description": "기후 시나리오 분석"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [21]",
+                        "description": "시나리오 방법론"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-b",
+                "GRI102-2-b-i",
+                "GRI102-2-b-ii",
+                "GRI102-1"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "b 본문 지침과 b-i, b-ii를 한 레코드에 묶음. 세분 rulebook은 b-iii 이하.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_B_III",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-b-iii",
+            "section_name": "공개 102-2-b-iii 지침",
+            "rulebook_title": "Guidance for 102-2-b-iii",
+            "section_content": "적응 계획 실행 지출 비율 = (적응 계획 관련 지출 / 총 지출) × 100.\n\n총 지출은 감사받은 연결 재무제표 또는 보고 기간 공개 재무정보와 조정·대조합니다. 불일치 시 차이를 설명합니다.\n\n보고 기간 적응 계획 실행 총지출을 CapEx와 OpEx로 구분하여 보고합니다.\n\n지속가능 경제 활동 분류 체계가 적용되는 경우 적응 활동 관련 CapEx·OpEx와 의무·자발 여부를 보고할 수 있습니다.",
+            "paragraph_reference": "Guidance for 102-2-b-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "adaptation expenditure",
+                    "percentage of total expenditure",
+                    "audited consolidated financial statements",
+                    "CapEx",
+                    "OpEx",
+                    "taxonomy"
+                ],
+                "related_concepts": [
+                    "reconciliation",
+                    "sustainable finance classification"
+                ],
+                "required_actions": [
+                    {
+                        "action": "calculate_adaptation_spend_ratio",
+                        "description": "적응 지출 비율 산식 적용",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "reconcile_financials",
+                        "description": "감사 재무제표 또는 공개 재무정보와 조정",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "separate_capex_opex_adaptation",
+                        "description": "적응 관련 CapEx·OpEx 구분",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_B_III_RATIO_AND_BREAKDOWN",
+                        "description": "비율·금액·CapEx/OpEx 보고",
+                        "expected": "adaptation_expenditure_ratio_and_breakdown_reported"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-b-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "102-1-c(전환 지출)와 병행 시 이중 계상·구분 명확화 필요.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_B_IV",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-b-iv",
+            "section_name": "공개 102-2-b-iv 지침",
+            "rulebook_title": "Guidance for 102-2-b-iv",
+            "section_content": "최고 의사결정 기구가 적응 계획 감독 책임(승인·검토·모니터링, 공정 전환 부합, 영향 관리 프로세스 감독 등)을 갖는지, 고위 경영진이 실행 및 계획 내용 결정 책임을 지는지 보고합니다.\n\nGRI 2-12·2-13에 적응 계획 거버넌스를 설명한 경우 참조할 수 있습니다. 공정 전환 세부는 102-1-g 지침 참조.",
+            "paragraph_reference": "Guidance for 102-2-b-iv",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "governance body",
+                    "senior management",
+                    "oversight",
+                    "implementation responsibility",
+                    "just transition alignment"
+                ],
+                "related_concepts": [
+                    "GRI 2-12",
+                    "GRI 2-13",
+                    "GRI102-1-g"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_oversight_and_execution_roles",
+                        "description": "감독 기구와 경영진의 역할·책임 구분 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_B_IV_GOVERNANCE_REPORTED",
+                        "description": "적응 계획 거버넌스 역할 보고",
+                        "expected": "adaptation_governance_roles_reported"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-12",
+                        "description": "최고 거버넌스 기구 역할"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-13",
+                        "description": "책임 위임"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-g",
+                        "description": "공정 전환 원칙"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-b-iv",
+                "GRI102-1-g"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_B_V",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-b-v",
+            "section_name": "공개 102-2-b-v 지침",
+            "rulebook_title": "Guidance for 102-2-b-v",
+            "section_content": "적응 목표 예: 물리적 위험 평가 대상 사이트 수, 적응 계획 수립·실행 대상 사이트 수, 관련 교육 이수 직원 수, 극한기상 견딤 점검 대상 사이트 수, 열 관련 병가 감소, 극한기상 피해 비용 감소, 노출 자산 적응 능력 향상 등.",
+            "paragraph_reference": "Guidance for 102-2-b-v",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "adaptation targets",
+                    "progress",
+                    "site-level metrics",
+                    "training",
+                    "heat-related illness",
+                    "asset resilience"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_adaptation_targets_and_progress",
+                        "description": "적응 목표와 진척을 구체적으로 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_B_V_TARGETS_PROGRESS_REPORTED",
+                        "description": "목표·진척 보고",
+                        "expected": "targets_and_progress_reported"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-b-v"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_B_VI",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-b-vi",
+            "section_name": "공개 102-2-b-vi 지침",
+            "rulebook_title": "Guidance for 102-2-b-vi",
+            "section_content": "공정 전환 원칙 상세는 102-1-g 지침을 참조합니다.\n\n보고: 영향받는 이해관계자 식별(사회적 영향 평가 여부 포함), 합법적 대표와의 소통, 노동자·노조·공급업체·원주민·지역사회·정부 참여 통찰의 조치 반영, 소통 빈도.\n\nGRI 2-29에 적응 계획 개발·실행의 이해관계자 참여를 기술한 경우 참조 가능.",
+            "paragraph_reference": "Guidance for 102-2-b-vi",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "just transition",
+                    "stakeholder identification",
+                    "social impact assessment",
+                    "engagement frequency",
+                    "indigenous peoples"
+                ],
+                "related_concepts": [
+                    "GRI 2-29",
+                    "GRI102-1-g"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_stakeholder_engagement_adaptation",
+                        "description": "적응 계획 관련 이해관계자 참여 및 공정 전환 부합",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_B_VI_STAKEHOLDER_AND_JT_REPORTED",
+                        "description": "이해관계자 참여·공정 전환 설명",
+                        "expected": "stakeholder_engagement_and_just_transition_reported"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-g",
+                        "description": "공정 전환 원칙"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 2-29",
+                        "description": "이해관계자 참여"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-b-vi",
+                "GRI102-1-g",
+                "GRI-2-29"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_2_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-2-c",
+            "section_name": "공개 102-2-c, 102-2-c-i, 102-2-c-ii 지침",
+            "rulebook_title": "Guidance for 102-2-c, c-i, c-ii",
+            "section_content": "적응 계획이 잘 관리되면 경제 발전·양질의 일자리 등 긍정적 영향이 있을 수 있습니다. 반면 시설 이전·홍수 방지 조치 등으로 지역사회에 부정적 영향이 생길 수 있습니다. 환경 영향으로 오염(이전지 수질 오염 등)이 포함될 수 있습니다.\n\nGRI 3-3-a·3-3-d에 적응 시행 영향을 기술한 경우 참조 가능. 적응 계획 미이행 관련 사람·환경 영향(직업 건강·생계·식량·물 불안정·노동권 등)도 설명합니다.\n\n102-2-c-i: 정량 지표는 공개 102-3 참조. 근로자·지역사회·원주민 관리 조치 예: 근로조건·보수·안전 지원, 일자리 상실자 지원, 현장 내 자연 기반·기술 투자로 일자리 보전, 지역사회·원주민 협력 및 지원.\n\n102-2-c-ii: 적응 조치의 생물다양성 긍정(맹그로브 등)·부정(외래종 조림, 인프라로 서식지 변화) 영향. GRI 101-2에 생물다양성·기후 조치 시너지·상충을 기술한 경우 참조 가능.",
+            "paragraph_reference": "Guidance for 102-2-c, 102-2-c-i, 102-2-c-ii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "positive impacts",
+                    "negative impacts",
+                    "non-implementation impacts",
+                    "workers",
+                    "communities",
+                    "indigenous peoples",
+                    "biodiversity",
+                    "pollution"
+                ],
+                "related_concepts": [
+                    "GRI 3-3-a",
+                    "GRI 3-3-d",
+                    "GRI 101-2",
+                    "GRI102-3"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_positive_negative_implementation_impacts",
+                        "description": "시행에 따른 긍정·부정 영향과 관리 조치",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "describe_non_implementation_impacts",
+                        "description": "미이행 관련 영향 설명",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "reference_102_3_for_metrics",
+                        "description": "정량 지표는 102-3 참조 가능",
+                        "mandatory": false
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_2_C_IMPLEMENTATION_IMPACTS_COVERED",
+                        "description": "시행 영향·관리 조치·미이행 영향",
+                        "expected": "implementation_and_non_implementation_impacts_covered"
+                    },
+                    {
+                        "check_id": "102_2_C_I_II_PEOPLE_AND_BIODIVERSITY",
+                        "description": "c-i 사람·c-ii 생물다양성 구분",
+                        "expected": "people_and_biodiversity_subrequirements_addressed"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-a",
+                        "description": "영향"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 3-3-d",
+                        "description": "관리 조치"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-3",
+                        "description": "공정 전환 정량 지표"
+                    },
+                    {
+                        "reference_type": "allow_reference_instead",
+                        "target": "GRI 101-2",
+                        "description": "생물다양성·기후 시너지"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-2-c",
+                "GRI102-2-c-i",
+                "GRI102-2-c-ii",
+                "GRI102-3"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "102-2-a(위험·기회 기반 영향)와 범위 구분 유지.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_SEC_2",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-SEC-2",
+            "section_name": "섹션 2: 주제별 공개",
+            "rulebook_title": "Section 2: Topic-specific disclosures",
+            "section_content": "GRI 기준에 따라 보고하는 조직은 기후 변화 관련 영향과 관련된 본 섹션(공개 102-3부터 공개 102-10까지)의 모든 공개 사항을 보고해야 합니다.",
+            "paragraph_reference": "GRI 102 Section 2",
+            "validation_rules": {
+                "section_type": "section",
+                "key_terms": [
+                    "topic-specific disclosures",
+                    "climate-related impacts",
+                    "Disclosure 102-3 through 102-10"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_section_2_disclosures",
+                        "description": "102-3~102-10 중 해당 공시 전부 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "SEC2_DISCLOSURES_COVERED",
+                        "description": "주제별 공시 섹션 요구 충족 여부",
+                        "expected": "applicable_102_3_to_102_10_reported"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-SEC-2",
+                "GRI102-3",
+                "GRI102-4",
+                "GRI102-5",
+                "GRI102-6",
+                "GRI102-7",
+                "GRI102-8"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "102-9~102-10은 추후 DP 확장 시 related_dp_ids 확장.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_3",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-3",
+            "section_name": "공개 102-3: 공정 전환",
+            "rulebook_title": "Disclosure 102-3: Just transition",
+            "section_content": "조직은 전환 또는 적응 노력의 맥락에서 다음을 수행해야 합니다:\n\na. 신규 채용된 종업원 총수 및 (i) 성별 (ii) 종업원 유형별 세부 내역을 보고할 것;\n\nb. 해고된 종업원 총수를 보고하고 이 총계를 (i) 성별 (ii) 종업원 유형별로 세분화할 것;\n\nc. 재배치된 종업원 총수를 보고하고 이 총계를 (i) 성별 (ii) 종업원 유형별로 세분화할 것;\n\nd. 업스킬링 및 리스킬링 교육을 받은 종업원 총수를 보고하고 이 총계를 (i) 성별 (ii) 종업원 유형별로 세분화할 것;\n\ne. 종업원이 아닌 신규 근로자 총수를 보고하고 이 총계를 성별로 세분화할 것;\n\nf. 고용 관계가 종료된 비정규직 근로자 총수를 성별로 구분하여 보고할 것;\n\ng. 신규 채용 종업원 중 기본급이 생활비 추정치 이상인 인원 수 및 비율을 보고하고, 공개 102-3-a 및 102-3-e에 보고된 근로자의 기본급과 생활비 추정치 간 격차를 해소하기 위해 취한 조치 또는 약속을 기술할 것;\n\nh. 전환·적응 노력으로 지역 사회 및 원주민에게 영향을 미치는 사업장 위치를 열거할 것;\n\ni. 공개 102-3-h에 기재된 운영 지역 중, 영향을 받거나 잠재적으로 영향받을 수 있는 지역 사회 또는 원주민의 이익을 보호하기 위한 협정이 체결된 지역의 비율을 보고할 것;\n\nj. 공개 102-3에 따라 보고된 데이터를 이해하는 데 필요한 맥락 정보를 보고하고, 데이터 집계에 사용된 방법론 및 가정을 설명하며, 해당 수치가 다음 중 어느 방식으로 보고되었는지를 포함할 것:\n  i. 인원 수, 정규직 환산 인원(FTE) 또는 다른 방법론;\n  ii. 보고 기간 말 기준, 보고 기간 평균, 또는 다른 방법론.\n\n지침: 본 공시는 전환·적응이 근로자·지역사회·원주민에 미치는 영향을 설명합니다. ILO 정의의 정의로운 전환 및 102-1-g 지침은 RULE_GRI102_3_GUIDANCE_INTRO 참조. 102-3-a~f의 지역별 분해·용어 정의·생활임금·102-3-h는 RULE_GRI102_3_GUIDANCE_A_TO_H. 102-3-i·102-3-j 세부는 각각 GUIDANCE_I, GUIDANCE_J.",
+            "paragraph_reference": "Disclosure 102-3 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "just transition",
+                    "공정 전환",
+                    "workers",
+                    "근로자",
+                    "indigenous peoples",
+                    "원주민",
+                    "local communities",
+                    "지역 사회",
+                    "living wage",
+                    "생활임금",
+                    "FPIC",
+                    "redeployment",
+                    "재배치",
+                    "upskilling",
+                    "reskilling"
+                ],
+                "related_concepts": [
+                    "GRI102-1-g",
+                    "GRI 2-8-a",
+                    "GRI 411",
+                    "GRI 413",
+                    "ILO just transition"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_102_3_a_through_j",
+                        "description": "102-3-a~j 요건 및 하위 로마숫자(a-i~a-ii 등) 충족",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "align_regional_and_estimate_guidance",
+                        "description": "a~f 지역별 분해·추정 시 j 설명은 RULE_GRI102_3_GUIDANCE_A_TO_H·GUIDANCE_J 따름",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_3_A_J_STRUCTURE_COMPLETE",
+                        "description": "요구 a~j 및 명시된 하위 항목이 DP 트리와 대응하는지",
+                        "expected": "disclosure_102_3_subitems_mapped"
+                    },
+                    {
+                        "check_id": "102_3_G_SINGLE_DP_NO_ARBITRARY_SPLIT",
+                        "description": "102-3-g는 인원·비율·격차 해소 서술을 한 dp_id에 유지(임의 -pct 등 금지)",
+                        "expected": "g_reported_as_single_requirement"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-g",
+                        "description": "정의로운 전환 원칙 상세"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-3",
+                "GRI102-3-a",
+                "GRI102-3-a-i",
+                "GRI102-3-a-ii",
+                "GRI102-3-b",
+                "GRI102-3-b-i",
+                "GRI102-3-b-ii",
+                "GRI102-3-c",
+                "GRI102-3-c-i",
+                "GRI102-3-c-ii",
+                "GRI102-3-d",
+                "GRI102-3-d-i",
+                "GRI102-3-d-ii",
+                "GRI102-3-e",
+                "GRI102-3-f",
+                "GRI102-3-g",
+                "GRI102-3-h",
+                "GRI102-3-i",
+                "GRI102-3-j",
+                "GRI102-3-j-i",
+                "GRI102-3-j-ii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "요구문에 로마숫자 하위만 있는 항목은 해당 dp_id; e·f의 성별 분해는 별도 문자 하위 없이 단일 DP validation_rules에 반영.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_3_GUIDANCE_INTRO",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-3",
+            "section_name": "공개 102-3 지침 (서문)",
+            "rulebook_title": "Guidance for 102-3 — purpose and ILO",
+            "section_content": "본 공시는 조직의 전환 또는 적응 노력이 근로자, 지역 사회 및 원주민에게 미치는 영향을 설명합니다. 이러한 영향 관리는 공정한 전환(just transition)으로 이어집니다.\n\n국제노동기구(ILO)에 따르면 정의로운 전환은 관련된 모든 이에게 가능한 한 공정하고 포용적인 방식으로 경제를 녹색화하며, 양질의 일자리 기회를 창출하고 누구도 소외되지 않도록 하는 것을 의미합니다. 자세한 내용은 공개 102-1-g에 대한 지침을 참조하십시오.",
+            "paragraph_reference": "Guidance — Disclosure 102-3 (introductory paragraphs)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "ILO",
+                    "just transition",
+                    "inclusive",
+                    "decent work",
+                    "102-1-g"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "link_to_102_1_g_for_jt_principles",
+                        "description": "정의로운 전환 원칙·참여의 상세는 102-1-g와 연계 가능",
+                        "mandatory": false
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_3_GUIDE_INTRO_CONTEXT",
+                        "description": "보고서가 102-3가 노동·지역사회·원주민 영향 측정임을 맥락화했는지",
+                        "expected": "just_transition_disclosure_context_stated"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-g",
+                        "description": "공정 전환 원칙·이해관계자 참여"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-3",
+                "GRI102-1-g"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_3_GUIDANCE_A_TO_H",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-3",
+            "section_name": "공개 102-3-a~h 지침",
+            "rulebook_title": "Guidance for 102-3-a through 102-3-h",
+            "section_content": "조직은 공개 102-3-a부터 102-3-f까지 보고된 정보를 지역별로 분해하여 제공해야 합니다. 부속서 표 1·2는 제시 방식의 예시입니다.\n\n102-3-a 및 102-3-e: 전환·적응과 관련된 채용(저탄소 제품·서비스·현장, 재생에너지·에너지효율·기후 회복력 인프라 등)에 초점을 둡니다.\n\n102-3-b 및 102-3-f: '종료(해고)'는 조직 주도의 직무 종료를 의미하며, 대량 해고나 온실가스 집약적 경제활동 축소·폐쇄에 따른 단계적 직무 제거 맥락을 포함합니다.\n\n102-3-c: 재배치—고배출 활동 종업원이 재교육 후 동일 조직 내 저배출 활동으로 이동하는 경우 등.\n\n102-3-d: 업·리스킬링 교육이 고용 안정·기본급 상승 등에 미친 영향 설명에 활용.\n\n102-3-e, 102-3-f, 102-3-g: '종업원이 아닌 근로자'는 조직이 업무를 통제하나 공식 고용관계에 있지 않은 개인입니다. GRI 2: 일반 공시 2021 공개 2-8-a 지침을 참조하십시오.\n\n102-3-g: 생활비 추정치는 특정 지역에서 개인·가구의 식료·주거·의료 등 기본 생활비를 충당하는 데 필요한 추정 금액입니다. 격차 해소 조치·약속은 102-3-a 및 102-3-e에 보고된 근로자를 대상으로 설명합니다.\n\n102-3-h: 지역 사회·원주민에 영향을 미치는 구체적 지역(주·도·시 등)을 보고합니다. 원주민 권리는 UN 원주민 권리 선언 등 맥락에서 다룰 수 있습니다. 다른 취약 계층을 포함한 이해관계자에게 영향을 미치는 운영 위치를 명시할 수 있습니다.",
+            "paragraph_reference": "Guidance — 102-3-a through 102-3-h",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "regional breakdown",
+                    "지역별",
+                    "termination",
+                    "redeployment",
+                    "living wage estimate",
+                    "non-employee workers",
+                    "GRI 2-8-a",
+                    "appendix tables"
+                ],
+                "related_concepts": [
+                    "UN DRIP",
+                    "indigenous peoples rights"
+                ],
+                "required_actions": [
+                    {
+                        "action": "disclose_a_to_f_by_region",
+                        "description": "102-3-a~f 수치·정보를 지역별로 분해 보고",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "define_non_employee_per_gri2",
+                        "description": "비종업원 근로자 범위는 GRI 2 공개 2-8-a 지침과 정합",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "explain_living_wage_gap_actions_for_a_and_e_workers",
+                        "description": "102-3-g에서 a·e 근로자 대상 기본급-생활임금 격차 해소 조치·약속",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_3_GUIDE_A_F_REGIONAL",
+                        "description": "a~f에 지역 차원 분해·표시가 있는지(부록 표 예시와 호환)",
+                        "expected": "regional_breakdown_for_a_through_f"
+                    },
+                    {
+                        "check_id": "102_3_GUIDE_H_LOCATIONS_LISTED",
+                        "description": "h에서 영향 운영 지역·위치가 구체적으로 열거되는지",
+                        "expected": "operating_locations_for_communities_ip_listed"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 2-8-a",
+                        "description": "종업원이 아닌 근로자 정의"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-3",
+                "GRI102-3-a",
+                "GRI102-3-b",
+                "GRI102-3-c",
+                "GRI102-3-d",
+                "GRI102-3-e",
+                "GRI102-3-f",
+                "GRI102-3-g",
+                "GRI102-3-h"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "지역별 분해는 요구 문자에 별도 항목이 없어 별도 dp_id를 두지 않고 본 rulebook·validation으로 추적.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_3_GUIDANCE_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-3-i",
+            "section_name": "공개 102-3-i 지침",
+            "rulebook_title": "Guidance for 102-3-i",
+            "section_content": "지역 사회 및 원주민과 협력하여 전환·적응과 관련된 부정적 영향을 예방·완화·대응하는 맥락을 다룹니다. 자유적·사전적·정보에 입각한 동의(FPIC)를 통한 협정은 명확하고 지속 가능한 결과를 제공할 수 있습니다. GRI 411: 원주민 권리 2016, GRI 413: 지역 사회 2016 지침을 참조하십시오.\n\n본 요구사항에 따른 비율을 계산할 때 조직은 공개 102-3-h에 보고된 운영 위치 목록을 사용합니다.\n\n협정이 존재하는 각 운영 위치에 대해, 협정이 영향을 받거나 잠재적 영향이 있는 지역 사회 또는 원주민 전체와 이루어졌는지, 아니면 일부와만 이루어졌는지 보고해야 합니다.",
+            "paragraph_reference": "Guidance — 102-3-i",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "FPIC",
+                    "agreements",
+                    "102-3-h",
+                    "operating locations",
+                    "indigenous peoples",
+                    "local communities",
+                    "GRI 411",
+                    "GRI 413"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "use_102_3_h_list_for_ratio",
+                        "description": "102-3-i 비율 산정 시 102-3-h 운영 위치 목록 사용",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "disclose_all_vs_partial_stakeholders_per_site",
+                        "description": "협정이 있는 각 운영지에서 전체 vs 일부 지역사회·원주민 대상 여부 보고",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_3_GUIDE_I_RATIO_DENOMINATOR_FROM_H",
+                        "description": "i의 분모·분자가 h 목록과 논리적으로 연결되는지",
+                        "expected": "i_percentage_traces_to_h_locations"
+                    },
+                    {
+                        "check_id": "102_3_GUIDE_I_COVERAGE_DISCLOSED",
+                        "description": "각 협정 위치별 전체/일부 이해관계자 범위 서술",
+                        "expected": "all_or_some_communities_disclosed_per_site"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-3-h",
+                        "description": "운영 위치 목록"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-3-i",
+                "GRI102-3-h"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_3_GUIDANCE_J",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-3-j",
+            "section_name": "공개 102-3-j 지침 (추정)",
+            "rulebook_title": "Guidance for 102-3-j — estimates for a–f",
+            "section_content": "조직이 공개 102-3-a부터 102-3-f까지의 수치를 직접 산출할 수 없는 경우 추정치를 보고할 수 있습니다. 이 경우 조직은 공개 102-3-j에 추정에 대한 설명을 제공해야 합니다.",
+            "paragraph_reference": "Guidance — 102-3-j (estimates)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "estimates",
+                    "추정",
+                    "methodology",
+                    "102-3-a",
+                    "102-3-f",
+                    "102-3-j"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "explain_estimates_in_102_3_j",
+                        "description": "a~f에 추정치 사용 시 102-3-j에서 추정 근거·방법 설명",
+                        "mandatory": true,
+                        "condition": "if_estimates_used_for_a_to_f"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_3_GUIDE_J_ESTIMATE_EXPLANATION",
+                        "description": "a~f가 추정이면 j에 설명이 동반되는지",
+                        "expected": "estimate_narrative_in_j_when_a_f_estimated"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-3-j",
+                "GRI102-3-a",
+                "GRI102-3-b",
+                "GRI102-3-c",
+                "GRI102-3-d",
+                "GRI102-3-e",
+                "GRI102-3-f"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "j-i·j-ii 요구 본문은 별도 dp_id; 추정 지침은 rulebook으로 보완.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4",
+            "section_name": "공개 102-4: 온실가스 배출 감축 목표 및 진행 상황",
+            "rulebook_title": "Disclosure 102-4: GHG emission reduction targets and progress",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 단기·중기·장기 총 범위 1·2·3 감축 목표를 CO₂e 및 기준 연도 배출 대비 %로 보고하며 (i) 별도 또는 범위 1+2 합산 (ii) 합산 시 102-5·102-6 총 스코프 1·2 포함 (iii) 흡수·거래·회피 제외;\n\nb. 각 총 목표에 생물 기원 CO₂ 포함 여부;\n\nc. 각 총 범위 2 목표에 위치 기반 또는 시장 기반;\n\nd. 각 총 범위 3 목표에 적용 범위 3 범주 열거;\n\ne. 각 총 목표에 적용 가스;\n\nf. 각 목표가 1.5°C 제한을 위한 최신 과학적 증거와의 부합 설명;\n\ng. 총 감축 목표 수정 정책;\n\nh. 각 목표 기준 연도 (i) 선정 근거 (ii) 기준 연도 배출 CO₂e (iii) 재계산 유발 중대 변화 (iv) 재계산 시 이전 보고 기준 연도 배출;\n\ni. 각 목표 진척을 인벤토리 방법으로 CO₂e 및 기준연도 대비 % 보고;\n\nj. 각 목표 진척 달성 설명 및 (i) 조직 이니셔티브 또는 (ii) 기타 요인 명시;\n\nk. 사용된 기준·방법론·가정·계산 도구.\n\n본 공개에 따라 보고된 온실가스 배출 감축 목표는 102-1-f 전환 계획 달성 목표 보고에 사용됩니다.\n\n※ 기준서 「102-4-k 지침」(제3자 검증)은 요구 항목 a~k에 해당 문자가 없으므로 별도 dp_id 없이 RULE_GRI102_4_GUIDANCE_K_VERIFICATION에만 기술.",
+            "paragraph_reference": "Disclosure 102-4 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "GHG reduction targets",
+                    "Scope 1 2 3",
+                    "tCO2e",
+                    "baseline",
+                    "inventory method",
+                    "progress rate",
+                    "1.5°C",
+                    "biogenic CO2",
+                    "location-based",
+                    "market-based"
+                ],
+                "related_concepts": [
+                    "GRI102-1-f",
+                    "GRI102-5",
+                    "GRI102-6",
+                    "GRI102-7"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_102_4_a_through_k",
+                        "description": "102-4-a~k 요건 충족",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "apply_guidance_102_4_k_verification",
+                        "description": "102-4-k 지침(제3자 검증)은 RULE_GRI102_4_GUIDANCE_K_VERIFICATION·related_dp_ids로 추적",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_PROGRESS_FORMULA_CONSISTENT",
+                        "description": "진전률 (당해−기준)/기준×100 과 102-4-k 방법론·102-4-i 정합",
+                        "expected": "progress_pct_matches_inventory_and_methodology"
+                    },
+                    {
+                        "check_id": "102_4_SCOPE3_VS_102_7",
+                        "description": "범위 3 목표·비율이 102-7-a·102-7-c와 정합(시드 보강 후)",
+                        "expected": "scope3_target_aligned_with_102_7"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-f",
+                        "description": "전환 계획 목표·고정 배출"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4",
+                "GRI102-4-a",
+                "GRI102-4-a-i",
+                "GRI102-4-a-ii",
+                "GRI102-4-a-iii",
+                "GRI102-4-b",
+                "GRI102-4-c",
+                "GRI102-4-d",
+                "GRI102-4-e",
+                "GRI102-4-f",
+                "GRI102-4-g",
+                "GRI102-4-h",
+                "GRI102-4-h-i",
+                "GRI102-4-h-ii",
+                "GRI102-4-h-iii",
+                "GRI102-4-h-iv",
+                "GRI102-4-i",
+                "GRI102-4-j",
+                "GRI102-4-j-i",
+                "GRI102-4-j-ii",
+                "GRI102-4-k"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "요구 k=GRI102-4-k(방법론). 「102-4-k 지침」(검증)=별도 DP 금지, GUIDANCE_K_VERIFICATION만.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-a",
+            "section_name": "102-4-a에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-a",
+            "section_content": "목표 적용 범위 3 범주와 공개 102-7 적용 범주 간 일관성. 단기·중기·장기 정의 및 목표 설정 연도 보고(예: 기준+5~10년 단기, +10~15년 중기, +20~30년 장기 등). 참고문헌 [12]. 중대 변화로 목표 적절성 훼손 시 재계산·GRI 2 공개 2-4 재공시. 집약도 목표는 선택, 범위 1·2·3별 별도 보고.",
+            "paragraph_reference": "Guidance — 102-4-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "Scope 3",
+                    "102-7",
+                    "SML",
+                    "intensity targets",
+                    "GRI 2-4"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "align_scope3_with_102_7",
+                        "description": "범위 3 목표 범주와 102-7 일관",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_GUIDE_A_SML_DEFINED",
+                        "description": "단·중·장기 정의·목표 설정 연도",
+                        "expected": "sml_and_target_years_reported"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [12]",
+                        "description": "단·중·장기 목표"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 2-4",
+                        "description": "재공시"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-a",
+                "GRI102-4-d"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_A_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-a-i",
+            "section_name": "102-4-a-i 지침",
+            "rulebook_title": "Guidance for 102-4-a-i",
+            "section_content": "범위 1·2·3 통합 감축 목표 보고 가능. 이 경우 관련성 이유 설명. 통합 목표 시 목표에 포함된 총 배출 대비 각 범위 비율(%) 보고.",
+            "paragraph_reference": "Guidance — 102-4-a-i",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "integrated target",
+                    "scope share"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "scope_shares_if_integrated",
+                        "description": "통합 목표 시 범위별 비중 %",
+                        "mandatory": true,
+                        "condition": "if_integrated_s123_target"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_A_I_SCOPE_SHARES",
+                        "description": "통합 목표 시 범위 1·2·3 비중",
+                        "expected": "scope_shares_reported"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-a-i"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_A_II",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-a-ii",
+            "section_name": "102-4-a-ii에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-a-ii",
+            "section_content": "102-5·102-6 총 스코프 1·2를 모두 포함하지 않는 스코프 1·2 감축 목표인 경우: 이유 설명, 총량 대비 목표 비율, 총량 포함 일정·단계.",
+            "paragraph_reference": "Guidance — 102-4-a-ii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "partial S1 S2"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "explain_partial_s12",
+                        "description": "부분 S1+2 시 이유·비율·로드맵",
+                        "mandatory": true,
+                        "condition": "if_partial_s12_target"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_A_II_PARTIAL_S12",
+                        "description": "부분 S1+2 목표 시 이유·비율·단계",
+                        "expected": "rationale_ratio_timeline"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-a-ii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_A_III",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-a-iii",
+            "section_name": "102-4-a-iii에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-a-iii",
+            "section_content": "제거량, 거래(크레딧), 회피 배출은 총 감축 목표에서 제외. 102-9-c·102-10-d 지침 참조. 회피는 별도 회계. 부문 프로그램 순감축 시 감축과 제거 별도 보고, 참고문헌 [10].",
+            "paragraph_reference": "Guidance — 102-4-a-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "removals",
+                    "carbon credits",
+                    "avoided emissions"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-9-c",
+                        "description": "온실가스 제거"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-10-d",
+                        "description": "탄소 크레딧"
+                    },
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [10]",
+                        "description": "부문별 프로그램"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-a-iii",
+                "GRI102-4-i"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-b",
+            "section_name": "102-4-b에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-b",
+            "section_content": "과학 기반 목표 설정 이니셔티브(SBTi)는 각 총 감축 목표에 생물 기원 CO₂를 포함하도록 요구. 참고문헌 [11].",
+            "paragraph_reference": "Guidance — 102-4-b",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "SBTi",
+                    "biogenic CO2"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [],
+                "cross_references": [
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [11]",
+                        "description": "SBTi"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-b"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-c",
+            "section_name": "102-4-c에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-c",
+            "section_content": "시장 기반 범위 2 감축 목표 시 위치 기반 범위 2 목표를 별도 보고. 시장 기반 시 범위 2 품질 기준을 계약적 수단에 적용. 102-6-a 지침 참조.",
+            "paragraph_reference": "Guidance — 102-4-c",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "market-based",
+                    "location-based"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "dual_report_scope2_if_market",
+                        "description": "시장 기반 시 위치 기반 별도 목표",
+                        "mandatory": true,
+                        "condition": "if_market_based_scope2_target"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_C_LOCATION_IF_MARKET",
+                        "description": "시장 기반 범위 2 시 위치 기반 병기",
+                        "expected": "location_based_alongside_market"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-6-a",
+                        "description": "범위 2 품질 기준"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_D",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-d",
+            "section_name": "102-4-d에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-d",
+            "section_content": "모든 범위 3 범주 미포함 시 비율 보고: (목표 적용 범위 3 배출) ÷ (102-7-a 총 범위 3 + 102-7-c 생물기원 범위 3) × 100. 제외 범주 이유·향후 포함 조치. 102-7-a 지침 참조.",
+            "paragraph_reference": "Guidance — 102-4-d",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "Scope 3 coverage",
+                    "102-7-a",
+                    "102-7-c"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_scope3_coverage_pct",
+                        "description": "부분 범위 3 시 공식 비율·제외 사유",
+                        "mandatory": true,
+                        "condition": "if_partial_scope3_target"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_D_SCOPE3_PCT_FORMULA",
+                        "description": "부분 범위 3 비율 분모·분자 정의",
+                        "expected": "scope3_ratio_documented"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-d"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_F",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-f",
+            "section_name": "102-4-f에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-f",
+            "section_content": "목표가 산업별 과학 기반 경로와 일치하는지·방법 보고. 목표 결정에 사용한 지침·프레임워크(기후·정책 시나리오). 판매·M&A 등 미래 발전과 전환 위험·기회 반영 및 목표 달성에 미치는 영향 설명.",
+            "paragraph_reference": "Guidance — 102-4-f",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "sector pathway",
+                    "scenarios",
+                    "transition risk"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_pathway_frameworks_impacts",
+                        "description": "산업 경로·프레임워크·시나리오·사업 변화 영향",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": []
+            },
+            "related_dp_ids": [
+                "GRI102-4-f"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_G",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-g",
+            "section_name": "102-4-g에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-g",
+            "section_content": "102-4-g 보고 시 목표 업데이트 주기(예: 5년마다) 보고 가능. 목표 수정 주요 사유: 이해관계자 요구, 시나리오·기준 변화, 환경·기술·법률 변화, 조기 달성, 방법론 개선 등.",
+            "paragraph_reference": "Guidance — 102-4-g",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "target revision",
+                    "update cycle"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": []
+            },
+            "related_dp_ids": [
+                "GRI102-4-g"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_H_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-h-i",
+            "section_name": "102-4-h-i에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-h-i",
+            "section_content": "인벤토리(102-5, 102-6, 102-7)와 목표 기준 연도(102-4)에 서로 다른 연도 사용 가능하나 동일 연도가 단순. GHG Protocol 기업 회계 및 보고 표준 [14] 참조.",
+            "paragraph_reference": "Guidance — 102-4-h-i",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "baseline year",
+                    "GHG Protocol"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [],
+                "cross_references": [
+                    {
+                        "reference_type": "reference",
+                        "target": "Reference [14]",
+                        "description": "GHG Protocol Corporate Standard"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-h",
+                "GRI102-4-h-i"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_H_III",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-h-iii",
+            "section_name": "102-4-h-iii에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-h-iii",
+            "section_content": "재계산 유발 사례: 구조적 변화(M&A·아웃소싱 등), 계수·활동·방법론 중대 개선, 중대·누적 오류(재발 방지 절차 보고).",
+            "paragraph_reference": "Guidance — 102-4-h-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "recalculation",
+                    "structural change"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": []
+            },
+            "related_dp_ids": [
+                "GRI102-4-h-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-i",
+            "section_name": "102-4-i에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-i",
+            "section_content": "목표 달성 현황 보고 시 제거·거래·회피 제외. 감소·증가 모두 포함. 배출량 변화 = 당해 − 기준. 진전률 = (변화/기준)×100. 부록 표 3. 장애 요인·고정 배출은 102-1-f 지침.",
+            "paragraph_reference": "Guidance — 102-4-i",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "inventory method",
+                    "progress rate",
+                    "appendix table 3"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_I_FORMULA_CHECK",
+                        "description": "진전률·제외항목이 지침과 일치",
+                        "expected": "formula_and_exclusions_per_guidance"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-1-f",
+                        "description": "고정 배출·장애 요인"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4-i",
+                "GRI102-4-k"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_J",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4-j",
+            "section_name": "102-4-j에 대한 지침",
+            "rulebook_title": "Guidance for 102-4-j",
+            "section_content": "진전은 이니셔티브(공정 재설계, 장비, 연료, 행동) 또는 기타(전력망 탈탄소, 공급망, 폐기물 정책, 소비자 행동 등)로 달성 가능.",
+            "paragraph_reference": "Guidance — 102-4-j",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "initiatives",
+                    "external factors"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": []
+            },
+            "related_dp_ids": [
+                "GRI102-4-j",
+                "GRI102-4-j-i",
+                "GRI102-4-j-ii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_4_GUIDANCE_K_VERIFICATION",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-4",
+            "section_name": "102-4-k 지침 (제3자 검증)",
+            "rulebook_title": "Guidance 102-4-k — third-party verification",
+            "section_content": "조직은 독립 제3자가 온실가스 배출 감축 목표 및 관련 진척을 검증했는지 보고해야 하며, 검증한 경우 검증 기관과 사용된 기준 또는 방법론을 명시해야 합니다. ※ 요구 항목 k(방법론)는 GRI102-4-k dp_id. 본 문단은 기준서 지침 제목이 「102-4-k 지침」으로 겹치나 요구 문항에 별도 문자가 없어 임의 dp_id(예: -l)를 두지 않고 rulebook만으로 보관.",
+            "paragraph_reference": "Guidance — 102-4-k (verification)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "third-party verification",
+                    "assurance"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "disclose_verifier_if_verified",
+                        "description": "검증 시 기관·기준·방법론",
+                        "mandatory": true,
+                        "condition": "if_third_party_verification"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_4_GUIDE_K_VERIFICATION_COMPLETE",
+                        "description": "검증 시 검증기관·적용 기준·방법론 누락 없음",
+                        "expected": "verifier_and_standard_if_yes"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-4",
+                "GRI102-4-i",
+                "GRI102-4-k"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "요구 k=GRI102-4-k. 검증 지침만 별 rulebook; 별도 dp_id 생성 금지(추출 가이드).",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5",
+            "section_name": "공개 102-5: 범위 1 온실가스 배출량",
+            "rulebook_title": "Disclosure 102-5: Scope 1 GHG emissions",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 범위 1 온실가스 배출 총량을 CO₂e(톤)으로 보고하며, 산정 시 (i) CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃ 포함 (ii) 조직이 소유·통제하는 배출원의 바이오매스 연소·생분해로부터 생물 기원 CO₂ 처리(102-5-c 지침과 합계 정합) (iii) 온실가스 제거·거래·회피 배출 제외 (iv) 최신 IPCC 평가보고서 GWP 사용;\n\nb. 범위 1 총 배출을 가스별(CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃) 메트릭 톤 및 CO₂e로 분해;\n\nc. 위 (ii)에 해당하는 생물 기원 CO₂를 총 범위 1과 구분하여 메트릭 톤으로 별도 보고;\n\nd. 산정 기준년 보고: (i) 기준년 선정 근거 (ii) 기준년 배출을 총 범위 1과 생물 기원 CO₂로 분해 (iii) 기준년 재계산을 유발한 중대 변화 맥락 (iv) 재계산 시 이전 보고 기준년 배출;\n\ne. 지분율·재무 통제·운영 통제 중 연결 방식을 택하여 범위 1·2·3에 일관 적용;\n\nf. 보고 기준, 방법론, 가정, 계산 도구 및 배출계수 출처 보고.\n\n지침: 에너지 소비 관련 배출은 GRI 103: Energy 2025 공개 103-2-a와 연계. GRI 1 Foundation 2021 비교가능성 원칙에 따라 102-5-a, b, c는 당기 및 직전 2개 보고기간 정보 제시. 부록 표 4·5 참고. 사업부·국가·배출원 유형 등 추가 분해는 지침상 선택이며 별도 dp_id 없음(추출 가이드 §3.2.1).",
+            "paragraph_reference": "Disclosure 102-5 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "Scope 1",
+                    "범위 1",
+                    "tCO2e",
+                    "biogenic CO2",
+                    "GWP",
+                    "IPCC",
+                    "consolidation",
+                    "연결 방식",
+                    "emission factors",
+                    "배출계수"
+                ],
+                "related_concepts": [
+                    "GRI 103-2-a",
+                    "GHG Protocol",
+                    "Kyoto gases"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_102_5_a_through_f",
+                        "description": "102-5-a~f 및 a-i~a-iv, d-i~d-iv 충족",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "comparability_three_periods_a_b_c",
+                        "description": "지침: a·b·c는 당기 및 직전 2기 제시",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_SCOPE1_TOTAL_AND_DECOMPOSITION",
+                        "description": "총량(a)·가스별(b)·생물기원(c)이 요구와 정합하는지",
+                        "expected": "scope1_total_by_gas_biogenic_separated"
+                    },
+                    {
+                        "check_id": "102_5_CONSOLIDATION_CONSISTENT_123",
+                        "description": "연결 방식이 범위 1·2·3에 동일 적용인지",
+                        "expected": "same_consolidation_across_scopes"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 103-2-a",
+                        "description": "에너지 소비와 범위 1 배출의 관계"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-5",
+                "GRI102-5-a",
+                "GRI102-5-a-i",
+                "GRI102-5-a-ii",
+                "GRI102-5-a-iii",
+                "GRI102-5-a-iv",
+                "GRI102-5-b",
+                "GRI102-5-c",
+                "GRI102-5-d",
+                "GRI102-5-d-i",
+                "GRI102-5-d-ii",
+                "GRI102-5-d-iii",
+                "GRI102-5-d-iv",
+                "GRI102-5-e",
+                "GRI102-5-f"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "요구문에 로마숫자만 있는 항목은 해당 하위 dp_id; 지침의 선택적 분해·몬트리온 가스 등은 rulebook만.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_INTRO",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5",
+            "section_name": "공개 102-5 지침 (에너지·배출원·비교가능성)",
+            "rulebook_title": "Guidance for 102-5 — energy link, source types, comparability",
+            "section_content": "범위 1 온실가스 배출에는 GRI 103: Energy 2025 공개 103-2-a에 따라 보고된 에너지 소비로부터 발생한 배출이 포함됩니다.\n\n범위 1 배출은 조직이 소유하거나 통제하는 배출원에서 발생하며, 일반적으로 (1) 고정 연소: 발전·난방·냉방·증기(보일러·가열로·터빈) 및 플레어링 등 (2) 물리·화학 공정: 시멘트·강·알루미늄·암모니아·폐기물 처리 등 (3) 이동 연소: 조직 소유·통제 차량·열차·선박·항공기·버스·승용 등 연료 연소 (4) 무집적(도피성) 배출: 설비 누출, 석탄광 CH₄, 냉매 HFC 등.\n\nGRI 1: Foundation 2021의 비교가능성 원칙에 따라 조직은 102-5-a, 102-5-b, 102-5-c에 대해 당기 및 최소 직전 두 보고기간의 정보를 제시해야 합니다.\n\n부속서 표 4 및 표 5는 요구 정보 제시 방식의 예시입니다.",
+            "paragraph_reference": "Guidance — Disclosure 102-5 (introductory)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "stationary combustion",
+                    "mobile combustion",
+                    "process emissions",
+                    "fugitive",
+                    "GRI 103",
+                    "comparability",
+                    "appendix tables"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "present_three_periods_for_a_b_c",
+                        "description": "102-5-a·b·c 당기+직전 2기",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_COMPARABILITY_THREE_PERIODS",
+                        "description": "a·b·c에 3개 기간(당기+2개 전기) 수치·표시",
+                        "expected": "three_reporting_periods_for_a_b_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-a",
+                "GRI102-5-b",
+                "GRI102-5-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-a",
+            "section_name": "102-5-a에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-a",
+            "section_content": "총 범위 1 온실가스 배출에는 교토의정서가 다루는 7가지 기체가 포함됩니다. 몬트리올 의정서 가스는 별도로 보고할 수 있습니다.\n\n투명성·시간적 비교가능성을 높이기 위해 조직은 총 범위 1 배출을 사업부 또는 시설, 국가, 배출원 유형(고정·이동 연소, 공정, 무집적 등), 활동 유형(물리·화학 처리, 자재·제품·폐기물·종업원 운송, 무집적 등)으로 분해할 수 있습니다. 이러한 분해는 별도 요구 문자가 없으므로 dp_id를 추가하지 않고 본 지침·서술로 처리합니다.",
+            "paragraph_reference": "Guidance — 102-5-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "Kyoto gases",
+                    "Montreal Protocol",
+                    "facility breakdown",
+                    "source type"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_A_KYOTO_SEVEN",
+                        "description": "7가지 기체가 총량 산정에 반영되었는지",
+                        "expected": "seven_kyoto_gases_in_scope1_total"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_A_III",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-a-iii",
+            "section_name": "102-5-a-iii에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-a-iii",
+            "section_content": "온실가스 제거 활동으로부터의 범위 1 온실가스 배출은 102-5-a에 따라 보고합니다.",
+            "paragraph_reference": "Guidance — 102-5-a-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "GHG removals",
+                    "removal activities"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_A_III_REMOVALS_LINK",
+                        "description": "제거 활동 관련 배출이 102-5-a 해석과 연계되는지",
+                        "expected": "removal_related_emissions_aligned_with_102_5_a"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-a",
+                "GRI102-5-a-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_A_IV",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-a-iv",
+            "section_name": "102-5-a-iv에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-a-iv",
+            "section_content": "이전 보고기간과 다른 IPCC GWP 값으로 산정한 정보를 보고하는 경우, 각 기간에 사용한 GWP 값을 보고해야 합니다.",
+            "paragraph_reference": "Guidance — 102-5-a-iv",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "GWP",
+                    "IPCC",
+                    "time series"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "disclose_gwp_per_period_if_changed",
+                        "description": "GWP 체계 변경 시 기간별 적용값 병기",
+                        "mandatory": true,
+                        "condition": "if_gwp_values_differ_from_prior_periods"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_A_IV_GWP_DISCLOSED",
+                        "description": "GWP 변경 시 과거·당기 적용값 모두 제시",
+                        "expected": "period_specific_gwp_values_reported"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-a-iv"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-c",
+            "section_name": "102-5-c에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-c",
+            "section_content": "바이오매스 연소 또는 생분해로부터의 생물 기원 CO₂ 배출은 102-5-c에 따라 별도 보고하며 102-5-a 산정에 포함하지 않습니다. 다만 생물 기원이 아닌 CH₄, N₂O 등 비-CO₂ 배출은 총 범위 1 온실가스 배출의 일부로 포함됩니다.",
+            "paragraph_reference": "Guidance — 102-5-c",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "biogenic CO2",
+                    "CH4",
+                    "N2O",
+                    "double counting"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "exclude_biogenic_co2_from_102_5_a_total",
+                        "description": "생물 기원 CO₂는 c에만 톤으로 집계하고 a 총량과 중복 없음",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_C_NO_DOUBLE_COUNT",
+                        "description": "생물 기원 CO₂가 a 총량과 c 별도 합계에 이중 반영되지 않았는지",
+                        "expected": "biogenic_co2_only_in_c_not_in_a_total"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-a",
+                "GRI102-5-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_D",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-d",
+            "section_name": "102-5-d에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-d",
+            "section_content": "기준년 배출을 재계산한 경우 조직은 재계산 정책에 따라 범위 1 배출을 일관되게 보고해야 합니다.",
+            "paragraph_reference": "Guidance — 102-5-d",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "base year",
+                    "recalculation",
+                    "consistency"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_D_RECALC_CONSISTENT",
+                        "description": "재계산 후 시계열이 정책과 일관되는지",
+                        "expected": "recalculated_scope1_time_series_consistent"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-d"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_D_III",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-d-iii",
+            "section_name": "102-5-d-iii에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-d-iii",
+            "section_content": "기준년 배출 재계산을 유발할 수 있는 예: 구조적 변화(합병·인수·매각·아웃소싱·인소싱 등)로 중대한 영향; 배출계수·활동자료 정확도·계산 방법론 변경; 중대 오류 또는 누적 오류 발견. 오류의 경우 향후 오류 방지를 위해 마련한 절차도 보고합니다. GHG Protocol Corporate Accounting and Reporting Standard [14] 참조.",
+            "paragraph_reference": "Guidance — 102-5-d-iii",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "structural change",
+                    "emission factor",
+                    "methodology",
+                    "error correction"
+                ],
+                "related_concepts": [
+                    "GHG Protocol Corporate Standard"
+                ],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_D_III_RECALC_TRIGGERS",
+                        "description": "재계산 사유가 구조·방법·오류 등 지침 예시와 대응 가능한지",
+                        "expected": "recalculation_context_matches_guidance_triggers"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-d-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_E",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-e",
+            "section_name": "102-5-e에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-e",
+            "section_content": "조직은 연결 방식 선택 이유를 설명해야 합니다. 재무제표에 포함된 법인의 범위 1 총 배출을 보고합니다. 지속가능성 보고 경계가 재무 보고와 다르면 GRI 2(2021) 공개 2-2에 따라 차이를 명시합니다. 재무제표에 포함되지 않은 법인을 포함하는 경우 해당 범위 1 데이터를 별도로 보고합니다(예: 관계회사, 합작, 비연결 종속). 조직 경계 변경이 있으면 보고합니다.",
+            "paragraph_reference": "Guidance — 102-5-e",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "financial reporting boundary",
+                    "GRI 2-2",
+                    "joint venture",
+                    "subsidiary"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "explain_consolidation_choice",
+                        "description": "지분·재무·운영 통제 선택 이유",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "reconcile_sustainability_vs_financial_boundary",
+                        "description": "지속가능성 경계≠재무 경계 시 GRI 2-2에 따라 차이 설명",
+                        "mandatory": true,
+                        "condition": "if_boundaries_differ"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_E_BOUNDARY_EXPLAINED",
+                        "description": "재무·비재무 포함 주체와 별도 보고 요건 충족",
+                        "expected": "consolidation_rationale_and_boundary_differences_clear"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-e"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_5_GUIDANCE_F",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-5-f",
+            "section_name": "102-5-f에 대한 지침",
+            "rulebook_title": "Guidance for 102-5-f",
+            "section_content": "총 범위 1 온실가스 배출 산정 방법론에는 직접 측정, 또는 활동자료(예: 연료 사용량)와 배출계수에 기반한 계산이 포함될 수 있습니다.\n\n조직은 선택한 기준, 방법론, 가정, 계산 도구의 이유를 설명해야 하며, 사용한 배출계수의 출처를 포함해야 합니다. 배출계수는 의무 보고, 자발 프레임워크, 산업단체, 학술 논문, 상업 데이터, 정부 기관 등에서 올 수 있습니다.\n\n조직은 102-5-a 및 102-5-c를 계산할 때 배출계수를 일관되게 적용해야 합니다.",
+            "paragraph_reference": "Guidance — 102-5-f",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "direct measurement",
+                    "activity data",
+                    "emission factor consistency"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "apply_factors_consistently_a_and_c",
+                        "description": "102-5-a·102-5-c 산정에 동일 배출계수 논리 적용",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_5_GUIDE_F_FACTOR_CONSISTENCY_A_C",
+                        "description": "a 총량·c 생물 기원 CO₂ 산정의 계수·방법 일관성",
+                        "expected": "consistent_emission_factors_for_a_and_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-5-f",
+                "GRI102-5-a",
+                "GRI102-5-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6",
+            "section_name": "공개 102-6: 범위 2 온실가스 배출량",
+            "rulebook_title": "Disclosure 102-6: Scope 2 GHG emissions",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 위치 기준 및 해당되는 경우 시장 기준 범위 2 온실가스 배출을 CO₂e(톤)로 보고하며, 산정 시 (i) CO₂·CH₄·N₂O 포함 (ii) 전기 사용 생물 기원 비CO₂ 포함 (iii) 흡수·거래·회피 제외 (iv) 최신 IPCC 100년 GWP;\n\nb. 총 위치 기준 범위 2를 CO₂·CH₄·N₂O별 메트릭 톤 및 CO₂e로 분해;\n\nc. 전기 사용에 따른 위치·해당 시 시장 기준 생물 기원 CO₂를 총 범위 2와 구분하여 톤으로 별도 보고;\n\nd. 계산 기준 연도: (i) 선정 근거 (ii) 기준년 CO₂e—총 범위 2와 생물 기원 CO₂ 구분 (iii) 재계산 유발 중대 변화 맥락 (iv) 재계산 시 이전 보고 기준년 배출;\n\ne. 범위 1·2·3에 일관 적용되는 통합 연결 접근(지분·재무·운영 통제);\n\nf. 기준·방법론·가정·계산 도구 및 배출계수 출처.\n\n지침: 구매·취득 전력·열·냉방·증기는 GRI 103: Energy 2025 공개 103-2-b와 연계. GRI 1 비교가능성에 따라 102-6-a·b·c는 당기 및 직전 2기. 부록 표 4·5. 위치 vs 시장 정의·시장기반 계약·계수 위계·품질기준은 별도 rulebook; 별도 dp_id 없음(추출 가이드 §3.2.1).",
+            "paragraph_reference": "Disclosure 102-6 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "Scope 2",
+                    "location-based",
+                    "market-based",
+                    "tCO2e",
+                    "biogenic CO2",
+                    "GWP",
+                    "consolidation"
+                ],
+                "related_concepts": [
+                    "GRI 103-2-b",
+                    "GHG Protocol Scope 2 Guidance"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_102_6_a_through_f",
+                        "description": "102-6-a~f 및 a-i~a-iv, d-i~d-iv 충족",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "comparability_three_periods_a_b_c",
+                        "description": "지침: a·b·c 당기+직전 2기",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_LB_MB_AND_GAS_BREAKDOWN",
+                        "description": "위치 기준 총량·가스별(b)·해당 시 시장 기준 및 가스별 분해",
+                        "expected": "location_based_and_optional_market_based_complete"
+                    },
+                    {
+                        "check_id": "102_6_BIOGENIC_C_NOT_IN_A_TOTAL",
+                        "description": "생물 기원 CO₂는 c만, a 총량과 이중 없음",
+                        "expected": "biogenic_co2_separate_from_a_total"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 103-2-b",
+                        "description": "구매·취득 전력·열·냉방·증기"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-6",
+                "GRI102-6-a",
+                "GRI102-6-a-i",
+                "GRI102-6-a-ii",
+                "GRI102-6-a-iii",
+                "GRI102-6-a-iv",
+                "GRI102-6-b",
+                "GRI102-6-c",
+                "GRI102-6-d",
+                "GRI102-6-d-i",
+                "GRI102-6-d-ii",
+                "GRI102-6-d-iii",
+                "GRI102-6-d-iv",
+                "GRI102-6-e",
+                "GRI102-6-f"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "시장기반 계약 유형·조달 비중·계수 위계·6대 품질기준은 요구 문자 없음→GUIDANCE_A_MARKET.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_INTRO",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6",
+            "section_name": "공개 102-6 지침 (에너지·비교가능성)",
+            "rulebook_title": "Guidance for 102-6 — energy link and comparability",
+            "section_content": "범위 2 온실가스 배출에는 GRI 103: Energy 2025 공개 103-2-b에 따라 보고된 구매 또는 취득 전력, 난방, 냉방 및 증기 사용으로 인한 배출이 포함됩니다.\n\nGRI 1: Foundation 2021 비교가능성 원칙에 따라 조직은 102-6-a, 102-6-b, 102-6-c에 대해 당기 및 최소 직전 두 보고기간의 정보를 제시해야 합니다.\n\n부속서 표 4 및 표 5는 제시 방식의 예시입니다.",
+            "paragraph_reference": "Guidance — Disclosure 102-6 (introductory)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "purchased electricity",
+                    "steam",
+                    "comparability",
+                    "three reporting periods"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_COMPARABILITY_ABC",
+                        "description": "a·b·c에 당기+직전 2기",
+                        "expected": "three_periods_for_102_6_a_b_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-a",
+                "GRI102-6-b",
+                "GRI102-6-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-a",
+            "section_name": "102-6-a에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-a — location-based and market-based",
+            "section_content": "위치 기반 방법: 에너지 소비가 발생하는 전력망의 평균 온실가스 배출 강도를 사용합니다.\n\n시장 기반 방법: 계약 등을 통해 조직이 의도적으로 선택한 전력의 배출을 반영합니다. 제품·공급자별 데이터가 계약 증서를 통해 이용 가능한 시장에서 적용됩니다.\n\n범위 2 배출에는 CO₂, CH₄, N₂O가 포함됩니다.\n\n구매 전력·열·냉방·증기 생산 과정에서 교토 의정서 기체(HFC, PFC, SF₆, NF₃)가 배출되면 범위 2에 포함할 수 있습니다. 조직은 어떤 기체를 포함했는지 및 총 범위 2 보고와의 관계를 보고합니다. 몬트리온 의정서 가스는 총량과 별도 보고할 수 있습니다.\n\n투명성·비교가능성을 위해 총 범위 2를 사업부·시설, 국가, 배출원 유형(전력·열·냉방·증기), 활동 유형 등으로 분해할 수 있으나 별도 요구 문자가 없어 dp_id를 추가하지 않습니다.",
+            "paragraph_reference": "Guidance — 102-6-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "location-based",
+                    "market-based",
+                    "grid average",
+                    "contractual instruments"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_A_METHODS_EXPLAINED",
+                        "description": "위치·시장 기준 정의가 보고서에 구분되어 설명되는지",
+                        "expected": "lb_mb_methods_disclosed"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_A_MARKET",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-a",
+            "section_name": "102-6-a 시장 기반 산정·계약 보고",
+            "rulebook_title": "Guidance for 102-6-a — market-based factors and contracts",
+            "section_content": "시장 기반 배출 산정 시 배출계수는 다음 순서로 선택: (1) 에너지 속성·인증서 (2) 전력 구매계약(PPA 등) (3) 공급자·유틸리티 특정 계수 (4) 잔여믹스 (5) 기타 지역·하위국가·국가 망 평균. 잔여믹스 정보가 없어 망 평균을 대리로 쓴 경우 그 사실을 보고해야 합니다.\n\n시장 기반 방법 품질 기준(요지): 계약 증서가 GHG 배출 속성을 이전할 것; 보고 주체 또는 대리인이 추적·소멸·취소할 것; 발행·소비 기간과 가능한 한 근접한 시점 연계; 에너지 소비와 동일 시장에서 조달; 유틸리티 특정 계수는 잔여믹스를 ‘공급사 미지정’ 전력에 적용해 산정; 잔여믹스는 다른 주장·공유되지 않은 전력의 GHG 강도를 나타냄.\n\n102-6-a에 따라 시장 기준 범위 2를 보고할 때: 사용한 계약 유형(예: PPA, 유틸 그린 요금제, 비묶음 인증서), 각 유형이 차지하는 총 전력 조달 비율(%)을 보고합니다. 추가로 재생 시설 가동·재가동 시점, 정부 보조 여부, 계약 기간 등을 보고할 수 있습니다.\n\n선택: 재생에너지 발전 시설 건설 투자 결정 전에 해당 계약이 체결되었는지 여부.",
+            "paragraph_reference": "Guidance — 102-6-a (market-based detail)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "residual mix",
+                    "PPA",
+                    "EAC",
+                    "emission factor hierarchy"
+                ],
+                "related_concepts": [
+                    "GHG Protocol Scope 2 Guidance"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_contract_types_and_procurement_pct",
+                        "description": "시장 기준 보고 시 계약 유형 및 총 전력 조달 대비 비율(%)",
+                        "mandatory": true,
+                        "condition": "if_market_based_scope2_reported"
+                    },
+                    {
+                        "action": "disclose_if_grid_average_proxy_for_residual",
+                        "description": "잔여믹스 부재로 망 평균 사용 시 그 사실 명시",
+                        "mandatory": true,
+                        "condition": "if_residual_unavailable"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_MARKET_CONTRACTS_AND_PCT",
+                        "description": "시장 기준 시 계약 유형·조달 비중",
+                        "expected": "contract_types_and_procurement_percentages"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "계약 유형·%는 요구 본문에 하위 문자 없음—본 rulebook으로만 추적.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_A_IV",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-a-iv",
+            "section_name": "102-6-a-iv에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-a-iv (GWP)",
+            "section_content": "이전 보고기간과 다른 IPCC GWP 값으로 산정한 정보를 보고하는 경우, 각 보고기간에 사용한 GWP 값을 보고해야 합니다. (동일 원칙은 102-5-a-iv 등 다른 IPCC GWP 요구 항목에도 적용.)",
+            "paragraph_reference": "Guidance — 102-6-a-iv",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "GWP",
+                    "IPCC",
+                    "time series"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_A_IV_GWP_PERIODS",
+                        "description": "GWP 변경 시 기간별 적용값",
+                        "expected": "gwp_values_per_reporting_period"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-a-iv",
+                "GRI102-5-a-iv"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "기준서가 102-4-a-iv 등으로 동일 문구를 두는 판본은 본 지침과 동일 원칙(별도 dp_id 생성 금지).",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-b",
+            "section_name": "102-6-b에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-b",
+            "section_content": "시장 기반 방법에 따라 총 범위 2 온실가스 배출을 보고하는 경우(102-6-a), 위치 기준 정보에 더하여 시장 기준에 대해서도 CO₂, CH₄, N₂O별 분해를 제공해야 합니다.",
+            "paragraph_reference": "Guidance — 102-6-b",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "market-based",
+                    "gas breakdown",
+                    "location-based"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "market_based_gas_breakdown_when_mb_reported",
+                        "description": "시장 기준 총량 보고 시 가스별 분해를 위치 기준에 추가",
+                        "mandatory": true,
+                        "condition": "if_market_based_scope2_reported"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_B_MB_GAS_SPLIT",
+                        "description": "시장 기준 사용 시 b에 CO₂·CH₄·N₂O 시장 기준 분해 존재",
+                        "expected": "market_based_by_gas_when_applicable"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-b",
+                "GRI102-6-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-c",
+            "section_name": "102-6-c에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-c",
+            "section_content": "전기 사용은 구매 또는 취득 전력, 난방, 냉방, 증기를 의미합니다(GHG Protocol 기업 기준 및 Scope 2 Guidance).\n\n전력 가치사슬에서 바이오매스 연소로부터의 생물 기원 비CO₂ 배출(예: CH₄, N₂O)은 전력 관련 온실가스 배출의 일부로 보고합니다.\n\n전기 사용에 따른 생물 기원 CO₂ 배출은 별도로 보고하며 102-6-a 산정에 포함하지 않습니다.",
+            "paragraph_reference": "Guidance — 102-6-c",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "electricity",
+                    "heat",
+                    "cooling",
+                    "steam",
+                    "biogenic non-CO2"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_C_A_EXCLUSION",
+                        "description": "생물 기원 CO₂가 a 총량에 포함되지 않았는지",
+                        "expected": "biogenic_co2_only_in_c_not_in_a"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-c",
+                "GRI102-6-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_D",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-d",
+            "section_name": "102-6-d에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-d",
+            "section_content": "이전 보고기간 배출 재계산에 관한 자세한 내용은 102-5-d-iii에 대한 지침 및 GHG Protocol Corporate Accounting and Reporting Standard을 참조하십시오.",
+            "paragraph_reference": "Guidance — 102-6-d",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "recalculation",
+                    "base year"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_D_CROSS_REF_5",
+                        "description": "재계산 서술이 102-5-d-iii·GHG Protocol과 연계되는지",
+                        "expected": "recalculation_policy_cross_referenced"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-5-d-iii",
+                        "description": "재계산 맥락"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-6-d",
+                "GRI102-6-d-iii",
+                "GRI102-5-d-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_E",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-e",
+            "section_name": "102-6-e에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-e",
+            "section_content": "연결 방식 선택 이유를 설명합니다. 재무제표에 포함된 법인의 범위 2 총 배출을 보고합니다. 지속가능성 보고의 법인 목록이 재무 보고와 다르면 GRI 2(2021) 공개 2-2에 따라 차이를 설명합니다(GRI 1 Foundation 2021 §5.1 참고). 재무제표에 포함되지 않은 법인을 포함하는 경우(관계회사, 합작, 비연결 종속 등) 해당 범위 2를 별도 보고합니다. 조직 경계 변경을 보고합니다.",
+            "paragraph_reference": "Guidance — 102-6-e",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "GRI 2-2",
+                    "financial statements",
+                    "organizational boundary"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_E_BOUNDARY",
+                        "description": "재무 경계·별도 보고·경계 변경",
+                        "expected": "scope2_boundary_aligned_with_guidance"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-e"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_6_GUIDANCE_F",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-6-f",
+            "section_name": "102-6-f에 대한 지침",
+            "rulebook_title": "Guidance for 102-6-f",
+            "section_content": "선택한 기준, 방법론, 가정, 계산 도구의 이유를 설명하고 배출계수 출처를 포함합니다. 배출계수는 의무·자발 제도, 산업단체, 학술 논문, 상업 데이터, 공급자 등에서 올 수 있습니다.\n\n조직은 102-6-a 및 102-6-c를 계산할 때 배출계수를 일관되게 적용해야 합니다.",
+            "paragraph_reference": "Guidance — 102-6-f",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "emission factors",
+                    "suppliers",
+                    "consistency"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "apply_factors_consistently_102_6_a_and_c",
+                        "description": "102-6-a·102-6-c 산정에 계수 일관 적용",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_6_GUIDE_F_FACTOR_CONSISTENCY_A_C",
+                        "description": "a 총량·c 생물 기원 CO₂ 산정의 계수 일관성",
+                        "expected": "consistent_factors_scope2_a_and_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-6-f",
+                "GRI102-6-a",
+                "GRI102-6-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7",
+            "section_name": "공개 102-7: 범위 3 온실가스 배출량",
+            "rulebook_title": "Disclosure 102-7: Scope 3 GHG emissions",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 총 범위 3 온실가스 배출을 CO₂e(톤)로 보고하며 산정 시 (i) 각 범위 3 범주별 배출 (ii) CO₂·CH₄·N₂O·HFC·PFC·SF₆·NF₃ (iii) 상·하류 바이오매스 연소·생분해 생물 기원 CO₂ 처리(102-7-c와 정합) (iv) 흡수·거래·회피 제외 (v) 최신 IPCC 100년 GWP;\n\nb. 총 범위 3를 15개 범주별 CO₂e로 세분화;\n\nc. 생물 기원 CO₂를 총 범위 3와 구분하여 톤으로 보고하고 15개 범주별로 세분화;\n\nd. 계산 기준 연도: (i) 선정 근거 (ii) 기준년 CO₂e—총 범위 3와 생물 기원 CO₂ 구분 (iii) 재계산 유발 중대 변화 (iv) 재계산 시 이전 보고 기준년 배출;\n\ne. 범위 1·2·3에 일관 적용되는 통합 연결 접근(지분·재무·운영 통제);\n\nf. 보고 기준·방법론·가정·계산 도구 및 배출계수 출처.\n\n지침: 15개 범주는 GHG Protocol Corporate Value Chain (Scope 3) Standard. GRI 103 Energy 2025 공개 103-3-a 연계. GRI 1 비교가능성에 따라 102-7-a·b·c는 당기+직전 2기; 102-7-d는 당기+직전 2기 및 기준년 15 범주별 CO₂e. 범주 번호 1~15·1차 데이터 비율·사업부/국가 등 선택 분해는 별도 dp_id 없음.",
+            "paragraph_reference": "Disclosure 102-7 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "Scope 3",
+                    "value chain",
+                    "15 categories",
+                    "tCO2e",
+                    "biogenic CO2",
+                    "primary data",
+                    "GWP"
+                ],
+                "related_concepts": [
+                    "GHG Protocol Scope 3",
+                    "GRI 103-3-a"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_102_7_a_through_f",
+                        "description": "102-7-a~f 및 a-i~a-v, d-i~d-iv 충족",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "comparability_three_periods_a_b_c",
+                        "description": "지침: a·b·c 당기+직전 2기",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_FIFTEEN_CATEGORIES_BC",
+                        "description": "b·c가 15개 범주를 모두 다루는지",
+                        "expected": "all_scope3_categories_disclosed"
+                    },
+                    {
+                        "check_id": "102_7_BIOGENIC_C_NOT_IN_A",
+                        "description": "생물 기원 CO₂가 a 총량과 c에 이중 없는지",
+                        "expected": "biogenic_co2_separate_inventory_integrity"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI 103-3-a",
+                        "description": "에너지 소비와 범위 3"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-7",
+                "GRI102-7-a",
+                "GRI102-7-a-i",
+                "GRI102-7-a-ii",
+                "GRI102-7-a-iii",
+                "GRI102-7-a-iv",
+                "GRI102-7-a-v",
+                "GRI102-7-b",
+                "GRI102-7-c",
+                "GRI102-7-d",
+                "GRI102-7-d-i",
+                "GRI102-7-d-ii",
+                "GRI102-7-d-iii",
+                "GRI102-7-d-iv",
+                "GRI102-7-e",
+                "GRI102-7-f"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "범주 1~15·1차데이터%-pct 등 임의 접미 dp 금지.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_INTRO",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7",
+            "section_name": "공개 102-7 지침 (정의·에너지·비교가능성)",
+            "rulebook_title": "Guidance for 102-7 — definition and comparability",
+            "section_content": "범위 3 배출은 범위 2에 속하지 않는 간접 배출로서 상류·하류 가치사슬에서 발생합니다. 범위 1·2보다 규모가 클 수 있으며, 구매 자재, 비소유 운송 수단 운송, 제품 사용, 폐기물 등을 포함합니다.\n\n범위 3에는 GRI 103: Energy 2025 공개 103-3-a에 따라 보고된 에너지 소비와 관련된 배출이 포함됩니다.\n\nGRI 1: Foundation 2021 비교가능성 원칙에 따라 조직은 102-7-a, 102-7-b, 102-7-c에 대해 당기 및 최소 직전 두 보고기간의 정보를 제시해야 합니다.\n\n102-7-a 지침: 총 범위 3 온실가스 배출에는 GHG Protocol Corporate Value Chain (Scope 3) Standard의 상류·하류 15개 범주 각각에 대한 배출이 포함됩니다.",
+            "paragraph_reference": "Guidance — Disclosure 102-7 (introductory)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "upstream",
+                    "downstream",
+                    "indirect emissions",
+                    "comparability"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_COMPARABILITY_ABC",
+                        "description": "a·b·c 당기+직전 2기",
+                        "expected": "three_periods_for_102_7_a_b_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-a",
+                "GRI102-7-b",
+                "GRI102-7-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_A_I",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-a-i",
+            "section_name": "102-7-a-i 및 15개 범주·누락·인벤토리",
+            "rulebook_title": "Guidance for 102-7-a-i — categories, omissions, inventory",
+            "section_content": "GHG Protocol Scope 3 Standard 15개 범주(상류): (1) 구매한 상품 및 서비스 (2) 자본재 (3) 연료 및 에너지 관련 활동(범위 1·2 미포함) (4) 상류 운송 및 유통 (5) 운영 과정에서 발생하는 폐기물 (6) 출장 (7) 직원 통근 (8) 상류 임대 자산. (하류): (9) 하류 운송 및 유통 (10) 판매 제품 처리 (11) 판매 제품의 사용 (12) 판매된 제품의 수명 종료 처리 (13) 하류 임대 자산 (14) 프랜차이즈 (15) 투자.\n\n조직은 보고하는 범위 3 범주에 포함되는 활동을 정의해야 합니다.\n\n온실가스 제거 활동으로부터의 범위 3 배출은 102-7-a에 따라 보고합니다.\n\n인벤토리는 배출을 적절히 반영해야 하며, 보고된 범위 3의 관련성을 훼손할 범주를 부적절히 제외해서는 안 됩니다(GHG Protocol Scope 3 Standard).\n\n특정 범주를 102-7-a-i에 포함할 수 없어 정보가 부족한 경우: 사유를 ‘정보 없음/불완전’으로 명시하고, 누락 내용·구체 사유·정보 확보를 위한 조치·예상 시기를 설명합니다(GRI 1 Foundation 2021 요구 6).\n\n구매 전력·열·냉방·증기 등의 생산 과정에서 교토 의정서 기체(HFC, PFC, SF₆, NF₃ 등)가 배출되는 경우, 그 처리 방식을 인벤토리에 반영합니다. 총 범위 3에는 CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃를 포함하며, 어떤 기체를 포함했는지와 총 보고와의 관계를 밝힙니다. 몬트리온 의정서 등 기타 온실가스는 총 범위 3와 별도로 보고할 수 있습니다.\n\n투명성을 위해 총 범위 3를 7가지 기체별로 톤 및 CO₂e로 분해할 수 있습니다.",
+            "paragraph_reference": "Guidance — 102-7-a-i and Scope 3 categories",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "Scope 3 categories",
+                    "omission",
+                    "GRI 1 requirement 6",
+                    "inventory relevance"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "explain_omission_per_gri1_req6",
+                        "description": "범주 누락 시 사유·내용·조치·시기",
+                        "mandatory": true,
+                        "condition": "if_category_emissions_not_included"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_A_I_OMISSION_NARRATIVE",
+                        "description": "정보 부족 범주에 GRI 1 요구 6 형식 설명",
+                        "expected": "omission_justification_complete"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-a-i",
+                "GRI102-7-b",
+                "GRI102-7-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "15개 범주는 명명 목록만; GRI102-7-b-1 형태 dp 생성 금지.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_A_TRANSPARENCY",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-a",
+            "section_name": "102-7-a 추가 세분화(선택)",
+            "rulebook_title": "Guidance for 102-7-a — optional breakdowns",
+            "section_content": "투명성·비교가능성을 위해 총 범위 3 온실가스 배출을 사업부 또는 시설, 국가, 배출원 유형(고정·이동 연소, 공정, 무집적 등), 활동 유형 등으로 세분화할 수 있습니다. 범위 3 회계 품질은 GHG Protocol Corporate Value Chain (Scope 3) Standard[15]를 참조할 수 있습니다.",
+            "paragraph_reference": "Guidance — 102-7-a (optional disaggregation)",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "facility",
+                    "country",
+                    "source type"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_A_OPTIONAL_DISAGG",
+                        "description": "선택 세분화가 있으면 방법·경계가 명확한지",
+                        "expected": "optional_breakdown_documented_if_used"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_A_V",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-a-v",
+            "section_name": "102-7-a-v에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-a-v (GWP)",
+            "section_content": "이전 보고기간과 다른 IPCC GWP 값으로 산정한 정보를 보고하는 경우, 각 보고기간에 사용한 GWP 값을 보고해야 합니다.",
+            "paragraph_reference": "Guidance — 102-7-a-v",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "GWP",
+                    "IPCC"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_A_V_GWP_PERIODS",
+                        "description": "GWP 변경 시 기간별 적용값",
+                        "expected": "gwp_disclosed_per_reporting_period"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-a-v",
+                "GRI102-6-a-iv",
+                "GRI102-5-a-iv"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-b",
+            "section_name": "102-7-b에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-b — primary data ratio",
+            "section_content": "15개 범위 3 범주 각각에 대해 1차 데이터(primary data)를 통해 산정된 온실가스 배출량이 해당 범주 총 배출(CO₂e)에서 차지하는 비율(%)을 보고합니다.\n\n1차 데이터 비율(%) = [1차 데이터로 산정한 해당 범주 배출(mtCO₂e) ÷ 해당 범주 총 배출(mtCO₂e)] × 100.\n\n1차 데이터는 공급자 또는 가치사슬 파트너로부터 직접 확보한 데이터이며, 2차 데이터는 산업 평균·정부 통계 등입니다.",
+            "paragraph_reference": "Guidance — 102-7-b",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "primary data",
+                    "secondary data",
+                    "category-level ratio"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_primary_data_share_per_category",
+                        "description": "15개 범주 각각 1차 데이터 기반 배출 비율(%)",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_B_PRIMARY_RATIO_15",
+                        "description": "각 범주별 1차 데이터 비율 제시 여부",
+                        "expected": "primary_data_pct_for_each_of_15_categories"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-b"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "비율은 별도 dp_id 없이 b·본 rulebook으로 추적.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_C",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-c",
+            "section_name": "102-7-c에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-c",
+            "section_content": "GHG Protocol Corporate Accounting and Reporting Standard[14] 및 Corporate Value Chain (Scope 3) Standard[15]를 참조합니다.\n\n가치사슬에서 바이오매스 연소로부터의 생물 기원 비CO₂ 배출(예: CH₄, N₂O)은 총 범위 3 온실가스 배출의 일부로 보고합니다.\n\n가치사슬에서의 생물 기원 CO₂ 배출은 별도로 보고하며 102-7-a 산정에 포함하지 않습니다.",
+            "paragraph_reference": "Guidance — 102-7-c",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "biogenic CO2",
+                    "biogenic non-CO2",
+                    "value chain"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_C_A_EXCLUSION",
+                        "description": "생물 기원 CO₂가 a 총량에 포함되지 않았는지",
+                        "expected": "biogenic_co2_only_in_c_not_in_a_total"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-c",
+                "GRI102-7-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_D",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-d",
+            "section_name": "102-7-d에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-d",
+            "section_content": "GRI 1: Foundation 2021 비교가능성 원칙에 따라 조직은 102-7-d에 대해 당기 및 최소 직전 두 보고기간의 정보를 제시해야 합니다.\n\n이전 보고기간 배출 재계산에 관한 자세한 내용은 102-5-d-iii에 대한 지침 및 GHG Protocol Corporate Accounting and Reporting Standard[14]를 참조합니다.\n\n기준 연도 배출량은 CO₂e(톤)로 15개 범위 3 범주별로 구분하여 제공해야 합니다.",
+            "paragraph_reference": "Guidance — 102-7-d",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "base year",
+                    "15 categories",
+                    "recalculation"
+                ],
+                "related_concepts": [],
+                "required_actions": [],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_D_THREE_PERIODS",
+                        "description": "d 관련 정보에 당기+직전 2기",
+                        "expected": "three_periods_for_102_7_d"
+                    },
+                    {
+                        "check_id": "102_7_GUIDE_D_BASEYEAR_15CAT",
+                        "description": "기준년 배출이 15 범주 CO₂e로 제시되는지",
+                        "expected": "base_year_breakdown_by_15_categories"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-5-d-iii",
+                        "description": "재계산 맥락"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-7-d",
+                "GRI102-7-d-ii",
+                "GRI102-7-d-iii",
+                "GRI102-5-d-iii"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_E",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-e",
+            "section_name": "102-7-e에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-e",
+            "section_content": "연결 방식 선택 이유를 설명합니다. 조직 경계에 변화가 있으면 보고합니다.",
+            "paragraph_reference": "Guidance — 102-7-e",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "consolidation",
+                    "organizational boundary"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "explain_consolidation_choice_scope3",
+                        "description": "범위 3 통합 접근 선택 이유",
+                        "mandatory": true
+                    },
+                    {
+                        "action": "report_boundary_changes_scope3",
+                        "description": "경계 변경 보고",
+                        "mandatory": true,
+                        "condition": "if_boundary_changed"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_E_RATIONALE_AND_CHANGES",
+                        "description": "연결 이유·경계 변경",
+                        "expected": "consolidation_rationale_and_boundary_changes"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-e"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_7_GUIDANCE_F",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-7-f",
+            "section_name": "102-7-f에 대한 지침",
+            "rulebook_title": "Guidance for 102-7-f",
+            "section_content": "선택한 기준, 방법론, 가정, 계산 도구의 이유를 설명하고 배출계수 출처를 포함합니다. 배출계수는 의무·자발 제도, 산업단체, 학술 논문, 상업 데이터, 공급자 등에서 올 수 있습니다.\n\n조직은 102-7-a 및 102-7-c를 계산할 때 배출계수를 일관되게 적용해야 합니다.",
+            "paragraph_reference": "Guidance — 102-7-f",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "emission factors",
+                    "methodology",
+                    "suppliers"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "apply_factors_consistently_102_7_a_and_c",
+                        "description": "102-7-a·102-7-c 산정에 계수 일관 적용",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_7_GUIDE_F_FACTOR_CONSISTENCY_A_C",
+                        "description": "a 총량·c 생물 기원 CO₂ 산정의 계수 일관성",
+                        "expected": "consistent_factors_scope3_a_and_c"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-7-f",
+                "GRI102-7-a",
+                "GRI102-7-c"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_8",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-8",
+            "section_name": "공개 102-8: 온실가스 배출 강도",
+            "rulebook_title": "Disclosure 102-8: GHG emissions intensity",
+            "section_content": "조직은 다음을 수행해야 합니다:\n\na. 온실가스 배출 강도 비율을 보고하며, 비율 계산에 사용한 총 온실가스 배출량(분자)을 CO₂e(톤)로 표시하고 조직별 측정 기준(분모)을 포함할 것;\n\nb. 강도 비율에 포함된 온실가스 배출 범위를 범위 1, 범위 2 또는 범위 3으로 구분하여 보고할 것.\n\n지침: 강도는 총 배출을 조직별 지표로 나눈 값이며, 환경 성과 추적 및 총 배출(공개 102-5·102-6·102-7)과 함께 제시 시 조직 간 비교에 도움이 될 수 있습니다. 분모 유형·세부 분해·생물 기원 CO₂ 포함 여부는 별도 요구 문자 없음→GUIDANCE_A·B.",
+            "paragraph_reference": "Disclosure 102-8 Requirements",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "key_terms": [
+                    "emissions intensity",
+                    "numerator",
+                    "denominator",
+                    "tCO2e",
+                    "Scope 1 2 3"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "report_102_8_a_and_b",
+                        "description": "102-8-a·b 충족",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_8_INTENSITY_NUM_DENOM_SCOPES",
+                        "description": "강도·CO₂e 분자·분모 정의·포함 범위(1/2/3)",
+                        "expected": "intensity_ratio_fully_specified"
+                    }
+                ],
+                "cross_references": [
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-5",
+                        "description": "총 범위 1 배출"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-6",
+                        "description": "총 범위 2 배출"
+                    },
+                    {
+                        "reference_type": "see_also",
+                        "target": "GRI102-7",
+                        "description": "총 범위 3 배출"
+                    }
+                ]
+            },
+            "related_dp_ids": [
+                "GRI102-8",
+                "GRI102-8-a",
+                "GRI102-8-b",
+                "GRI102-5",
+                "GRI102-6",
+                "GRI102-7"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": true,
+            "effective_date": "2024-01-01",
+            "mapping_notes": "요구는 a·b만; 지침의 분모 종류·세분은 dp 추가 금지.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_8_GUIDANCE_A",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-8-a",
+            "section_name": "102-8-a에 대한 지침",
+            "rulebook_title": "Guidance for 102-8-a",
+            "section_content": "강도 비율 예: (총) 범위 1 배출(CO₂e) / 정규직 환산 100명; 총 범위 2 배출(CO₂e) / 매출 100만 유로.\n\n분모(조직별 측정 기준) 예: 제품 단위; 생산량(톤·리터·MWh 등); 규모(바닥면적 m² 등); 정규직 환산(FTE) 수; 금전 단위(매출·판매액 등).\n\n조직은 분자와 분모 모두에 대해 일관된 경계를 선택해야 합니다.\n\n투명성·비교가능성을 높이기 위해 강도를 사업부 또는 시설, 국가, 배출원 유형(가열로·폐기물 처리·이동 연소 등), 활동 유형, 범위 3 범주 등으로 분해하여 제공할 수 있으나 별도 dp_id를 만들지 않습니다.",
+            "paragraph_reference": "Guidance — 102-8-a",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "FTE",
+                    "revenue",
+                    "production volume",
+                    "consistent boundary"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "consistent_numerator_denominator_boundary",
+                        "description": "분자·분모 동일 조직·운영 경계",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_8_GUIDE_A_BOUNDARY_CONSISTENT",
+                        "description": "강도 분자·분모 경계 일치 설명",
+                        "expected": "aligned_boundaries_for_intensity"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-8-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI102_8_GUIDANCE_B",
+            "standard_id": "GRI102",
+            "primary_dp_id": "GRI102-8-b",
+            "section_name": "102-8-b에 대한 지침",
+            "rulebook_title": "Guidance for 102-8-b",
+            "section_content": "조직은 범위 1, 범위 2 또는 범위 3에 대해 각각 강도 비율을 보고할 수 있으며, 범위 1과 2를 결합하여 보고할 수 있습니다.\n\n조직은 분자에 생물 기원 CO₂ 배출량을 포함했는지 여부를 보고해야 합니다.",
+            "paragraph_reference": "Guidance — 102-8-b",
+            "validation_rules": {
+                "section_type": "guidance",
+                "key_terms": [
+                    "Scope 1",
+                    "Scope 2",
+                    "Scope 3",
+                    "combined Scope 1 and 2",
+                    "biogenic CO2"
+                ],
+                "related_concepts": [],
+                "required_actions": [
+                    {
+                        "action": "disclose_biogenic_co2_in_numerator",
+                        "description": "분자에 생물 기원 CO₂ 포함 여부 명시",
+                        "mandatory": true
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "102_8_GUIDE_B_BIOGENIC_IN_NUMERATOR",
+                        "description": "생물 기원 CO₂ 분자 포함 여부",
+                        "expected": "biogenic_co2_inclusion_stated"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI102-8-b",
+                "GRI102-8-a"
+            ],
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2024-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        }
+    ]
+}

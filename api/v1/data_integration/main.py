@@ -31,6 +31,17 @@ except ImportError:
 from fastapi import FastAPI
 
 from backend.api.v1.data_integration.routes import router as data_integration_router
+from backend.core.config.settings import get_settings
+
+
+def _mcp_index_bind() -> tuple[str, int, str]:
+    """자동 기동 MCP 바인딩: MCP_SR_INDEX_TOOLS_* 우선, 없으면 공통 MCP_HTTP_* (core settings)."""
+    s = get_settings()
+    host = os.environ.get("MCP_SR_INDEX_TOOLS_HOST", "").strip() or s.mcp_http_host
+    port_s = os.environ.get("MCP_SR_INDEX_TOOLS_PORT", "").strip()
+    port = int(port_s) if port_s else s.mcp_http_port
+    path = os.environ.get("MCP_SR_INDEX_TOOLS_PATH", "").strip() or s.mcp_http_path
+    return host, port, path
 
 # 자동 기동한 MCP Index 서버 프로세스 (shutdown 시 종료용)
 _mcp_index_server_process: subprocess.Popen | None = None
@@ -67,10 +78,11 @@ async def _lifespan(app: FastAPI):
         masked_url = "(unset)"
 
     # 런타임 환경 확인용 시작 로그 (민감정보는 값 대신 설정 여부만 출력)
+    llama_set = bool(get_settings().llama_cloud_api_key.strip())
     print(
         "[DataIntegration] env check: "
         f"MCP_SR_INDEX_TOOLS_URL={'set' if url_raw else 'unset'}({masked_url}), "
-        f"LLAMA_CLOUD_API_KEY={'set' if os.environ.get('LLAMA_CLOUD_API_KEY', '').strip() else 'unset'}",
+        f"LLAMA_CLOUD_API_KEY={'set' if llama_set else 'unset'}",
         file=sys.stderr,
         flush=True,
     )
@@ -82,9 +94,7 @@ async def _lifespan(app: FastAPI):
         return
 
     # 자동 기동: 서브프로세스로 sr_index_tools_server.py 실행 (Streamable HTTP)
-    mcp_host = os.environ.get("MCP_SR_INDEX_TOOLS_HOST", "127.0.0.1")
-    mcp_port = int(os.environ.get("MCP_SR_INDEX_TOOLS_PORT", "8000"))
-    mcp_path = os.environ.get("MCP_SR_INDEX_TOOLS_PATH", "/mcp")
+    mcp_host, mcp_port, mcp_path = _mcp_index_bind()
     url = f"http://{mcp_host}:{mcp_port}{mcp_path}"
 
     if not _MCP_INDEX_SERVER_SCRIPT.exists():
@@ -139,13 +149,15 @@ app = FastAPI(
 app.include_router(data_integration_router)
 
 
-def run(host: str = "0.0.0.0", port: int = 9002) -> None:
+def run(host: str = "0.0.0.0", port: int | None = None) -> None:
     """ASGI 앱을 실행합니다."""
     import uvicorn
-    reload = os.getenv("DATA_INTEGRATION_RELOAD", "").lower() in ("1", "true", "yes")
+
+    if port is None:
+        port = get_settings().data_integration_port
+    reload = get_settings().data_integration_reload
     uvicorn.run(app, host=host, port=port, reload=reload)
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", "9002"))
-    run(port=port)
+    run()

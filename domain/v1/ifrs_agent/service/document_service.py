@@ -6,11 +6,12 @@ from typing import List, Optional, Dict, Any
 from pathlib import Path
 from loguru import logger
 
-from ifrs_agent.service.pdf_parser_service import PDFParserService
-from ifrs_agent.service.embedding_service import EmbeddingService
-from ifrs_agent.service.image_caption_service import ImageCaptionService
-from ifrs_agent.repository.vector_store_repository import VectorStoreRepository
-from ifrs_agent.config.settings import get_settings
+from backend.domain.v1.ifrs_agent.repository.vector_store_repository import VectorStoreRepository
+
+from .embedding_service import EmbeddingService
+from .image_caption_service import ImageCaptionService
+from .pdf_parser_service import PDFParserService
+from backend.core.config.settings import get_settings
 
 
 class DocumentService:

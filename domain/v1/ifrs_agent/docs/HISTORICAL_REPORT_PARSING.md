@@ -114,7 +114,6 @@ CREATE TABLE historical_sr_reports (
     company_id UUID NOT NULL,
     report_year INTEGER NOT NULL,
     report_name TEXT NOT NULL,
-    pdf_file_path TEXT,
     source TEXT NOT NULL,  -- 'dart' | 'manual_upload'
     total_pages INTEGER,
     index_page_numbers INTEGER[],  -- Index 페이지 번호들 [146, 147]
@@ -203,9 +202,8 @@ CREATE TABLE sr_report_images (
     page_number INTEGER NOT NULL,
     image_index INTEGER,  -- 페이지 내 이미지 순서 (0-based)
     
-    -- ===== 이미지 파일 =====
-    image_file_path TEXT NOT NULL,  -- 저장된 이미지 파일 경로
-    image_file_size BIGINT,  -- 파일 크기 (bytes)
+    -- ===== 이미지 메타 (로컬 파일 경로 미저장) =====
+    -- 바이트 크기는 extracted_data.size_bytes 또는 image_blob 길이로 표현 (image_file_size 컬럼 제거)
     image_width INTEGER,  -- 이미지 너비 (px)
     image_height INTEGER,  -- 이미지 높이 (px)
     
@@ -585,7 +583,6 @@ def _extract_images_from_page(
             image_info = {
                 "page_number": page_number,
                 "image_index": start_index + len(images),
-                "image_file_path": image_path,
                 "image_width": item.image.width if hasattr(item.image, 'width') else None,
                 "image_height": item.image.height if hasattr(item.image, 'height') else None,
                 "image_bytes": image_bytes  # 캡셔닝용
@@ -902,7 +899,6 @@ async def process_images(
             "report_id": report_id,
             "page_number": img_info["page_number"],
             "image_index": img_info["image_index"],
-            "image_file_path": img_info["image_file_path"],
             "image_width": img_info.get("image_width"),
             "image_height": img_info.get("image_height"),
             "image_type": caption_result["image_type"],
@@ -994,10 +990,10 @@ class HistoricalReportService:
             await self.db.execute(
                 """
                 INSERT INTO sr_report_images
-                (report_id, page_number, image_index, image_file_path,
+                (report_id, page_number, image_index,
                  image_width, image_height, image_type, caption_text,
                  caption_confidence, extracted_data)
-                VALUES (:report_id, :page_number, :image_index, :file_path,
+                VALUES (:report_id, :page_number, :image_index,
                         :width, :height, :image_type, :caption,
                         :confidence, :extracted_data)
                 """,
@@ -1005,7 +1001,6 @@ class HistoricalReportService:
                     "report_id": img_data["report_id"],
                     "page_number": img_data["page_number"],
                     "image_index": img_data["image_index"],
-                    "file_path": img_data["image_file_path"],
                     "width": img_data.get("image_width"),
                     "height": img_data.get("image_height"),
                     "image_type": img_data["image_type"],
@@ -1080,7 +1075,6 @@ async def find_images_by_dp(
     query = """
         SELECT 
             img.page_number,
-            img.image_file_path,
             img.caption_text,
             img.image_type,
             img.extracted_data,
@@ -1177,7 +1171,7 @@ images = await service.find_images_by_dp(
 #     {
 #         "report_year": 2023,
 #         "page_number": 131,
-#         "image_file_path": "data/images/sr_reports/report_131_img_0.png",
+#         (로컬 image_file_path 컬럼 없음 — 캡션·extracted_data 등으로 식별)
 #         "caption_text": "막대 그래프: 2022-2024년 Scope 1 배출량 추이",
 #         "image_type": "chart",
 #         "extracted_data": {

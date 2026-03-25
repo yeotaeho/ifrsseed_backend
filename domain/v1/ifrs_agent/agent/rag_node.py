@@ -35,7 +35,7 @@ except ImportError:
 
 from ifrs_agent.agent.base import BaseNode
 from ifrs_agent.orchestrator.state import IFRSAgentState
-from ifrs_agent.config.settings import get_settings
+from backend.core.config.settings import get_settings
 from ifrs_agent.repository.vector_store_repository import VectorStoreRepository
 from ifrs_agent.service.embedding_service import EmbeddingService
 from ifrs_agent.service.document_service import DocumentService

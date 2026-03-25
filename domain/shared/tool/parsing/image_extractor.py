@@ -249,3 +249,155 @@ def extract_report_images(
         "error": None,
         "skipped_pages": skipped_pages,
     }
+
+
+def _mime_from_ext(ext: str) -> str:
+    e = (ext or "").lower().lstrip(".")
+    return {
+        "png": "image/png",
+        "jpeg": "image/jpeg",
+        "jpg": "image/jpeg",
+        "jpx": "image/jpx",
+        "jp2": "image/jp2",
+        "gif": "image/gif",
+        "bmp": "image/bmp",
+        "tiff": "image/tiff",
+        "webp": "image/webp",
+    }.get(e, "application/octet-stream")
+
+
+def extract_report_images_to_memory(
+    pdf_bytes: bytes,
+    pages: List[int],
+    report_id: str,
+    *,
+    index_page_numbers: Optional[List[int]] = None,
+    skip_index_pages: Optional[bool] = None,
+) -> Dict[str, Any]:
+    """
+    extract_report_images 와 동일 필터·휴리스틱이나 디스크에 쓰지 않고
+    각 항목에 image_bytes·mime_type 를 담아 반환합니다.
+
+    Returns:
+        success, images_by_page (항목에 path 없음), error, skipped_pages
+    """
+    if not PYMUPDF_AVAILABLE:
+        return {
+            "success": False,
+            "images_by_page": {},
+            "error": "PyMuPDF(pymupdf) 미설치",
+            "skipped_pages": [],
+        }
+
+    if skip_index_pages is None:
+        skip_index_pages = _env_bool("SR_IMAGE_SKIP_INDEX_PAGES", True)
+
+    index_set: Set[int] = set()
+    for x in index_page_numbers or []:
+        try:
+            index_set.add(int(x))
+        except (TypeError, ValueError):
+            continue
+
+    try:
+        uuid.UUID(str(report_id))
+    except (ValueError, TypeError):
+        return {
+            "success": False,
+            "images_by_page": {},
+            "error": f"유효하지 않은 report_id: {report_id!r}",
+            "skipped_pages": [],
+        }
+
+    min_edge = _min_edge()
+    min_image_bytes = _min_bytes()
+    max_edge = _max_edge_limit()
+    images_by_page: Dict[int, List[Dict[str, Any]]] = {}
+    skipped_pages: List[int] = []
+
+    try:
+        doc = open_pdf(pdf_bytes)
+    except Exception as e:
+        logger.exception("[image_extractor] PDF 열기 실패")
+        return {
+            "success": False,
+            "images_by_page": {},
+            "error": str(e),
+            "skipped_pages": [],
+        }
+
+    try:
+        for pn in pages:
+            try:
+                pno = int(pn)
+            except (TypeError, ValueError):
+                continue
+            if pno < 1 or pno > doc.page_count:
+                continue
+            if skip_index_pages and pno in index_set:
+                skipped_pages.append(pno)
+                continue
+
+            page = doc.load_page(pno - 1)
+            imglist = page.get_images(full=True)
+            seen_xref: Set[int] = set()
+            page_entries: List[Dict[str, Any]] = []
+            local_idx = 0
+
+            for img in imglist:
+                xref = img[0]
+                if xref in seen_xref:
+                    continue
+                seen_xref.add(xref)
+
+                try:
+                    info = doc.extract_image(xref)
+                except Exception as e:
+                    logger.debug("[image_extractor] extract_image xref={} page={} err={}", xref, pno, e)
+                    continue
+
+                raw = info.get("image") or b""
+                w = int(info.get("width") or 0)
+                h = int(info.get("height") or 0)
+                ext = (info.get("ext") or "png").lower()
+                if ext not in ("png", "jpeg", "jpg", "jpx", "jp2", "gif", "bmp", "tiff", "webp"):
+                    ext = "png"
+
+                raw, ext, w, h = _maybe_downscale_image(raw, w, h, ext, max_edge)
+
+                if len(raw) < min_image_bytes:
+                    continue
+                if w > 0 and h > 0 and (w < min_edge or h < min_edge):
+                    continue
+
+                mime = _mime_from_ext(ext)
+                page_entries.append({
+                    "image_bytes": raw,
+                    "mime_type": mime,
+                    "width": w or None,
+                    "height": h or None,
+                    "size_bytes": len(raw),
+                    "image_index": local_idx,
+                })
+                local_idx += 1
+
+            if page_entries:
+                images_by_page[pno] = page_entries
+    finally:
+        doc.close()
+
+    if _env_bool("SR_IMAGE_DEBUG", False):
+        total = sum(len(v) for v in images_by_page.values())
+        logger.info(
+            "[SR_IMAGE] 메모리 추출 완료 | pages_with_images={} total_images={} skipped_index_pages={}",
+            len(images_by_page),
+            total,
+            len(skipped_pages),
+        )
+
+    return {
+        "success": True,
+        "images_by_page": images_by_page,
+        "error": None,
+        "skipped_pages": skipped_pages,
+    }

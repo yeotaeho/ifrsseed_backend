@@ -34,7 +34,7 @@ curl -X POST http://localhost:8000/data-integration/sr-agent/extract-and-save/bo
   -d "{\"report_id\": \"<uuid>\", \"pdf_bytes_b64\": null}"
 ```
 
-`pdf_bytes_b64`가 없으면 DB `historical_sr_reports.pdf_file_path` 로컬 파일을 읽습니다.
+`pdf_bytes_b64`가 없으면 **400** — DB에 PDF 로컬 경로 컬럼은 없습니다. `body-agentic` 호출 시 **base64 PDF를 넣으세요.**
 
 **LangGraph + SRAgent fetch(권장, `pdf_bytes_b64` 불필요)**  
 `report_id`가 있으면 워크플로가 **메타데이터 INSERT를 건너뛰고**, 검색·다운로드한 PDF로 바로 본문 저장합니다.

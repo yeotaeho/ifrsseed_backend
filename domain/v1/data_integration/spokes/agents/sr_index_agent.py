@@ -11,10 +11,10 @@ from __future__ import annotations
 import asyncio
 import base64
 import json
-import os
 from typing import Any, Dict, List, Optional, TypedDict
 
 from loguru import logger
+from backend.core.config.settings import get_settings
 from langchain_core.messages import HumanMessage, SystemMessage, ToolMessage
 from langchain_openai import ChatOpenAI
 
@@ -59,7 +59,7 @@ class SRIndexAgent:
         model_name: str = "gpt-5-mini",
         max_iterations: int = 50,
     ) -> None:
-        api_key = openai_api_key or os.getenv("OPENAI_API_KEY", "")
+        api_key = openai_api_key or get_settings().openai_api_key
         if not api_key:
             raise ValueError("OPENAI_API_KEY가 설정되지 않았습니다.")
 

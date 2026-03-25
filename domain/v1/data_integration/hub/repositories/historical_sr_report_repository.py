@@ -51,7 +51,6 @@ class HistoricalSRReportRepository:
                 company_id=company_id,
                 report_year=int(row["report_year"]),
                 report_name=str(row["report_name"]),
-                pdf_file_path=row.get("pdf_file_path"),
                 source=str(row.get("source", "sr_agent")),
                 total_pages=row.get("total_pages"),
                 index_page_numbers=row.get("index_page_numbers"),

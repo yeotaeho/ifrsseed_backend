@@ -43,13 +43,11 @@ class PDFParser:
 
             report_id = str(uuid.uuid4())
             report_name = f"{company} 지속가능경영보고서 {year}"
-            pdf_file_path = None if isinstance(pdf_path_or_bytes, bytes) else pdf_path_or_bytes
             historical_sr_reports = {
                 "id": report_id,
                 "company_id": None,
                 "report_year": year,
                 "report_name": report_name,
-                "pdf_file_path": pdf_file_path,
                 "source": "sr_agent",
                 "total_pages": total_pages,
                 "index_page_numbers": index_page_numbers,

@@ -19,6 +19,7 @@ except ImportError:
 from fastapi import FastAPI
 
 from backend.api.v1.data_integration.routes import router as data_integration_router
+from backend.api.v1.esg_data.routes import router as esg_data_router
 
 app = FastAPI(
     title="Backend API",
@@ -27,6 +28,7 @@ app = FastAPI(
 )
 
 app.include_router(data_integration_router)
+app.include_router(esg_data_router)
 
 
 def run(host: str = "0.0.0.0", port: int = 9001) -> None:

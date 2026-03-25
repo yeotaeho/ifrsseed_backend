@@ -36,8 +36,10 @@ def _load_env() -> None:
 
 _load_env()
 
+from backend.core.config.settings import get_settings
+
 # LlamaParse 사용 가능 여부 시작 시 한 번 로그 (키 값 노출 없음)
-_llama_key_set = bool(os.getenv("LLAMA_CLOUD_API_KEY", "").strip())
+_llama_key_set = bool(get_settings().llama_cloud_api_key.strip())
 print(
     f"[MCP] LLAMA_CLOUD_API_KEY {'설정됨' if _llama_key_set else '미설정 (LlamaParse 비사용)'}",
     file=sys.stderr,
@@ -120,10 +122,12 @@ async def correct_anomalous_rows_with_md_tool(anomalous_items: list, page_markdo
 
 if __name__ == "__main__":
     import os
+
     if os.environ.get("MCP_HTTP") or os.environ.get("MCP_SR_INDEX_TOOLS_HTTP"):
-        port = int(os.environ.get("MCP_HTTP_PORT", "8000"))
-        path = os.environ.get("MCP_HTTP_PATH", "/mcp")
-        host = os.environ.get("MCP_HTTP_HOST", "127.0.0.1")
+        s = get_settings()
+        port = int(os.environ.get("MCP_HTTP_PORT", str(s.mcp_http_port)))
+        path = os.environ.get("MCP_HTTP_PATH", s.mcp_http_path)
+        host = os.environ.get("MCP_HTTP_HOST", s.mcp_http_host)
         mcp.run(
             transport="streamable-http",
             host=host,

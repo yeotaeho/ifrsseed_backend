@@ -21,7 +21,6 @@ class HistoricalSRReport(Base):
     company_id = Column(UUID(as_uuid=True), nullable=True, index=True)
     report_year = Column(Integer, nullable=False, index=True)
     report_name = Column(Text, nullable=False)
-    pdf_file_path = Column(Text, nullable=True)
     source = Column(Text, nullable=False)
     total_pages = Column(Integer, nullable=True)
     index_page_numbers = Column(ARRAY(Integer), nullable=True)

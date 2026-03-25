@@ -22,7 +22,7 @@ except ImportError:
 
 from ifrs_agent.orchestrator.state import IFRSAgentState
 from ifrs_agent.orchestrator.supervisor import SupervisorAgent
-from ifrs_agent.config.settings import get_settings
+from backend.core.config.settings import get_settings
 # 노드는 MCP 서버로 실행되므로 import 불필요
 
 

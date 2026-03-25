@@ -10,6 +10,9 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Any, List, Optional, Union
 from loguru import logger
+
+from backend.core.config.settings import get_settings
+
 from .path_resolver import find_repo_root
 
 try:
@@ -29,16 +32,41 @@ except ImportError:
 _INFRA_DIR = Path(__file__).resolve().parent
 _REPO_ROOT = find_repo_root(Path(__file__))
 _TOOL_DIR = _REPO_ROOT / "backend" / "domain" / "shared" / "tool"
-_SR_SERVERS_IN_INFRA = {"sr_tools", "sr_index_tools", "sr_body_tools"}
-_INPROCESS_ELIGIBLE_SERVERS = {"sr_tools", "sr_index_tools", "sr_body_tools"}
+_SR_SERVERS_IN_INFRA = {"sr_tools", "sr_index_tools", "sr_body_tools", "sr_images_tools"}
+_INPROCESS_ELIGIBLE_SERVERS = {"sr_tools", "sr_index_tools", "sr_body_tools", "sr_images_tools"}
 
-# Streamable HTTP 사용 시 URL 환경 변수 (설정 시 stdio 대신 HTTP 연결)
-_MCP_URL_ENV_KEYS: dict[str, str] = {
+# Streamable HTTP: 기본은 `get_settings()`(.env 반영), 런타임에만 바뀌는 값은 os.environ 우선
+# (예: api `data_integration/main.py` lifespan 이 MCP_SR_INDEX_TOOLS_URL 을 주입).
+_MCP_STREAMABLE_HTTP_SERVERS = frozenset(
+    {"sr_index_tools", "sr_tools", "sr_body_tools", "sr_images_tools", "web_search"}
+)
+_MCP_SERVER_ENV_KEYS: dict[str, str] = {
     "sr_index_tools": "MCP_SR_INDEX_TOOLS_URL",
     "sr_tools": "MCP_SR_TOOLS_URL",
     "sr_body_tools": "MCP_SR_BODY_TOOLS_URL",
+    "sr_images_tools": "MCP_SR_IMAGES_TOOLS_URL",
     "web_search": "MCP_WEB_SEARCH_URL",
 }
+
+
+def _remote_url_from_settings(server_name: str) -> str:
+    if server_name not in _MCP_STREAMABLE_HTTP_SERVERS:
+        return ""
+    env_key = _MCP_SERVER_ENV_KEYS.get(server_name)
+    if env_key:
+        live = os.environ.get(env_key, "").strip()
+        if live:
+            return live
+    s = get_settings()
+    mapping: dict[str, str] = {
+        "sr_index_tools": s.mcp_sr_index_tools_url,
+        "sr_tools": s.mcp_sr_tools_url,
+        "sr_body_tools": s.mcp_sr_body_tools_url,
+        "sr_images_tools": s.mcp_sr_images_tools_url,
+        "web_search": s.mcp_web_search_url,
+    }
+    return (mapping.get(server_name) or "").strip()
+
 
 # Python 3.11+ TaskGroup 실패 등 (except Exception 에 안 잡힘)
 # ExceptionGroup 만이 아니라 BaseExceptionGroup 으로 잡아 타입/백포트 차이를 흡수
@@ -287,8 +315,7 @@ class MCPClient:
         return self.tool_dir / f"{name}_server.py"
 
     def _has_remote_url(self, server_name: str) -> bool:
-        env_key = _MCP_URL_ENV_KEYS.get(server_name)
-        return bool(env_key and os.environ.get(env_key, "").strip())
+        return bool(_remote_url_from_settings(server_name))
 
     def should_use_inprocess(self, server_name: str) -> bool:
         """
@@ -296,7 +323,7 @@ class MCPClient:
         - URL이 설정되어 있으면 외부 통합(HTTP) 우선
         - MCP_INTERNAL_TRANSPORT=stdio 로 강제 시 in-process 비활성화
         """
-        policy = os.getenv("MCP_INTERNAL_TRANSPORT", "inprocess").strip().lower()
+        policy = get_settings().mcp_internal_transport.strip().lower()
         if policy == "stdio":
             return False
         if server_name not in _INPROCESS_ELIGIBLE_SERVERS:
@@ -403,6 +430,94 @@ class MCPClient:
                     "save_sr_report_body_batch_tool",
                     save_sr_report_body_batch,
                     "본문 데이터를 배치로 저장합니다.",
+                ),
+            ]
+        if server_name == "sr_images_tools":
+            import base64
+            import json
+
+            from backend.domain.shared.tool.parsing.image_extractor import extract_report_images
+            from backend.domain.shared.tool.sr_report.images import map_extracted_images_to_sr_report_rows
+            from backend.domain.shared.tool.sr_report.index.sr_index_agent_tools import get_pdf_metadata
+            from backend.domain.shared.tool.sr_report.save.sr_save_tools import (
+                save_sr_report_images_batch,
+            )
+
+            def _get_pdf_metadata_tool(report_id: str) -> str:
+                result = get_pdf_metadata(report_id)
+                return json.dumps(result, ensure_ascii=False)
+
+            def _extract_report_images_tool(
+                pdf_bytes_b64: str,
+                pages: list,
+                output_dir: str,
+                report_id: str,
+                index_page_numbers: Optional[list] = None,
+            ) -> str:
+                pdf_bytes = base64.b64decode(pdf_bytes_b64)
+                idx = index_page_numbers if index_page_numbers is not None else []
+                result = extract_report_images(
+                    pdf_bytes,
+                    list(pages),
+                    output_dir,
+                    report_id,
+                    index_page_numbers=idx,
+                )
+                return json.dumps(result, ensure_ascii=False)
+
+            def _norm_images_by_page(d: Any) -> dict[int, list]:
+                out: dict[int, list] = {}
+                for k, v in (d or {}).items():
+                    try:
+                        pk = int(k)
+                    except (TypeError, ValueError):
+                        continue
+                    if isinstance(v, list):
+                        out[pk] = v
+                return out
+
+            def _map_extracted_images_to_sr_report_rows_tool(
+                images_by_page: dict,
+                report_id: str,
+            ) -> str:
+                rows = map_extracted_images_to_sr_report_rows(
+                    report_id,
+                    _norm_images_by_page(images_by_page),
+                )
+                return json.dumps(rows, ensure_ascii=False)
+
+            def _save_sr_report_images_batch_tool(
+                report_id: str,
+                rows: list,
+                replace_existing: bool = True,
+            ) -> str:
+                result = save_sr_report_images_batch(
+                    report_id,
+                    list(rows),
+                    replace_existing=replace_existing,
+                )
+                return json.dumps(result, ensure_ascii=False)
+
+            return [
+                _wrap_inprocess_tool(
+                    "get_pdf_metadata_tool",
+                    _get_pdf_metadata_tool,
+                    "DB에서 SR 보고서 메타데이터를 조회합니다.",
+                ),
+                _wrap_inprocess_tool(
+                    "extract_report_images_tool",
+                    _extract_report_images_tool,
+                    "PDF에서 지정 페이지 임베디드 이미지를 추출합니다.",
+                ),
+                _wrap_inprocess_tool(
+                    "map_extracted_images_to_sr_report_rows_tool",
+                    _map_extracted_images_to_sr_report_rows_tool,
+                    "추출 결과를 sr_report_images 저장용 행으로 변환합니다.",
+                ),
+                _wrap_inprocess_tool(
+                    "save_sr_report_images_batch_tool",
+                    _save_sr_report_images_batch_tool,
+                    "sr_report_images 테이블에 배치 저장합니다.",
                 ),
             ]
         return []
@@ -530,14 +645,12 @@ class MCPClient:
     
     def get_mcp_params(self, server_name: str) -> Optional[Union[Any, dict]]:
         """MCP 서버 연결 파라미터 생성.
-        - 환경 변수 MCP_<SERVER>_URL 이 있으면 Streamable HTTP 연결 정보 반환.
+        - `get_settings()`에 해당 MCP URL이 있으면 Streamable HTTP 연결 정보 반환.
         - 없으면 stdio용 StdioServerParameters 반환.
         """
-        url_env = _MCP_URL_ENV_KEYS.get(server_name)
-        if url_env:
-            url = os.environ.get(url_env, "").strip()
-            if url:
-                return {"transport": "streamable_http", "url": url}
+        url = _remote_url_from_settings(server_name)
+        if url:
+            return {"transport": "streamable_http", "url": url}
 
         try:
             from mcp import StdioServerParameters

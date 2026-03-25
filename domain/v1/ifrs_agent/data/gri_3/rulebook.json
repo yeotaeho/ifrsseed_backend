@@ -1,0 +1,1159 @@
+{
+    "rulebooks": [
+        {
+            "rulebook_id": "RULE_GRI3",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3",
+            "section_name": "GRI 3: 중요 주제",
+            "section_content": "GRI 3: Material Topics 2021\n\n본 기준서는 조직의 중요 주제(material topics)와 중요 주제 결정/관리 방식에 대한 공시 요구사항을 제공합니다.",
+            "validation_rules": {
+                "section_type": "standard",
+                "paragraph_reference": "GRI 3: Material Topics 2021",
+                "key_terms": [
+                    "material topics",
+                    "materiality",
+                    "impacts",
+                    "economy",
+                    "environment",
+                    "people",
+                    "human rights"
+                ],
+                "related_concepts": [
+                    "impact assessment",
+                    "stakeholder engagement",
+                    "materiality process"
+                ],
+                "required_actions": [
+                    {
+                        "action": "apply_gri3",
+                        "description": "GRI 3 요구사항에 따라 중요 주제 결정·공시를 수행해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_SCOPE_DEFINED",
+                        "description": "GRI 3 시드 범위(공개 3-1·3-2)가 정의되었는지 확인",
+                        "expected": "gri3_scope_defined"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3",
+                "GRI3-SEC-2",
+                "GRI3-3-1",
+                "GRI3-3-2",
+                "GRI3-3-3"
+            ],
+            "rulebook_title": "GRI 3: Material Topics 2021",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "시드: 섹션 2(공개 3-1·3-3)만 포함.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_SEC_2",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-SEC-2",
+            "section_name": "섹션 2: 중요 주제에 관한 공시",
+            "section_content": "Section 2: Disclosures on Material Topics\n\n이 섹션은 조직의 중요 주제 결정 절차(공개 3-1)와 중요 주제 목록(공개 3-2)을 요구합니다.",
+            "validation_rules": {
+                "section_type": "section",
+                "paragraph_reference": "GRI 3 Section 2",
+                "key_terms": [
+                    "process",
+                    "determine material topics",
+                    "list of material topics",
+                    "stakeholders",
+                    "experts"
+                ],
+                "related_concepts": [
+                    "materiality assessment",
+                    "prioritization",
+                    "topic list maintenance"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_process_and_list",
+                        "description": "중요 주제 결정 절차와 중요 주제 목록을 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_SEC2_DISCLOSURES_PRESENT",
+                        "description": "공개 3-1과 3-2가 포함되었는지 확인",
+                        "expected": "disclosures_3_1_and_3_2_present"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-SEC-2",
+                "GRI3-3-1",
+                "GRI3-3-2",
+                "GRI3-3-3"
+            ],
+            "rulebook_title": "Section 2: Disclosures on Material Topics",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "본 시드는 섹션 2만 포함.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_1",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-1",
+            "section_name": "공개 3-1: 중요 주제 결정 절차",
+            "section_content": "Disclosure 3-1: Process for determining material topics\n\nREQUIREMENTS\nThe organization shall:\na. describe the process it has followed to determine its material topics, including:\n   i. how it has identified actual and potential impacts on the economy, environment, and people (including on their human rights) across its activities and business relationships;\n   ii. how it has assessed and prioritized the impacts for reporting;\nb. specify the stakeholders and experts whose views have informed the process of assessing the significance of impacts.",
+            "validation_rules": {
+                "section_type": "disclosure",
+                "paragraph_reference": "GRI 3 Disclosure 3-1",
+                "key_terms": [
+                    "process",
+                    "material topics",
+                    "identify impacts",
+                    "assess",
+                    "prioritize",
+                    "stakeholders",
+                    "experts",
+                    "human rights"
+                ],
+                "related_concepts": [
+                    "impact identification",
+                    "impact prioritization",
+                    "stakeholder input"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_process",
+                        "description": "중요 주제 결정 절차를 설명해야 함(영향 식별 및 중요성 평가/우선순위화 포함)"
+                    },
+                    {
+                        "action": "specify_informants",
+                        "description": "중요성 평가 과정에 의견을 제공한 이해관계자 및 전문가를 명시해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_1_PROCESS_DESCRIBED",
+                        "description": "중요 주제 결정 절차가 기술되었는지 확인",
+                        "expected": "process_described"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-1",
+                "GRI3-3-1-a",
+                "GRI3-3-1-a-i",
+                "GRI3-3-1-a-ii",
+                "GRI3-3-1-b"
+            ],
+            "rulebook_title": "Disclosure 3-1: Process for determining material topics",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "요구사항의 로마숫자(i·ii)는 원문에 명시되어 별도 DP로 분리(가이드 §3.2.1).",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_1_A",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-1-a",
+            "section_name": "공개 3-1-a: 절차 설명",
+            "section_content": "Disclosure 3-1-a: Describe procedure\n\nREQUIREMENT\nThe organization shall describe the process it has followed to determine its material topics, including (i) impact identification and (ii) assessing and prioritizing impacts for reporting.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-1-a",
+                "key_terms": [
+                    "describe process",
+                    "determine material topics",
+                    "identify impacts",
+                    "assess",
+                    "prioritize"
+                ],
+                "related_concepts": [
+                    "materiality process",
+                    "impact assessment"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_procedure",
+                        "description": "중요 주제 결정 절차를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_1_A_PROCEDURE_INCLUDED",
+                        "description": "절차 설명(영향 식별 및 중요성 평가/우선순위화)이 포함되었는지 확인",
+                        "expected": "procedure_included"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-1-a",
+                "GRI3-3-1-a-i",
+                "GRI3-3-1-a-ii"
+            ],
+            "rulebook_title": "Disclosure 3-1-a: Describe procedure",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_1_A_I",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-1-a-i",
+            "section_name": "공개 3-1-a-i: 영향 식별",
+            "section_content": "Disclosure 3-1-a-i: Identify impacts\n\nREQUIREMENT\nThe organization shall describe how it has identified actual and potential impacts on the economy, environment, and people, including impacts on their human rights, across its activities and business relationships.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-1-a-i",
+                "key_terms": [
+                    "identified",
+                    "actual impacts",
+                    "potential impacts",
+                    "economy",
+                    "environment",
+                    "people",
+                    "human rights",
+                    "business relationships"
+                ],
+                "related_concepts": [
+                    "impact identification",
+                    "due diligence"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_identification",
+                        "description": "실제·잠재적 영향 식별 방법을 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_1_AI_IDENTIFICATION_DESCRIBED",
+                        "description": "영향 식별 방법이 기술되었는지 확인",
+                        "expected": "impact_identification_described"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-1-a-i"
+            ],
+            "rulebook_title": "Disclosure 3-1-a-i: Identify impacts",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_1_A_II",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-1-a-ii",
+            "section_name": "공개 3-1-a-ii: 중요성 평가 및 우선순위화",
+            "section_content": "Disclosure 3-1-a-ii: Assess and prioritize impacts\n\nREQUIREMENT\nThe organization shall describe how it has assessed and prioritized the impacts for reporting.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-1-a-ii",
+                "key_terms": [
+                    "assessed",
+                    "prioritized",
+                    "impacts",
+                    "reporting"
+                ],
+                "related_concepts": [
+                    "severity",
+                    "likelihood",
+                    "prioritization criteria"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_assessment_prioritization",
+                        "description": "중요성 평가 및 우선순위화 방법을 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_1_AII_PRIORITIZATION_DESCRIBED",
+                        "description": "우선순위화 방법이 기술되었는지 확인",
+                        "expected": "prioritization_described"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-1-a-ii"
+            ],
+            "rulebook_title": "Disclosure 3-1-a-ii: Assess and prioritize impacts",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_1_B",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-1-b",
+            "section_name": "공개 3-1-b: 참여 이해관계자 및 전문가",
+            "section_content": "Disclosure 3-1-b: Stakeholders and experts involved\n\nREQUIREMENT\nThe organization shall specify the stakeholders and experts whose views have informed the process of assessing the significance of impacts.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-1-b",
+                "key_terms": [
+                    "stakeholders",
+                    "experts",
+                    "views",
+                    "informed",
+                    "assessing significance"
+                ],
+                "related_concepts": [
+                    "stakeholder engagement",
+                    "expert input"
+                ],
+                "required_actions": [
+                    {
+                        "action": "specify_stakeholders_experts",
+                        "description": "의견을 제공한 이해관계자 및 전문가를 명시해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_1B_INFORMANTS_SPECIFIED",
+                        "description": "이해관계자/전문가가 명시되었는지 확인",
+                        "expected": "informants_specified"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-1-b"
+            ],
+            "rulebook_title": "Disclosure 3-1-b: Stakeholders and experts involved",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_2",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-2",
+            "section_name": "공개 3-2: 중요 주제 목록",
+            "section_content": "Disclosure 3-2: List of material topics\n\nREQUIREMENTS\nThe organization shall:\na. list its material topics;\nb. report changes to its list of material topics compared to the previous reporting period.",
+            "validation_rules": {
+                "section_type": "disclosure",
+                "paragraph_reference": "GRI 3 Disclosure 3-2",
+                "key_terms": [
+                    "list",
+                    "material topics",
+                    "changes",
+                    "previous reporting period"
+                ],
+                "related_concepts": [
+                    "topic list",
+                    "change log"
+                ],
+                "required_actions": [
+                    {
+                        "action": "list_topics",
+                        "description": "중요 주제를 열거해야 함"
+                    },
+                    {
+                        "action": "report_changes",
+                        "description": "전기 대비 중요 주제 목록 변경 사항을 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_2_LIST_PROVIDED",
+                        "description": "중요 주제 목록이 제공되었는지 확인",
+                        "expected": "topic_list_provided"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-2",
+                "GRI3-3-2-a",
+                "GRI3-3-2-b"
+            ],
+            "rulebook_title": "Disclosure 3-2: List of material topics",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_2_A",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-2-a",
+            "section_name": "공개 3-2-a: 중요 주제 열거",
+            "section_content": "Disclosure 3-2-a: List material topics\n\nREQUIREMENT\nThe organization shall list its material topics.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-2-a",
+                "key_terms": [
+                    "list",
+                    "material topics"
+                ],
+                "related_concepts": [
+                    "material topics register"
+                ],
+                "required_actions": [
+                    {
+                        "action": "provide_topic_list",
+                        "description": "중요 주제 목록을 제공해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_2A_TOPICS_LISTED",
+                        "description": "중요 주제가 열거되었는지 확인",
+                        "expected": "topics_listed"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-2-a"
+            ],
+            "rulebook_title": "Disclosure 3-2-a: List material topics",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_2_B",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-2-b",
+            "section_name": "공개 3-2-b: 중요 주제 변경 사항",
+            "section_content": "Disclosure 3-2-b: Changes from prior period\n\nREQUIREMENT\nThe organization shall report changes to its list of material topics compared to the previous reporting period.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-2-b",
+                "key_terms": [
+                    "changes",
+                    "material topics",
+                    "previous reporting period"
+                ],
+                "related_concepts": [
+                    "change rationale",
+                    "comparative reporting"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_changes",
+                        "description": "전기 대비 중요 주제 변경 사항과 사유를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_2B_CHANGES_REPORTED",
+                        "description": "변경 사항이 보고되었는지 확인",
+                        "expected": "changes_reported"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-2-b"
+            ],
+            "rulebook_title": "Disclosure 3-2-b: Changes from prior period",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3",
+            "section_name": "공개 3-3: 중요 주제 관리",
+            "section_content": "Disclosure 3-3: Management of material topics\n\nFor each material topic reported in Disclosure 3-2, the organization shall report: (a) impacts, (b) involvement with negative impacts, (c) policies or commitments, (d) actions, (e) how effectiveness is tracked, and (f) how stakeholder engagement informs actions and effectiveness.",
+            "validation_rules": {
+                "section_type": "disclosure",
+                "paragraph_reference": "GRI 3 Disclosure 3-3",
+                "key_terms": [
+                    "management of material topics",
+                    "impacts",
+                    "negative impacts",
+                    "positive impacts",
+                    "actions",
+                    "effectiveness",
+                    "stakeholder engagement"
+                ],
+                "related_concepts": [
+                    "topic management approach",
+                    "remediation",
+                    "continuous improvement"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_3_3_a_to_f",
+                        "description": "각 중요 주제별로 3-3-a~f 항목을 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3_ALL_ELEMENTS_PRESENT",
+                        "description": "3-3-a~f 요소가 모두 보고되었는지 확인",
+                        "expected": "all_3_3_elements_present"
+                    }
+                ],
+                "cross_references": [
+                    "GRI 3 Disclosure 3-2",
+                    "GRI 2 Disclosure 2-23",
+                    "GRI 2 Disclosure 2-25"
+                ]
+            },
+            "related_dp_ids": [
+                "GRI3-3-3",
+                "GRI3-3-3-a",
+                "GRI3-3-3-b",
+                "GRI3-3-3-c",
+                "GRI3-3-3-d",
+                "GRI3-3-3-e",
+                "GRI3-3-3-f"
+            ],
+            "rulebook_title": "Disclosure 3-3: Management of material topics",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "3-3은 공개 단위 루트 DP이며, 요구사항 라벨(a~f, d-i~iii, e-i~iv)에 따라 하위 DP를 분리.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_A",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-a",
+            "section_name": "공개 3-3-a: 영향 설명",
+            "section_content": "Disclosure 3-3-a\n\nThe organization shall report the actual and potential, negative and positive impacts related to the material topic.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-a",
+                "key_terms": [
+                    "actual impacts",
+                    "potential impacts",
+                    "negative",
+                    "positive"
+                ],
+                "related_concepts": [
+                    "impact profile"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_impacts",
+                        "description": "실제/잠재 및 부정적/긍정적 영향을 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3A_IMPACTS_DESCRIBED",
+                        "description": "영향 구분(실제/잠재, 부정적/긍정적)이 포함되었는지 확인",
+                        "expected": "impacts_classified_described"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-a"
+            ],
+            "rulebook_title": "Disclosure 3-3-a: Describe impacts",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_B",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-b",
+            "section_name": "공개 3-3-b: 부정적 영향 관여 방식",
+            "section_content": "Disclosure 3-3-b\n\nThe organization shall report whether it is involved with the negative impacts related to the material topic through its activities or business relationships.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-b",
+                "key_terms": [
+                    "involved",
+                    "negative impacts",
+                    "activities",
+                    "business relationships"
+                ],
+                "related_concepts": [
+                    "cause",
+                    "contribute",
+                    "directly linked"
+                ],
+                "required_actions": [
+                    {
+                        "action": "explain_involvement",
+                        "description": "부정적 영향 관여 여부 및 활동/사업관계 연계를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3B_INVOLVEMENT_EXPLAINED",
+                        "description": "관여 여부 및 연계 설명이 포함되었는지 확인",
+                        "expected": "involvement_explained"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-b"
+            ],
+            "rulebook_title": "Disclosure 3-3-b: Explain involvement",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_C",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-c",
+            "section_name": "공개 3-3-c: 정책 및 약속",
+            "section_content": "Disclosure 3-3-c\n\nThe organization shall describe any policies or commitments regarding the material topic.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-c",
+                "key_terms": [
+                    "policies",
+                    "commitments"
+                ],
+                "related_concepts": [
+                    "policy framework"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_policies_commitments",
+                        "description": "해당 주제 관련 정책/약속을 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3C_POLICIES_REPORTED",
+                        "description": "정책 또는 약속이 보고되었는지 확인",
+                        "expected": "policies_or_commitments_reported"
+                    }
+                ],
+                "cross_references": [
+                    "GRI 2 Disclosure 2-23"
+                ]
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-c"
+            ],
+            "rulebook_title": "Disclosure 3-3-c: Policies or commitments",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_D",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-d",
+            "section_name": "공개 3-3-d: 조치 설명",
+            "section_content": "Disclosure 3-3-d\n\nThe organization shall report actions taken to manage the topic's impacts, including:\ni. actions to prevent and mitigate potential negative impacts;\nii. actions to address actual negative impacts, including remediation;\niii. actions to manage actual and potential positive impacts.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-d",
+                "key_terms": [
+                    "actions",
+                    "prevent",
+                    "mitigate",
+                    "address",
+                    "remediation",
+                    "positive impacts"
+                ],
+                "related_concepts": [
+                    "impact response"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_actions",
+                        "description": "3-3-d-i·ii·iii 조치를 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3D_ACTIONS_REPORTED",
+                        "description": "조치 항목(예방/시정/긍정관리)이 모두 포함되었는지 확인",
+                        "expected": "all_action_categories_reported"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-d",
+                "GRI3-3-3-d-i",
+                "GRI3-3-3-d-ii",
+                "GRI3-3-3-d-iii"
+            ],
+            "rulebook_title": "Disclosure 3-3-d: Actions taken",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "요구사항의 로마숫자(i·ii·iii)는 원문에 명시되어 별도 DP로 분리.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_D_I",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-d-i",
+            "section_name": "공개 3-3-d-i: 잠재적 부정적 영향 예방·완화",
+            "section_content": "Disclosure 3-3-d-i\n\nActions taken to prevent and mitigate potential negative impacts.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-d-i",
+                "key_terms": [
+                    "prevent",
+                    "mitigate",
+                    "potential negative impacts"
+                ],
+                "related_concepts": [
+                    "preventive controls"
+                ],
+                "required_actions": [
+                    {
+                        "action": "prevent_mitigate",
+                        "description": "잠재적 부정적 영향 예방/완화 조치를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3DI_PREVENTIVE_ACTIONS",
+                        "description": "예방·완화 조치가 제시되었는지 확인",
+                        "expected": "preventive_actions_present"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-d-i"
+            ],
+            "rulebook_title": "Disclosure 3-3-d-i: Prevent and mitigate",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_D_II",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-d-ii",
+            "section_name": "공개 3-3-d-ii: 실제 부정적 영향 시정",
+            "section_content": "Disclosure 3-3-d-ii\n\nActions taken to address actual negative impacts, including remediation.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-d-ii",
+                "key_terms": [
+                    "actual negative impacts",
+                    "remediation",
+                    "address"
+                ],
+                "related_concepts": [
+                    "corrective actions",
+                    "remedy"
+                ],
+                "required_actions": [
+                    {
+                        "action": "remediate_actual_impacts",
+                        "description": "실제 부정적 영향 시정 조치를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3DII_REMEDIATION_ACTIONS",
+                        "description": "시정/복구/보상 조치가 제시되었는지 확인",
+                        "expected": "remediation_actions_present"
+                    }
+                ],
+                "cross_references": [
+                    "GRI 2 Disclosure 2-25"
+                ]
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-d-ii"
+            ],
+            "rulebook_title": "Disclosure 3-3-d-ii: Address actual negative impacts",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_D_III",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-d-iii",
+            "section_name": "공개 3-3-d-iii: 긍정적 영향 관리",
+            "section_content": "Disclosure 3-3-d-iii\n\nActions taken to manage actual and potential positive impacts.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-d-iii",
+                "key_terms": [
+                    "positive impacts",
+                    "manage",
+                    "enhance"
+                ],
+                "related_concepts": [
+                    "value creation"
+                ],
+                "required_actions": [
+                    {
+                        "action": "manage_positive_impacts",
+                        "description": "긍정적 영향 관리/강화 조치를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3DIII_POSITIVE_MANAGEMENT",
+                        "description": "긍정 영향 관리 조치가 제시되었는지 확인",
+                        "expected": "positive_impact_management_present"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-d-iii"
+            ],
+            "rulebook_title": "Disclosure 3-3-d-iii: Manage positive impacts",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_E",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-e",
+            "section_name": "공개 3-3-e: 조치 효과 추적",
+            "section_content": "Disclosure 3-3-e\n\nThe organization shall report information about tracking the effectiveness of actions, including:\ni. process used;\nii. goals, targets, and indicators;\niii. effectiveness and progress toward goals and targets;\niv. lessons learned and how these have been integrated into policies and operational processes.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-e",
+                "key_terms": [
+                    "track effectiveness",
+                    "process",
+                    "goals",
+                    "targets",
+                    "indicators",
+                    "progress",
+                    "lessons learned"
+                ],
+                "related_concepts": [
+                    "monitoring and evaluation",
+                    "KPI",
+                    "continuous improvement"
+                ],
+                "required_actions": [
+                    {
+                        "action": "track_and_report_effectiveness",
+                        "description": "3-3-e-i·ii·iii·iv 정보를 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3E_EFFECTIVENESS_TRACKED",
+                        "description": "효과 추적 요소가 모두 포함되었는지 확인",
+                        "expected": "all_effectiveness_elements_present"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-e",
+                "GRI3-3-3-e-i",
+                "GRI3-3-3-e-ii",
+                "GRI3-3-3-e-iii",
+                "GRI3-3-3-e-iv"
+            ],
+            "rulebook_title": "Disclosure 3-3-e: Track effectiveness",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": "요구사항의 로마숫자(i·ii·iii·iv)는 원문에 명시되어 별도 DP로 분리.",
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_E_I",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-e-i",
+            "section_name": "공개 3-3-e-i: 효과 추적 프로세스",
+            "section_content": "Disclosure 3-3-e-i\n\nReport the process used to track effectiveness of actions.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-e-i",
+                "key_terms": [
+                    "process used",
+                    "track effectiveness"
+                ],
+                "related_concepts": [
+                    "monitoring process"
+                ],
+                "required_actions": [
+                    {
+                        "action": "describe_tracking_process",
+                        "description": "효과 추적 프로세스를 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3EI_PROCESS_DESCRIBED",
+                        "description": "추적 프로세스가 제시되었는지 확인",
+                        "expected": "tracking_process_described"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-e-i"
+            ],
+            "rulebook_title": "Disclosure 3-3-e-i: Process used",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_E_II",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-e-ii",
+            "section_name": "공개 3-3-e-ii: 목표·목표치·지표",
+            "section_content": "Disclosure 3-3-e-ii\n\nReport goals, targets, and indicators used to evaluate progress.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-e-ii",
+                "key_terms": [
+                    "goals",
+                    "targets",
+                    "indicators"
+                ],
+                "related_concepts": [
+                    "KPI",
+                    "baseline"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_goals_targets_indicators",
+                        "description": "목표/목표치/지표를 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3EII_METRICS_REPORTED",
+                        "description": "목표·지표가 제시되었는지 확인",
+                        "expected": "metrics_reported"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-e-ii"
+            ],
+            "rulebook_title": "Disclosure 3-3-e-ii: Goals, targets, indicators",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_E_III",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-e-iii",
+            "section_name": "공개 3-3-e-iii: 효과성 및 진전",
+            "section_content": "Disclosure 3-3-e-iii\n\nReport effectiveness of actions, including progress toward goals and targets.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-e-iii",
+                "key_terms": [
+                    "effectiveness",
+                    "progress",
+                    "goals and targets"
+                ],
+                "related_concepts": [
+                    "performance tracking"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_effectiveness_progress",
+                        "description": "효과성 및 목표 달성 진전을 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3EIII_PROGRESS_REPORTED",
+                        "description": "진전/효과성 정보가 제시되었는지 확인",
+                        "expected": "progress_and_effectiveness_reported"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-e-iii"
+            ],
+            "rulebook_title": "Disclosure 3-3-e-iii: Effectiveness and progress",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_E_IV",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-e-iv",
+            "section_name": "공개 3-3-e-iv: 교훈 및 통합",
+            "section_content": "Disclosure 3-3-e-iv\n\nReport lessons learned and how these have been integrated into policies and operational processes.",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-e-iv",
+                "key_terms": [
+                    "lessons learned",
+                    "integrated",
+                    "policies",
+                    "operational processes"
+                ],
+                "related_concepts": [
+                    "continuous improvement cycle"
+                ],
+                "required_actions": [
+                    {
+                        "action": "report_lessons_integration",
+                        "description": "교훈과 통합 방식을 보고해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3EIV_LESSONS_INTEGRATED",
+                        "description": "교훈의 정책/운영 반영이 제시되었는지 확인",
+                        "expected": "lessons_integrated"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-e-iv"
+            ],
+            "rulebook_title": "Disclosure 3-3-e-iv: Lessons learned and integration",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        },
+        {
+            "rulebook_id": "RULE_GRI3_3_3_F",
+            "standard_id": "GRI3",
+            "primary_dp_id": "GRI3-3-3-f",
+            "section_name": "공개 3-3-f: 이해관계자 참여 반영",
+            "section_content": "Disclosure 3-3-f\n\nExplain how engagement with stakeholders has informed actions taken (3-3-d) and how this has informed whether the actions were effective (3-3-e).",
+            "validation_rules": {
+                "section_type": "disclosure_requirement",
+                "paragraph_reference": "GRI 3 Disclosure 3-3-f",
+                "key_terms": [
+                    "stakeholder engagement",
+                    "informed actions",
+                    "effectiveness"
+                ],
+                "related_concepts": [
+                    "feedback loop",
+                    "participatory governance"
+                ],
+                "required_actions": [
+                    {
+                        "action": "explain_stakeholder_informing",
+                        "description": "이해관계자 참여가 조치 및 효과성 판단에 반영된 방식을 설명해야 함"
+                    }
+                ],
+                "verification_checks": [
+                    {
+                        "check_id": "GRI3_3_3F_ENGAGEMENT_INFORMS_ACTIONS",
+                        "description": "이해관계자 참여-조치-효과성 연결이 설명되었는지 확인",
+                        "expected": "engagement_informs_actions_and_effectiveness"
+                    }
+                ],
+                "cross_references": []
+            },
+            "related_dp_ids": [
+                "GRI3-3-3-f"
+            ],
+            "rulebook_title": "Disclosure 3-3-f: Stakeholder engagement informing actions",
+            "disclosure_requirement": "필수",
+            "version": "1.0",
+            "is_active": true,
+            "is_primary": false,
+            "effective_date": "2021-01-01",
+            "mapping_notes": null,
+            "conflicts_with": []
+        }
+    ]
+}

@@ -1,7 +1,6 @@
 """data_integration 서비스 진입점. Python으로만 실행: python main.py"""
 from __future__ import annotations
 
-import os
 import sys
 from pathlib import Path
 
@@ -21,6 +20,8 @@ if __name__ == "__main__":
 
 from fastapi import FastAPI
 
+from backend.core.config.settings import get_settings
+
 # API 레이어 라우터 사용 (레이어 구분: HTTP는 API에 두고, domain은 서비스만)
 from backend.api.v1.data_integration.sr_agent_router import sr_agent_router
 
@@ -32,17 +33,18 @@ app = FastAPI(
 app.include_router(sr_agent_router)
 
 
-def run(host: str = "0.0.0.0", port: int = 9005) -> None:
+def run(host: str = "0.0.0.0", port: int | None = None) -> None:
     """ASGI 앱을 실행합니다. python main.py 시 호출됩니다."""
     import uvicorn
+
+    listen = port if port is not None else get_settings().data_integration_port
     uvicorn.run(
         app,
         host=host,
-        port=port,
-        reload=os.getenv("DATA_INTEGRATION_RELOAD", "").lower() in ("1", "true", "yes"),
+        port=listen,
+        reload=get_settings().data_integration_reload,
     )
 
 
 if __name__ == "__main__":
-    port = int(os.getenv("PORT", "9005"))
-    run(port=port)
+    run()

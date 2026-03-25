@@ -30,7 +30,6 @@ class HistoricalSRReportsRow:
     company_id: Optional[str]
     report_year: int
     report_name: str
-    pdf_file_path: Optional[str]
     source: str
     total_pages: int
     index_page_numbers: List[int]
@@ -77,8 +76,6 @@ class SrReportImagesRow:
     report_id: str
     page_number: int
     image_index: int
-    image_file_path: str
-    image_file_size: int
     image_width: Optional[int]
     image_height: Optional[int]
     image_type: Optional[str]

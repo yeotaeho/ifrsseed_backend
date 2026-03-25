@@ -911,7 +911,7 @@ CREATE TABLE ghg_disclosure_requirements (
 
 ### 2.0 통합 컬럼 매핑 테이블 (온톨로지)
 
-여러 기준서(IFRS S2, GRI, TCFD 등)의 동일한 의미를 가진 Data Point를 하나의 통합 컬럼으로 묶어 관리합니다. `sr_report_unified_data`가 이 테이블을 FK로 참조합니다. 상세 설계는 [DATA_ONTOLOGY.md](./DATA_ONTOLOGY.md)를 참조하세요.
+여러 기준서(IFRS S2, GRI, TCFD 등)의 동일한 의미를 가진 Data Point를 하나의 통합 컬럼으로 묶어 관리합니다. `sr_report_unified_data`는 **매핑된** 행에서 이 테이블을 FK로 참조하고, **아직 통합 컬럼에 올리지 않은 DP**는 `unmapped_data_points`를 FK로 참조합니다(두 FK는 상호 배타). 상세 설계는 [DATA_ONTOLOGY.md](./DATA_ONTOLOGY.md)를 참조하세요.
 
 #### `unified_column_mappings` - 통합 컬럼 매핑
 
@@ -1282,13 +1282,83 @@ CREATE TABLE esg_charts (
 
 ### 2.7 SR 보고서 통합 데이터 테이블
 
+통합 사실(`sr_report_unified_data`)은 **(A) 통합 컬럼(온톨로지)** 경로와 **(B) 아직 `unified_column_mappings`에 없는 DP** 경로 중 **하나만** 가집니다.  
+`(unified_column_id IS NOT NULL AND unmapped_dp_id IS NULL)` **또는** `(unified_column_id IS NULL AND unmapped_dp_id IS NOT NULL)` 를 DB CHECK로 강제한다.
+
+#### `unmapped_data_points` - 미매핑 Data Point
+
+**역할**: `data_points`에 존재하거나 공시 계획상 필요하지만, 아직 `unified_column_mappings`에 편입되지 않은 DP를 한 행으로 보관한다.  
+`data_points`의 핵심 메타(`dp_id`, 분류, 타입, 검증/공시 정보)를 유지하고, 이후 UCM 편입 시 후보/상태를 추적한다. `sr_report_unified_data`의 미매핑 경로에서 FK로 참조한다.
+
+**주요 필드**:
+```sql
+CREATE TABLE unmapped_data_points (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+
+  -- ===== data_points 정합 필드 =====
+  dp_id TEXT NOT NULL,                     -- data_points.dp_id와 동일 식별자
+  dp_code TEXT,                            -- data_points.dp_code
+  standard_code VARCHAR(50) NOT NULL,      -- 예: 'IFRS_S2', 'GRI'
+  name_ko VARCHAR(200) NOT NULL,
+  name_en VARCHAR(200) NOT NULL,
+  description TEXT,
+
+  -- ===== 분류 정보 (DataPoint / UCM 공통 축) =====
+  category CHAR(1) NOT NULL CHECK (category IN ('E', 'S', 'G')),
+  topic VARCHAR(100),
+  subtopic VARCHAR(100),
+
+  -- ===== 데이터 타입 / 단위 =====
+  dp_type VARCHAR(20) NOT NULL
+    CHECK (dp_type IN ('quantitative', 'qualitative', 'narrative', 'binary')),
+  unit VARCHAR(50),
+
+  -- ===== 검증 / 공시 요구사항 (data_points, UCM과 동일 의미) =====
+  validation_rules JSONB DEFAULT '[]'::jsonb,
+  value_range JSONB,
+  disclosure_requirement VARCHAR(20)
+    CHECK (disclosure_requirement IN ('필수', '권장', '선택')),
+  reporting_frequency VARCHAR(20),
+
+  -- ===== UCM 편입 추적 =====
+  candidate_unified_column_id VARCHAR(50) REFERENCES unified_column_mappings(unified_column_id),
+  mapping_status TEXT NOT NULL DEFAULT 'pending'
+    CHECK (mapping_status IN ('pending', 'reviewing', 'mapped', 'rejected', 'deferred')),
+  mapping_confidence DECIMAL(5, 2),         -- 0~100
+  mapping_notes TEXT,
+  mapped_at TIMESTAMPTZ,
+  mapped_by UUID REFERENCES users(id),
+
+  -- ===== 운영 메타 =====
+  is_active BOOLEAN DEFAULT TRUE,
+  source_type TEXT DEFAULT 'data_points',   -- 'data_points' | 'manual' | 'ingestion'
+  source_ref_id TEXT,                       -- 원천 식별자(선택)
+  notes TEXT,
+
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+
+  UNIQUE (standard_code, dp_id),
+
+  INDEX idx_unmapped_dp_id (dp_id),
+  INDEX idx_unmapped_standard (standard_code),
+  INDEX idx_unmapped_category_topic (category, topic),
+  INDEX idx_unmapped_type (dp_type),
+  INDEX idx_unmapped_status (mapping_status),
+  INDEX idx_unmapped_candidate_ucm (candidate_unified_column_id)
+);
+```
+
 #### `sr_report_unified_data` - SR 보고서 통합 데이터
 
-**역할**: SR 보고서 작성에 필요한 6개 테이블(`environmental_data`, `social_data`, `governance_data`, `company_info`, `sr_report_content`, `esg_charts`)의 데이터를 통합하고, `unified_column_mappings` 테이블과 매핑하여 기준서별(IFRS S2, GRI 등) Data Point에 연결
+**역할**: SR 보고서 작성에 필요한 6개 테이블(`environmental_data`, `social_data`, `governance_data`, `company_info`, `sr_report_content`, `esg_charts`)의 데이터를 통합한다.  
+- **UCM 경로**: `unified_column_mappings`와 연결해 기준서별(IFRS S2, GRI 등) Data Point에 연결  
+- **미매핑 경로**: `unmapped_data_points`와 연결해 아직 통합 컬럼이 없는 DP에 대한 사실을 저장
 
 **설계 목적**:
 - 여러 소스 테이블의 데이터를 하나의 통합 테이블로 집약
-- `unified_column_mappings`를 통해 다중 기준서(IFRS S2, GRI, TCFD 등)의 Data Point와 매핑
+- `unified_column_mappings`를 통해 다중 기준서(IFRS S2, GRI, TCFD 등)의 Data Point와 매핑(UCM 행)
+- 온톨로지에 없는 DP도 `unmapped_data_points`로 동일 테이블에 적재 가능(미매핑 행)
 - SR 보고서 생성 시 기준서별로 필요한 데이터를 효율적으로 조회
 
 **주요 필드**:
@@ -1303,8 +1373,9 @@ CREATE TABLE sr_report_unified_data (
   source_entity_type TEXT NOT NULL,  -- 'environmental' | 'social' | 'governance' | 'company_info' | 'content' | 'chart'
   source_entity_id UUID NOT NULL,  -- 원본 테이블의 PK
   
-  -- ===== UnifiedColumnMapping 연결 =====
-  unified_column_id VARCHAR(50) NOT NULL REFERENCES unified_column_mappings(unified_column_id),
+  -- ===== 의미 축: UCM XOR 미매핑 DP (둘 중 하나만 NOT NULL) =====
+  unified_column_id VARCHAR(50) REFERENCES unified_column_mappings(unified_column_id),
+  unmapped_dp_id UUID REFERENCES unmapped_data_points(id),
   
   -- ===== 데이터 값 (JSONB로 유연하게 저장) =====
   data_value JSONB NOT NULL,  -- 실제 데이터 값
@@ -1319,11 +1390,6 @@ CREATE TABLE sr_report_unified_data (
   calculation_method TEXT,  -- 산정 방법 (GHG인 경우)
   confidence_score DECIMAL(5, 2),  -- 데이터 신뢰도 (0~100)
   
-  -- ===== 승인 상태 =====
-  status TEXT DEFAULT 'draft',  -- 'draft' | 'pending_review' | 'approved' | 'final_approved'
-  approved_by UUID REFERENCES users(id),
-  approved_at TIMESTAMPTZ,
-  
   -- ===== 최종보고서 포함 여부 =====
   included_in_final_report BOOLEAN DEFAULT FALSE,
   final_report_version TEXT,  -- 'v1' | 'v2' 등
@@ -1334,9 +1400,9 @@ CREATE TABLE sr_report_unified_data (
   -- 인덱스
   INDEX idx_sr_unified_company (company_id, period_year),
   INDEX idx_sr_unified_column (unified_column_id),
+  INDEX idx_sr_unified_unmapped (unmapped_dp_id),
   INDEX idx_sr_unified_source (source_entity_type, source_entity_id),
   INDEX idx_sr_unified_final (company_id, included_in_final_report),
-  INDEX idx_sr_unified_status (company_id, status),
   
   -- 제약조건
   CONSTRAINT chk_source_entity_type CHECK (
@@ -1344,6 +1410,10 @@ CREATE TABLE sr_report_unified_data (
   ),
   CONSTRAINT chk_data_type CHECK (
     data_type IN ('quantitative', 'qualitative', 'narrative', 'binary')
+  ),
+  CONSTRAINT chk_unified_or_unmapped CHECK (
+    (unified_column_id IS NOT NULL AND unmapped_dp_id IS NULL)
+    OR (unified_column_id IS NULL AND unmapped_dp_id IS NOT NULL)
   )
 );
 ```
@@ -1356,9 +1426,9 @@ CREATE TABLE sr_report_unified_data (
 INSERT INTO sr_report_unified_data (
   company_id, period_year,
   source_entity_type, source_entity_id,
-  unified_column_id,
+  unified_column_id, unmapped_dp_id,
   data_value, data_type, unit,
-  data_source, status
+  data_source
 )
 SELECT 
   ed.company_id,
@@ -1366,11 +1436,11 @@ SELECT
   'environmental' AS source_entity_type,
   ed.id AS source_entity_id,
   '001_aa' AS unified_column_id,  -- "Scope 1 배출량" 통합 컬럼
+  NULL AS unmapped_dp_id,         -- UCM 경로: 미매핑 FK는 NULL
   jsonb_build_object('value', ed.scope1_total_tco2e) AS data_value,
   'quantitative' AS data_type,
   'tCO2e' AS unit,
-  'ghg_emission_results' AS data_source,
-  ed.status
+  'ghg_emission_results' AS data_source
 FROM environmental_data ed
 WHERE ed.company_id = 'company-001'
   AND ed.period_year = 2024
@@ -1382,9 +1452,9 @@ WHERE ed.company_id = 'company-001'
 INSERT INTO sr_report_unified_data (
   company_id, period_year,
   source_entity_type, source_entity_id,
-  unified_column_id,
+  unified_column_id, unmapped_dp_id,
   data_value, data_type, unit,
-  data_source, status
+  data_source
 )
 SELECT 
   sd.company_id,
@@ -1392,11 +1462,11 @@ SELECT
   'social' AS source_entity_type,
   sd.id AS source_entity_id,
   '002_ab' AS unified_column_id,  -- "총 임직원 수" 통합 컬럼
+  NULL AS unmapped_dp_id,
   jsonb_build_object('value', sd.total_employees) AS data_value,
   'quantitative' AS data_type,
   '명' AS unit,
-  'hr' AS data_source,
-  sd.status
+  'hr' AS data_source
 FROM social_data sd
 WHERE sd.company_id = 'company-001'
   AND sd.period_year = 2024
@@ -1409,9 +1479,9 @@ WHERE sd.company_id = 'company-001'
 INSERT INTO sr_report_unified_data (
   company_id, period_year,
   source_entity_type, source_entity_id,
-  unified_column_id,
+  unified_column_id, unmapped_dp_id,
   data_value, data_type,
-  data_source, status
+  data_source
 )
 SELECT 
   src.company_id,
@@ -1419,16 +1489,43 @@ SELECT
   'content' AS source_entity_type,
   src.id AS source_entity_id,
   '003_ac' AS unified_column_id,  -- "온실가스 배출량 설명" 통합 컬럼
+  NULL AS unmapped_dp_id,
   jsonb_build_object('text', src.content_text) AS data_value,
   'narrative' AS data_type,
-  'sr_report_content' AS data_source,
-  'final_approved' AS status
+  'sr_report_content' AS data_source
 FROM sr_report_content src
 WHERE src.company_id = 'company-001'
   AND src.saved_to_final_report = TRUE;
 ```
 
-**UnifiedColumnMapping과의 연결 구조**:
+**예시 4: 미매핑 DP (unmapped_data_points → 통합 행; `unified_column_id`는 NULL)**
+
+```sql
+-- 미매핑 DP 레코드가 준비된 뒤, 동일 회사·연도 사실을 적재
+INSERT INTO sr_report_unified_data (
+  company_id, period_year,
+  source_entity_type, source_entity_id,
+  unified_column_id, unmapped_dp_id,
+  data_value, data_type, unit,
+  data_source
+)
+VALUES (
+  'company-001',
+  2024,
+  'environmental',
+  (SELECT id FROM environmental_data WHERE company_id = 'company-001' AND period_year = 2024 LIMIT 1),
+  NULL,                                           -- 미매핑 경로: UCM FK는 NULL
+  'b8e3f0a2-....',                               -- unmapped_data_points.id (예시 UUID)
+  '{"value": 100.0}'::jsonb,
+  'quantitative',
+  'tCO2e',
+  'manual'
+);
+```
+
+**UnifiedColumnMapping / 미매핑과의 연결 구조**:
+
+**UCM 경로** 예:
 ```
 unified_column_mappings 테이블:
 - unified_column_id: '001_aa'
@@ -1439,14 +1536,28 @@ unified_column_mappings 테이블:
 
 sr_report_unified_data 테이블:
 - unified_column_id: '001_aa' (FK)
+- unmapped_dp_id: NULL
 - data_value: {"value": 1234.5}
 - source_entity_type: 'environmental'
 - source_entity_id: (environmental_data.id)
 ```
 
+**미매핑 경로** 예:
+```
+unmapped_data_points 테이블:
+- id: (UUID)
+- dp_id: 'NEW_STD-XX-01'
+- standard_code: 'CUSTOM'
+
+sr_report_unified_data 테이블:
+- unified_column_id: NULL
+- unmapped_dp_id: (위 unmapped_data_points.id, FK)
+- data_value: {...}
+```
+
 **SR 보고서 생성 시 활용**:
 ```sql
--- 특정 기준서(IFRS S2)의 DP에 해당하는 데이터 조회
+-- (1) UCM 경로: 특정 기준서(IFRS S2)의 DP에 해당하는 데이터 조회
 SELECT 
   ucm.unified_column_id,
   ucm.column_name_ko,
@@ -1465,6 +1576,29 @@ WHERE srud.company_id = 'company-001'
   AND srud.included_in_final_report = TRUE
   AND 'IFRS_S2-S2-29-a' = ANY(ucm.mapped_dp_ids)  -- IFRS S2 DP 필터링
 ORDER BY ucm.unified_column_id;
+
+-- (2) 미매핑 경로: 특정 dp_id로 사실 조회 (온톨로지 조인 없음)
+SELECT 
+  srud.id,
+  udp.dp_id,
+  udp.standard_code,
+  udp.dp_name,
+  srud.data_value,
+  srud.data_type,
+  srud.unit,
+  srud.source_entity_type,
+  srud.source_entity_id
+FROM sr_report_unified_data srud
+INNER JOIN unmapped_data_points udp ON udp.id = srud.unmapped_dp_id
+WHERE srud.company_id = 'company-001'
+  AND srud.period_year = 2024
+  AND srud.included_in_final_report = TRUE
+  AND udp.dp_id = 'NEW_STD-XX-01';
+
+-- (3) 한 화면에서 병렬 조회: UCM 행과 미매핑 행을 UNION (컬럼 정렬은 앱/뷰에서 통일)
+-- SELECT ... FROM (... UCM JOIN ...) u
+-- UNION ALL
+-- SELECT ... FROM (... unmapped JOIN ...) m;
 ```
 
 **장점**:
@@ -1473,10 +1607,12 @@ ORDER BY ucm.unified_column_id;
 - **유연성**: JSONB로 다양한 데이터 타입 저장
 - **추적성**: 원본 테이블 참조 유지 (`source_entity_type`, `source_entity_id`)
 - **확장성**: 새로운 소스 테이블 추가 용이
+- **미매핑 DP**: 온톨로지 편입 전에도 동일 테이블에 사실 적재 가능(`unmapped_data_points`)
 
 **고려사항**:
 - **데이터 동기화**: 소스 테이블 변경 시 통합 테이블 업데이트 필요 (트리거 또는 배치 작업)
 - **중복 데이터**: 같은 `unified_column_id`에 여러 소스가 있을 수 있음 → 우선순위 로직 필요 (예: `final_approved` > `approved` > `draft`)
+- **UCM ↔ 미매핑 전환**: DP가 `unified_column_mappings`에 추가되면 해당 사실 행을 **미매핑에서 UCM으로 이전**하는 마이그레이션(같은 행에서 `unmapped_dp_id` NULL 처리 + `unified_column_id` 설정, 또는 행 분리) 정책이 필요
 - **성능**: 대량 데이터 시 인덱스 최적화 필요
 
 ---
@@ -1484,6 +1620,8 @@ ORDER BY ucm.unified_column_id;
 ### 2.8 전년도 SR 보고서 파싱 테이블
 
 전년도 SR 보고서 PDF를 파싱하여 Index(DP→페이지 매핑), 본문, 이미지를 저장합니다. RAG·벤치마킹에서 참조합니다. 상세 파서 설계는 [HISTORICAL_REPORT_PARSING.md](./HISTORICAL_REPORT_PARSING.md)를 참조하세요.
+
+**스키마 참고**: `historical_sr_reports.pdf_file_path`, `sr_report_images.image_file_path` 컬럼은 Alembic `016_drop_sr_paths`에서 제거되었습니다. `sr_report_index`, `sr_report_body`는 원래 로컬 `file_path` 컬럼이 없습니다.
 
 #### `historical_sr_reports` - 보고서 메타데이터
 
@@ -1495,7 +1633,6 @@ CREATE TABLE historical_sr_reports (
     company_id UUID NOT NULL,
     report_year INTEGER NOT NULL,
     report_name TEXT NOT NULL,
-    pdf_file_path TEXT,
     source TEXT NOT NULL,  -- 'dart' | 'manual_upload'
     total_pages INTEGER,
     index_page_numbers INTEGER[],  -- Index 페이지 번호들 [146, 147]
@@ -1566,7 +1703,7 @@ CREATE TABLE sr_report_body (
 
 #### `sr_report_images` - 이미지 테이블
 
-**역할**: 보고서 내 이미지(차트·그래프·사진 등) 경로, 캡션, 추출 데이터, 임베딩 상태
+**역할**: 보고서 내 이미지(차트·그래프·사진 등) 메타(크기·캡션·추출 데이터), 임베딩 상태. 로컬 파일 경로는 저장하지 않습니다. 선택적으로 원본 래스터를 DB에 둘 수 있습니다(`image_blob`, Alembic `017_sr_images_blob`). 바이트 크기 전용 컬럼 `image_file_size`는 Alembic `018_drop_sr_image_file_size`에서 제거되었으며, 필요 시 `extracted_data.size_bytes` 또는 `image_blob` 길이로 표현합니다.
 
 ```sql
 CREATE TABLE sr_report_images (
@@ -1575,8 +1712,7 @@ CREATE TABLE sr_report_images (
     
     page_number INTEGER NOT NULL,
     image_index INTEGER,
-    image_file_path TEXT NOT NULL,
-    image_file_size BIGINT,
+    image_blob BYTEA,  -- 선택: 인메모리/SR_IMAGE_PERSIST_BLOB 등으로 저장 시
     image_width INTEGER,
     image_height INTEGER,
     image_type TEXT,  -- 'chart' | 'graph' | 'photo' | 'diagram' | 'table' | 'unknown'
@@ -1742,12 +1878,14 @@ GHG 산정 결과            →    ghg_emission_results  →    sr_report_unifi
 회사정보                 →    company_info          →    - unified_column_id     →                   →  표지, 회사 소개
 SR 작성 문단             →    sr_report_content     →    - data_value (JSONB)   →                   →  본문 텍스트
 차트/도표                →    esg_charts            →    - data_type            →                   →  차트 이미지 삽입
+미매핑 DP(온톨로지 전)   →    (위 6종 소스 중 해당)  →    - unmapped_dp_id SET  →  unmapped_data_   →  해당 공시·문단
+                                                          (unified_column_id NULL) →  points
 ```
 
 **통합 테이블의 역할**:
 1. **데이터 통합**: 6개 소스 테이블의 데이터를 하나의 테이블로 통합
-2. **기준서 매핑**: `unified_column_mappings`를 통해 IFRS S2, GRI, TCFD 등 다중 기준서의 Data Point와 연결
-3. **효율적 조회**: 기준서별로 필요한 데이터를 한 번의 조회로 가져올 수 있음
+2. **의미 축 매핑**: (a) `unified_column_mappings` — IFRS S2, GRI, TCFD 등 다중 기준서 Data Point; (b) `unmapped_data_points` — 아직 통합 컬럼이 없는 DP. 한 행은 **UCM(`unified_column_id`)과 미매핑 FK(`unmapped_dp_id`) 중 정확히 하나만** 설정한다(`chk_unified_or_unmapped`).
+3. **효율적 조회**: 기준서별로 필요한 데이터를 한 번의 조회로 가져올 수 있음(UCM 경로는 `mapped_dp_ids` 조인, 미매핑 경로는 `unmapped_data_points` 조인)
 4. **원본 추적**: `source_entity_type`과 `source_entity_id`로 원본 테이블 참조 유지
 
 ### 3.3 데이터 집계 로직
@@ -1829,8 +1967,8 @@ GROUP BY company_id, period_year;
 | sr_report_body | report_id | historical_sr_reports(id) | ON DELETE CASCADE |
 | sr_report_images | report_id | historical_sr_reports(id) | ON DELETE CASCADE |
 | sr_report_unified_data | company_id | companies(id) | |
-| sr_report_unified_data | unified_column_id | unified_column_mappings(unified_column_id) | |
-| sr_report_unified_data | approved_by | users(id) | |
+| sr_report_unified_data | unified_column_id | unified_column_mappings(unified_column_id) | NULL 허용; 미매핑 행에서는 NULL. `chk_unified_or_unmapped`로 두 FK 상호 배타 |
+| sr_report_unified_data | unmapped_dp_id | unmapped_data_points(id) | NULL 허용; UCM 행에서는 NULL. 위와 동일 CHK |
 | page_progress | company_id, assignee_id, completed_by | companies(id), users(id) | |
 | notifications | company_id, user_id, template_id | companies(id), users(id), notification_templates(id) | |
 | notification_reads | notification_id, user_id | notifications(id), users(id) | ON DELETE CASCADE |
@@ -1928,7 +2066,7 @@ LEFT JOIN governance_data gd ON gd.id = srud.source_entity_id AND srud.source_en
 | **FK + JSONB 스냅샷** | ghg_calculation_snapshots | **필수** (마감/버전 이력) |
 | **UNIQUE로 1:1(또는 키당 1건)** | historical_sr_reports, page_progress, progress_snapshots 등 | **필수** |
 | **ARRAY로 N 표현** | mapped_dp_ids, page_numbers, index_page_numbers | **선택·권장** |
-| **제안: unmapped_dp_id** | sr_report_unified_data가 “매핑 안 된 DP” 한 건 참조 | **선택** (미매핑 DP 통합 저장 시) |
+| **상호 배타 이중 FK (UCM / 미매핑)** | `sr_report_unified_data.unified_column_id` vs `unmapped_dp_id` + `chk_unified_or_unmapped` | **필수** (2.7 스키마) |
 
 ---
 
@@ -2147,9 +2285,10 @@ WHERE id = 'snapshot-uuid';
 5. **회사정보**: `company_info` (수동 입력)
 6. **SR 본문**: `sr_report_content` (사용자 작성 또는 AI 생성)
 7. **차트/도표**: `esg_charts` (사용자 생성)
-8. **통합 데이터**: `sr_report_unified_data` (6개 소스 테이블 통합 + `unified_column_mappings`와 매핑)
+8. **통합 데이터**: `sr_report_unified_data` (6개 소스 테이블 통합 + **UCM 또는** `unmapped_data_points`와 매핑)
    - 소스 테이블: `environmental_data`, `social_data`, `governance_data`, `company_info`, `sr_report_content`, `esg_charts`
-   - `unified_column_mappings`를 통해 IFRS S2, GRI, TCFD 등 다중 기준서의 Data Point와 연결
+   - **UCM 행**: `unified_column_mappings`를 통해 IFRS S2, GRI, TCFD 등 다중 기준서의 Data Point와 연결
+   - **미매핑 행**: `unmapped_data_points` FK만 설정(`unified_column_id`는 NULL); 이후 온톨로지 편입 시 전환 정책 적용
    - 기준서별 SR 보고서 생성 시 효율적인 데이터 조회 지원
 9. **전년도 SR 파싱**: `historical_sr_reports`, `sr_report_index`, `sr_report_body`, `sr_report_images` (PDF 파싱·RAG·벤치마킹 참조)
 10. **벤치마킹·평가**: `news_articles` (ESG 뉴스 수집·분석), `sr_report_evaluations` (보고서 종합 평가)

@@ -110,7 +110,6 @@ async def _save_metadata_node(state: SRWorkflowState) -> Dict[str, Any]:
             "source": meta["source"],
             "total_pages": meta.get("total_pages", 0),
             "index_page_numbers": meta.get("index_page_numbers", []),
-            "pdf_file_path": meta.get("pdf_file_path"),
         },
     )
     index_page_numbers = meta.get("index_page_numbers")
@@ -301,8 +300,35 @@ async def _save_images_node(state: SRWorkflowState) -> Dict[str, Any]:
         db_rows,
         agent_ok,
     )
-    if img_errors:
-        logger.warning("[SRWorkflow] save_images 에이전트 errors ({}건)", len(img_errors))
+    if not agent_ok:
+        logger.warning(
+            "[SRWorkflow] save_images 에이전트 실패: message={} errors={}",
+            agent_msg or "(없음)",
+            img_errors or raw_errs,
+        )
+    elif img_errors:
+        logger.warning("[SRWorkflow] save_images 에이전트 errors ({}건): {}", len(img_errors), img_errors)
+
+    vlm_auto: Dict[str, Any] = {}
+    if agent_ok and saved > 0 and report_id:
+        from backend.domain.v1.data_integration.spokes.infra.sr_image_vlm_enrichment import (
+            maybe_auto_enrich_after_image_save,
+        )
+
+        vlm_result = await asyncio.to_thread(maybe_auto_enrich_after_image_save, str(report_id))
+        if vlm_result is not None:
+            vlm_auto = {
+                "images_vlm_auto_success": bool(vlm_result.get("success")),
+                "images_vlm_auto_message": str(vlm_result.get("message", "")) or None,
+                "images_vlm_auto_updated": int(vlm_result.get("updated", 0) or 0),
+                "images_vlm_auto_skipped": int(vlm_result.get("skipped", 0) or 0),
+            }
+            logger.info(
+                "[SRWorkflow] save_images VLM 자동 보강: success={} updated={} skipped={}",
+                vlm_auto.get("images_vlm_auto_success"),
+                vlm_auto.get("images_vlm_auto_updated"),
+                vlm_auto.get("images_vlm_auto_skipped"),
+            )
 
     return {
         "images_saved_count": saved,
@@ -310,6 +336,7 @@ async def _save_images_node(state: SRWorkflowState) -> Dict[str, Any]:
         "images_agent_message": agent_msg or None,
         "images_agent_errors": img_errors if img_errors else None,
         "sr_report_images_db_row_count": db_rows,
+        **vlm_auto,
     }
 
 

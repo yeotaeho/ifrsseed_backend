@@ -5,6 +5,7 @@
 """
 from __future__ import annotations
 
+import base64
 import uuid
 from typing import Any, Dict, List, Optional
 
@@ -22,6 +23,16 @@ from backend.domain.v1.data_integration.models.bases import (
     SrReportBody,
     SrReportImage,
 )
+
+
+def _decode_optional_image_blob_base64(b64: Optional[str]) -> Optional[bytes]:
+    """LangChain 도구는 바이트 대신 base64 문자열로 선택 전달."""
+    if not b64 or not isinstance(b64, str):
+        return None
+    try:
+        return base64.b64decode(b64.strip())
+    except Exception:
+        return None
 
 
 def _to_uuid(value: Any) -> uuid.UUID:
@@ -42,7 +53,6 @@ def save_historical_sr_report(
     source: str,
     total_pages: int,
     index_page_numbers: List[int],
-    pdf_file_path: Optional[str] = None,
 ) -> str:
     """
     historical_sr_reports 테이블에 보고서 메타데이터 1건을 저장합니다.
@@ -54,7 +64,6 @@ def save_historical_sr_report(
         source: 출처 (예: "sr_agent")
         total_pages: 총 페이지 수
         index_page_numbers: 인덱스 페이지 번호 목록
-        pdf_file_path: PDF 파일 경로 (선택)
     
     Returns:
         저장된 report_id (UUID 문자열)
@@ -69,7 +78,6 @@ def save_historical_sr_report(
             company_id=cid,
             report_year=report_year,
             report_name=report_name,
-            pdf_file_path=pdf_file_path,
             source=source,
             total_pages=total_pages,
             index_page_numbers=index_page_numbers,
@@ -330,8 +338,8 @@ def save_sr_report_images_batch(
 
     Args:
         report_id: historical_sr_reports.id (UUID 문자열)
-        rows: 각 항목 page_number, image_file_path 필수;
-              image_index, image_file_size, image_width, image_height,
+        rows: 각 항목 page_number 필수;
+              image_index, image_blob(bytes, 선택), image_width, image_height,
               image_type, caption_text, caption_confidence, extracted_data 선택.
         replace_existing: True면 저장 전 해당 report_id 행 전부 DELETE
 
@@ -353,17 +361,13 @@ def save_sr_report_images_batch(
         for idx, item in enumerate(rows):
             try:
                 page_number = int(item.get("page_number", 0))
-                path = str(item.get("image_file_path", "")).strip()
-                if not path:
-                    raise ValueError("image_file_path 필수")
                 image_id = uuid.uuid4()
                 entity = SrReportImage(
                     id=image_id,
                     report_id=rid,
                     page_number=page_number,
                     image_index=item.get("image_index"),
-                    image_file_path=path,
-                    image_file_size=item.get("image_file_size"),
+                    image_blob=item.get("image_blob"),
                     image_width=item.get("image_width"),
                     image_height=item.get("image_height"),
                     image_type=item.get("image_type"),
@@ -380,8 +384,7 @@ def save_sr_report_images_batch(
                     "report_id": str(report_id),
                     "page_number": page_number,
                     "image_index": item.get("image_index"),
-                    "image_file_path": path,
-                    "image_file_size": item.get("image_file_size"),
+                    "image_blob_len": len(item["image_blob"]) if item.get("image_blob") else None,
                     "image_width": item.get("image_width"),
                     "image_height": item.get("image_height"),
                     "image_type": item.get("image_type"),
@@ -418,9 +421,8 @@ def save_sr_report_images_batch(
 def save_sr_report_image(
     report_id: str,
     page_number: int,
-    image_file_path: str,
     image_index: Optional[int] = None,
-    image_file_size: Optional[int] = None,
+    image_blob_base64: Optional[str] = None,
     image_width: Optional[int] = None,
     image_height: Optional[int] = None,
     image_type: Optional[str] = None,
@@ -432,9 +434,8 @@ def save_sr_report_image(
     Args:
         report_id: historical_sr_reports.id (UUID 문자열)
         page_number: 페이지 번호
-        image_file_path: 이미지 파일 경로
         image_index: 페이지 내 이미지 인덱스 (선택)
-        image_file_size: 파일 크기 (bytes, 선택)
+        image_blob_base64: 원본 이미지 바이트를 base64로 인코딩한 문자열 (선택, image_blob 컬럼)
         image_width: 너비 (선택)
         image_height: 높이 (선택)
         image_type: 이미지 타입 (선택)
@@ -446,13 +447,13 @@ def save_sr_report_image(
     session = get_session()
     try:
         image_id = uuid.uuid4()
+        blob = _decode_optional_image_blob_base64(image_blob_base64)
         entity = SrReportImage(
             id=image_id,
             report_id=_to_uuid(report_id),
             page_number=page_number,
             image_index=image_index,
-            image_file_path=image_file_path,
-            image_file_size=image_file_size,
+            image_blob=blob,
             image_width=image_width,
             image_height=image_height,
             image_type=image_type,
@@ -464,7 +465,7 @@ def save_sr_report_image(
         )
         session.add(entity)
         session.commit()
-        logger.info(f"[Tool] sr_report_image 저장: page={page_number}, path={image_file_path}")
+        logger.info(f"[Tool] sr_report_image 저장: page={page_number}, image_index={image_index}")
         return str(image_id)
     except Exception as e:
         session.rollback()

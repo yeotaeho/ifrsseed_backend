@@ -1,0 +1,3442 @@
+{
+    "data_points": [
+        {
+            "dp_id": "GRI102",
+            "dp_code": "GRI_102_CLIMATE_CHANGE",
+            "name_ko": "GRI 102: 기후 변화",
+            "name_en": "GRI 102: Climate Change",
+            "description": "GRI 102: Climate Change는 조직이 기후 변화를 중요 주제로 결정한 경우 보고해야 하는 공시를 제공합니다. 본 기준은 기후 변화 완화 및 적응 계획, 정의로운 전환, 재무 영향, 온실가스 배출 등을 다룹니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "GRI 102",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기후 변화를 중요 주제로 결정한 경우 필수 보고"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "IFRS-S2",
+                "TCFD-Climate"
+            ],
+            "parent_indicator": null,
+            "child_dps": [
+                "GRI102-SEC-1",
+                "GRI102-SEC-2"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-SEC-1",
+            "dp_code": "GRI_102_SEC_1_TOPIC_MANAGEMENT",
+            "name_ko": "섹션 1: 주제별 관리 공시",
+            "name_en": "Section 1: Topic Management Disclosures",
+            "description": "GRI 표준에 따라 보고하는 조직은 각 중요 주제를 어떻게 관리하는지 보고해야 합니다. 기후 변화를 중요 주제로 결정한 조직은 GRI 3: 중요 주제 2021의 공개 3-3을 사용하여 해당 주제를 어떻게 관리하는지 보고해야 합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "주제별 관리",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 3 공개 3-3과 함께 보고 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-3-3"
+            ],
+            "parent_indicator": "GRI102",
+            "child_dps": [
+                "GRI102-1",
+                "GRI102-2"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1",
+            "dp_code": "GRI_102_DIS_1_TRANSITION_PLAN",
+            "name_ko": "공개 102-1: 기후 변화 완화를 위한 전환 계획",
+            "name_en": "Disclosure 102-1: Transition plan for climate change mitigation",
+            "description": "조직의 기후 변화 완화를 위한 전환 계획에 관한 종합적인 정보를 제공합니다. 정책, 조치, 1.5°C 목표 정렬, 지출, 거버넌스, 목표 달성 진척도, 정의로운 전환, 사람과 환경 영향, 로비 활동 일관성 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "전환 계획",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "전환 계획이 없는 경우 그 이유와 수립 계획 명시 필수",
+                "1.5°C 목표와의 정렬 설명 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "IFRS-S2-14",
+                "TCFD-Strategy-C"
+            ],
+            "parent_indicator": "GRI102-SEC-1",
+            "child_dps": [
+                "GRI102-1-a",
+                "GRI102-1-b",
+                "GRI102-1-c",
+                "GRI102-1-d",
+                "GRI102-1-e",
+                "GRI102-1-f",
+                "GRI102-1-g",
+                "GRI102-1-h",
+                "GRI102-1-i",
+                "GRI102-1-j"
+            ],
+            "financial_linkages": [
+                "전환 계획 지출",
+                "탄소배출권",
+                "재생에너지 투자",
+                "화석연료 관련 자산"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-a",
+            "dp_code": "GRI_102_DIS_1_A_POLICY_ACTIONS",
+            "name_ko": "공개 102-1-a: 전환 계획 정책 및 조치",
+            "name_en": "Disclosure 102-1-a: Transition plan policies and actions",
+            "description": "기후 변화 완화를 위한 정책 및 조치를 포함한 전환 계획을 기술합니다. 에너지 소비, 토지 이용 변화, 공급업체 협력, 바이오경제, 순환경제, 정의로운 전환 및 인권 관련 정책을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "전환 계획 정책",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "정책 수정 주기 포함 필수",
+                "단기/중기/장기 조치 개요 제공 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-23",
+                "GRI-3-3-c"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "정책 이행 비용",
+                "운영비용 변화"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-b",
+            "dp_code": "GRI_102_DIS_1_B_ALIGNMENT_1_5C",
+            "name_ko": "공개 102-1-b: 1.5°C 목표와의 정렬",
+            "name_en": "Disclosure 102-1-b: Alignment with 1.5°C target",
+            "description": "전환 계획이 지구 온난화를 1.5°C로 제한하기 위해 필요한 글로벌 노력에 관한 최신 과학적 증거와 어떻게 부합하는지 설명합니다. 사용된 기후 변화 관련 시나리오의 출처, 전환 계획 수립에 사용된 방법론 및 가정을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "과학적 정렬",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "파리 협정 호환 시나리오 최소 1개 이상 포함 필수",
+                "IPCC 또는 동등한 과학 기반 시나리오 사용 필수",
+                "완화 계층 구조(방지-감축-상쇄) 부합 설명 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "IFRS-S2-15",
+                "TCFD-Strategy-2C"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "시나리오 분석 비용",
+                "기후 리스크 평가 비용"
+            ],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-c",
+            "dp_code": "GRI_102_DIS_1_C_EXPENDITURE",
+            "name_ko": "공개 102-1-c: 전환 계획 지출",
+            "name_en": "Disclosure 102-1-c: Transition plan expenditure",
+            "description": "전환 계획 실행으로 발생한 총 지출액을 금전적 가치와 보고 기간 중 발생한 총 지출액 대비 비율로 보고합니다. 자본 지출(CapEx)과 운영 지출(OpEx) 구분, 화석 연료 관련 활동 지출도 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "재무 지출",
+            "dp_type": "quantitative",
+            "unit": "currency_krw",
+            "validation_rules": [
+                "감사받은 재무제표와의 대조 필수",
+                "CapEx와 OpEx 구분 보고 필수",
+                "화석 연료 관련 지출 별도 보고 필수"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [
+                "IFRS-S2-Financial-Impact"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "전환 계획 자본지출",
+                "전환 계획 운영지출",
+                "화석연료 관련 지출",
+                "재생에너지 투자",
+                "에너지효율 개선 투자"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-d",
+            "dp_code": "GRI_102_DIS_1_D_GOVERNANCE",
+            "name_ko": "공개 102-1-d: 거버넌스 역할 및 책임",
+            "name_en": "Disclosure 102-1-d: Governance roles and responsibilities",
+            "description": "전환 계획의 감독 및 실행을 담당하는 거버넌스 기관 또는 개인의 역할과 책임을 보고합니다. 최고 의사결정 기구의 감독 책임과 고위 경영진의 실행 책임을 포함합니다.",
+            "standard": "GRI",
+            "category": "G",
+            "topic": "기후 변화",
+            "subtopic": "거버넌스",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "최고 의사결정 기구의 감독 책임 명시 필수",
+                "고위 경영진의 실행 책임 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-12",
+                "GRI-2-13",
+                "IFRS-S2-Governance"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "이사회 운영 비용",
+                "이사보수"
+            ],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-e",
+            "dp_code": "GRI_102_DIS_1_E_BUSINESS_INTEGRATION",
+            "name_ko": "공개 102-1-e: 사업 전략 통합",
+            "name_en": "Disclosure 102-1-e: Business strategy integration",
+            "description": "전환 계획이 사업 전략에 어떻게 통합되었는지 설명합니다. 성과 평가 및 인센티브 메커니즘 연계, 연구개발 활동, 제품/서비스 포트폴리오 변경, 조직 문화, 내부 탄소 가격 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "전략 통합",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "인센티브 메커니즘 연계 여부 명시 필수",
+                "제품/서비스 포트폴리오 변경 계획 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-19",
+                "IFRS-S2-Strategy"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "연구개발비",
+                "교육훈련비",
+                "제품 전환 비용",
+                "내부 탄소 가격 제도 운영비"
+            ],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-f",
+            "dp_code": "GRI_102_DIS_1_F_TARGETS_PROGRESS",
+            "name_ko": "공개 102-1-f: 목표 및 진행 상황",
+            "name_en": "Disclosure 102-1-f: Targets and progress",
+            "description": "전환 계획 달성 목표 및 진행 상황을 보고합니다. 온실가스 배출 감축 목표, 화석 연료 단계적 폐지 목표, 기타 기후 변화 완화 목표를 포함하며, 고정된 온실가스 배출량의 역할도 설명합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표 및 진행 상황",
+            "dp_type": "quantitative",
+            "unit": "percentage",
+            "validation_rules": [
+                "온실가스 배출 감축 목표 필수 보고(공개 102-4 참조)",
+                "화석 연료 단계적 폐지 목표 포함 필수",
+                "목표 달성 장애물 및 고정 배출량 설명 필수"
+            ],
+            "value_range": {
+                "min": 0,
+                "max": 100
+            },
+            "equivalent_dps": [
+                "GRI102-4",
+                "IFRS-S2-Targets"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [
+                "GRI102-1-f-i",
+                "GRI102-1-f-ii",
+                "GRI102-1-f-iii"
+            ],
+            "financial_linkages": [
+                "배출권 매입/매도",
+                "화석연료 자산 감가",
+                "재생에너지 전환 투자"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-f-i",
+            "dp_code": "GRI_102_DIS_1_F_I_GHG_REDUCTION_TARGETS",
+            "name_ko": "공개 102-1-f-i: 온실가스 배출 감축 목표",
+            "name_en": "Disclosure 102-1-f-i: GHG emission reduction targets",
+            "description": "공개 102-4에 따라 보고된 온실가스 배출 감축 목표 및 진행 상황입니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "GHG 감축 목표",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "Scope 1, 2, 3 배출 목표 구분 필수",
+                "기준 연도 및 목표 연도 명시 필수"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [
+                "GRI102-4",
+                "GRI-305"
+            ],
+            "parent_indicator": "GRI102-1-f",
+            "child_dps": [],
+            "financial_linkages": [
+                "탄소배출권",
+                "배출권거래손익"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-f-ii",
+            "dp_code": "GRI_102_DIS_1_F_II_FOSSIL_FUEL_PHASEOUT",
+            "name_ko": "공개 102-1-f-ii: 화석 연료 단계적 폐지 목표",
+            "name_en": "Disclosure 102-1-f-ii: Fossil fuel phase-out targets",
+            "description": "화석 연료 단계적 폐지 목표, 기준 연도, 목표 설정 시 적용된 기준, 방법론 및 가정을 보고합니다. 재생에너지 조달, 화석 연료 기반 소재 폐지, 신규 탐사 중단 목표 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "화석 연료 폐지",
+            "dp_type": "quantitative",
+            "unit": "percentage",
+            "validation_rules": [
+                "재생에너지 조달 목표 명시 필수",
+                "신규 화석 연료 탐사 중단 계획 필수"
+            ],
+            "value_range": {
+                "min": 0,
+                "max": 100
+            },
+            "equivalent_dps": [
+                "SBTi-Fossil-Fuel"
+            ],
+            "parent_indicator": "GRI102-1-f",
+            "child_dps": [],
+            "financial_linkages": [
+                "화석연료 자산 손상",
+                "재생에너지 인프라 투자",
+                "좌초자산"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-f-iii",
+            "dp_code": "GRI_102_DIS_1_F_III_OTHER_MITIGATION_TARGETS",
+            "name_ko": "공개 102-1-f-iii: 기타 기후 변화 완화 목표",
+            "name_en": "Disclosure 102-1-f-iii: Other climate mitigation targets",
+            "description": "기타 기후 변화 완화 목표, 해당 목표 설정 방식, 적용 범위, 기준 연도 및 전환 계획 내에서의 역할을 보고합니다. 순배출 제로 목표, 에너지 효율 목표, 참여/거버넌스 목표 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기타 완화 목표",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표가 없는 경우 해당 사실 명시 가능",
+                "완화 계층 구조 부합 설명 필수(방지-감축-제거)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "SBTi-Net-Zero"
+            ],
+            "parent_indicator": "GRI102-1-f",
+            "child_dps": [],
+            "financial_linkages": [
+                "에너지효율 개선 투자",
+                "온실가스 제거 프로젝트 투자"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "권장",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-g",
+            "dp_code": "GRI_102_DIS_1_G_JUST_TRANSITION",
+            "name_ko": "공개 102-1-g: 정의로운 전환 원칙 정렬",
+            "name_en": "Disclosure 102-1-g: Just transition alignment",
+            "description": "전환 계획이 공정 전환 원칙과 어떻게 부합하는지, 그리고 이해관계자 참여가 계획 수립 및 실행에 어떻게 반영되는지 설명합니다. ILO 지침, UNFCCC 원칙, 유엔 원주민 권리 선언 등을 참조합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "정의로운 전환",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "이해관계자 식별 방법 명시 필수",
+                "사회적 영향 평가 수행 여부 명시 필수",
+                "노동조합 및 원주민 참여 여부 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-29",
+                "ILO-Just-Transition"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "이해관계자 참여 비용",
+                "사회적 영향 평가 비용",
+                "근로자 재교육 비용"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-h",
+            "dp_code": "GRI_102_DIS_1_H_IMPACTS",
+            "name_ko": "공개 102-1-h: 사람과 환경에 대한 영향",
+            "name_en": "Disclosure 102-1-h: Impacts on people and environment",
+            "description": "전환 계획 실행이 사람과 환경에 미치는 영향 및 이를 관리하기 위한 조치들을 설명합니다. 근로자, 지역 사회, 원주민에 대한 영향과 생물다양성 영향을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "영향 관리",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "근로자 영향 관리 조치 명시 필수",
+                "생물다양성 영향 관리 조치 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-3-3-a",
+                "GRI-3-3-d",
+                "GRI-101-2"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [
+                "GRI102-1-h-i",
+                "GRI102-1-h-ii"
+            ],
+            "financial_linkages": [
+                "환경복구비용",
+                "생물다양성 보전 투자",
+                "일자리 전환 지원 비용"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-h-i",
+            "dp_code": "GRI_102_DIS_1_H_I_PEOPLE_IMPACTS",
+            "name_ko": "공개 102-1-h-i: 근로자, 지역사회, 원주민 영향",
+            "name_en": "Disclosure 102-1-h-i: Impacts on workers, communities, indigenous peoples",
+            "description": "전환 계획 실행으로 인한 근로자, 지역 사회, 원주민에 대한 영향 및 관리 조치를 설명합니다. 일자리 손실, 기술 전환 어려움, 재교육 프로그램 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "사회적 영향",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "일자리 영향 평가 필수",
+                "재교육 프로그램 제공 여부 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI102-3",
+                "GRI-401",
+                "GRI-404"
+            ],
+            "parent_indicator": "GRI102-1-h",
+            "child_dps": [],
+            "financial_linkages": [
+                "퇴직금",
+                "재교육 프로그램 비용",
+                "지역사회 지원 비용"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-h-ii",
+            "dp_code": "GRI_102_DIS_1_H_II_BIODIVERSITY_IMPACTS",
+            "name_ko": "공개 102-1-h-ii: 생물다양성 영향",
+            "name_en": "Disclosure 102-1-h-ii: Biodiversity impacts",
+            "description": "전환 계획 실행으로 인한 생물다양성에 대한 영향 및 관리 조치를 설명합니다. 재생에너지 인프라 건설로 인한 서식지 훼손, 토지 이용 변화 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물다양성",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "토지 이용 변화 영향 평가 필수",
+                "서식지 보전 조치 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-101-2",
+                "GRI-304"
+            ],
+            "parent_indicator": "GRI102-1-h",
+            "child_dps": [],
+            "financial_linkages": [
+                "생물다양성 상쇄 비용",
+                "서식지 복원 비용"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-i",
+            "dp_code": "GRI_102_DIS_1_I_PUBLIC_POLICY",
+            "name_ko": "공개 102-1-i: 공공 정책 활동 일관성",
+            "name_en": "Disclosure 102-1-i: Public policy alignment",
+            "description": "로비 활동을 포함한 공공 정책 활동이 전환 계획과 어떻게 일관성을 유지하는지 설명합니다. 주요 쟁점에 대한 입장, 대표 협회 회원 자격, 입장 차이 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "G",
+            "topic": "기후 변화",
+            "subtopic": "정책 일관성",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "전환 계획 관련 주요 쟁점 입장 명시 필수",
+                "대표 협회 회원 자격 및 입장 차이 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-415"
+            ],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [
+                "로비 활동 비용",
+                "협회 회비"
+            ],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-1-j",
+            "dp_code": "GRI_102_DIS_1_J_NO_PLAN",
+            "name_ko": "공개 102-1-j: 전환 계획 부재 시 설명",
+            "name_en": "Disclosure 102-1-j: Explanation if no transition plan",
+            "description": "전환 계획이 없는 경우 그 이유를 설명하고, 이를 수립하기 위해 취하고 있는 조치와 예상되는 시간표를 기술합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "계획 부재 설명",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "계획 부재 이유 명시 필수",
+                "수립을 위한 조치 및 시간표 명시 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-1",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2",
+            "dp_code": "GRI_102_DIS_2_ADAPTATION_PLAN",
+            "name_ko": "공개 102-2: 기후 변화 적응 계획",
+            "name_en": "Disclosure 102-2: Climate change adaptation plan",
+            "description": "기후변화 영향에 대응하기 위한 조직의 적응 계획에 관한 정보를 제공합니다. 활동과 상·하류 가치 사슬을 포괄하며, 위험·기회에 따른 사람과 환경 영향, 적응 계획 내용(정책·시나리오·지출·거버넌스·목표·정의로운 전환), 계획 시행 영향 및 계획 부재 시 설명을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 계획",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "UNFCCC 정의에 따른 적응(프로세스·관행·구조 변화)과 일관되게 기술",
+                "적응 계획이 없는 경우 공개 102-2-d 요건 충족"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "IFRS-S2-Physical",
+                "TCFD-Strategy"
+            ],
+            "parent_indicator": "GRI102-SEC-1",
+            "child_dps": [
+                "GRI102-2-a",
+                "GRI102-2-b",
+                "GRI102-2-c",
+                "GRI102-2-d"
+            ],
+            "financial_linkages": [
+                "적응 투자",
+                "CapEx",
+                "OpEx",
+                "보험·복구비"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-a",
+            "dp_code": "GRI_102_DIS_2_A_IMPACTS_IN_PLANNING",
+            "name_ko": "공개 102-2-a: 위험·기회에 따른 영향 및 계획 수립 반영",
+            "name_en": "Disclosure 102-2-a: Impacts from risks and opportunities and reflection in adaptation planning",
+            "description": "기후 변화 관련 위험 및 기회에 따른 사람과 환경에 미치는 영향을 설명하고, 이러한 영향이 적응 계획 수립 과정에서 어떻게 고려되었는지 기술합니다. 물리적 위험(급성·만성), 적응과 관련된 전환 위험의 영향, 기회 관련 영향을 포함할 수 있습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응·영향",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "사람·환경 영향 설명 필수",
+                "적응 계획 수립 시 고려 방식 기술 필수"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-3-3",
+                "IFRS-S2-Risk"
+            ],
+            "parent_indicator": "GRI102-2",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b",
+            "dp_code": "GRI_102_DIS_2_B_ADAPTATION_PLAN_CONTENT",
+            "name_ko": "공개 102-2-b: 적응 계획 설명",
+            "name_en": "Disclosure 102-2-b: Description of the adaptation plan",
+            "description": "적응 계획을 설명합니다. 기후변화 적응을 위한 정책 및 조치, 시나리오 출처·온도 전망·방법론·가정, 지출액 및 비율, 거버넌스 역할, 목표·진척, 정의로운 전환·이해관계자 참여를 하위 항목으로 포함합니다. 공개 102-1과 중복 시 참조로 대체 가능합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 계획 내용",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "계획 검토 빈도 및 전기 대비 변경 사항 보고",
+                "국가·지역·부문 적응 계획과의 연계 및 출처 열거 가능"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-2",
+            "child_dps": [
+                "GRI102-2-b-i",
+                "GRI102-2-b-ii",
+                "GRI102-2-b-iii",
+                "GRI102-2-b-iv",
+                "GRI102-2-b-v",
+                "GRI102-2-b-vi"
+            ],
+            "financial_linkages": [
+                "적응 관련 CapEx",
+                "적응 관련 OpEx"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-i",
+            "dp_code": "GRI_102_DIS_2_B_I_POLICIES_ACTIONS",
+            "name_ko": "공개 102-2-b-i: 적응 정책 및 조치",
+            "name_en": "Disclosure 102-2-b-i: Adaptation policies and actions",
+            "description": "기후변화에 적응하기 위한 정책 및 조치를 기술합니다. 자연 기반·공학·기술적 적응 유형, 공급망·시설 설계·지역사회 지원 등 조치의 개괄을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 정책",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 2-23 또는 GRI 3-3-c에 기술 시 참조 가능",
+                "조치에 대한 상세 설명 대신 개괄 설명 가능"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-23",
+                "GRI-3-3-c"
+            ],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-ii",
+            "dp_code": "GRI_102_DIS_2_B_II_SCENARIOS_METHODOLOGY",
+            "name_ko": "공개 102-2-b-ii: 시나리오·온도 전망·방법론·가정",
+            "name_en": "Disclosure 102-2-b-ii: Scenario sources, temperature outlook, methodology and assumptions",
+            "description": "사용된 기후변화 관련 시나리오의 출처, 시나리오에 포함된 온도 전망, 적응 계획 수립에 사용된 방법론 및 가정을 보고합니다. 고배출 시나리오와 파리 협정 양립 시나리오 등 다양한 시나리오 포함을 권장합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기후 시나리오",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "IPCC 시나리오 미사용 시 출처 선택 이유 및 과학 정합성 설명",
+                "고배출·파리 양립 등 시나리오 다양성 권장"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI102-1-b"
+            ],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-iii",
+            "dp_code": "GRI_102_DIS_2_B_III_EXPENDITURE",
+            "name_ko": "공개 102-2-b-iii: 적응 계획 이행 지출",
+            "name_en": "Disclosure 102-2-b-iii: Expenditure on adaptation plan implementation",
+            "description": "적응 계획 이행으로 발생한 총 지출액을 보고 기간 총 지출 대비 금액 및 비율로 보고합니다. CapEx·OpEx 구분, 감사 재무제표와의 조정·차이 설명, 분류 체계(의무·자발) 병기 가능.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 지출",
+            "dp_type": "quantitative",
+            "unit": "currency_krw",
+            "validation_rules": [
+                "지출 비율 = (적응 계획 관련 지출 / 총 지출) × 100",
+                "CapEx·OpEx 구분 보고",
+                "감사 연결 재무제표 또는 공개 재무정보와 조정"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [
+                "GRI102-1-c"
+            ],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [
+                "적응 CapEx",
+                "적응 OpEx"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-iv",
+            "dp_code": "GRI_102_DIS_2_B_IV_GOVERNANCE",
+            "name_ko": "공개 102-2-b-iv: 적응 계획 거버넌스",
+            "name_en": "Disclosure 102-2-b-iv: Governance of adaptation plan",
+            "description": "적응 계획의 감독 및 이행을 담당하는 거버넌스 기관 또는 개인의 역할과 책임을 보고합니다. 최고 의사결정 기구의 감독(승인·검토·모니터링·공정 전환 부합·영향 관리)과 고위 경영진의 실행 책임을 포함합니다.",
+            "standard": "GRI",
+            "category": "G",
+            "topic": "기후 변화",
+            "subtopic": "적응 거버넌스",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 2-12·2-13에 기술 시 참조 가능"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-12",
+                "GRI-2-13",
+                "GRI102-1-d"
+            ],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-v",
+            "dp_code": "GRI_102_DIS_2_B_V_TARGETS_PROGRESS",
+            "name_ko": "공개 102-2-b-v: 적응 목표 및 진척",
+            "name_en": "Disclosure 102-2-b-v: Adaptation targets and progress",
+            "description": "적응 계획 달성을 위한 목표 및 진척 상황을 보고합니다. 물리적 위험 평가 사이트 수, 교육 이수 인원, 극한기상 견딤 점검, 열 관련 병가 감소, 피해 비용 감소 등 정성·정량 목표 예시를 포함할 수 있습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 목표",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표 및 진척을 구체적으로 보고"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-b-vi",
+            "dp_code": "GRI_102_DIS_2_B_VI_JUST_TRANSITION_STAKEHOLDERS",
+            "name_ko": "공개 102-2-b-vi: 정의로운 전환 및 이해관계자 참여",
+            "name_en": "Disclosure 102-2-b-vi: Just transition and stakeholder engagement",
+            "description": "적응 계획이 공정한 전환 원칙과 어떻게 부합하는지, 이해관계자 참여가 계획 수립·실행에 어떻게 반영되는지 설명합니다. 영향받는 이해관계자 식별, 소통, 통찰의 조치 반영, 소통 빈도를 포함합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "정의로운 전환·참여",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 2-29에 기술 시 참조 가능",
+                "공정 전환 원칙 상세는 공개 102-1-g 지침 참조"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-2-29",
+                "GRI102-1-g"
+            ],
+            "parent_indicator": "GRI102-2-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-c",
+            "dp_code": "GRI_102_DIS_2_C_IMPLEMENTATION_IMPACTS",
+            "name_ko": "공개 102-2-c: 적응 계획 시행의 사람·환경 영향",
+            "name_en": "Disclosure 102-2-c: Impacts on people and environment from adaptation implementation",
+            "description": "적응 계획 시행으로 인한 사람과 환경에 미치는 영향과 관리 조치를 설명합니다. 긍정적 영향(고용·양질의 일자리)과 부정적 영향(시설 이전에 따른 지역사회 홍수 피해 등), 미이행 시 영향을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "적응 시행 영향",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 3-3-a·3-3-d에 기술 시 참조 가능",
+                "적응 계획 미이행 관련 영향 설명"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-3-3-a",
+                "GRI-3-3-d"
+            ],
+            "parent_indicator": "GRI102-2",
+            "child_dps": [
+                "GRI102-2-c-i",
+                "GRI102-2-c-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-c-i",
+            "dp_code": "GRI_102_DIS_2_C_I_WORKERS_COMMUNITIES_INDIGENOUS",
+            "name_ko": "공개 102-2-c-i: 근로자·지역사회·원주민 영향",
+            "name_en": "Disclosure 102-2-c-i: Impacts on workers, communities and indigenous peoples",
+            "description": "적응 계획 시행으로 근로자, 지역 사회 및 원주민에 미치는 영향과 관리 조치를 설명합니다. 재배치·보수·안전, 일자리 전환 지원, 자연 기반·기술 투자로 일자리 보전, 지역사회·원주민 협력 등을 포함할 수 있습니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "사회적 영향",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "공개 102-3의 정량 지표 참조 가능"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI102-3"
+            ],
+            "parent_indicator": "GRI102-2-c",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-c-ii",
+            "dp_code": "GRI_102_DIS_2_C_II_BIODIVERSITY",
+            "name_ko": "공개 102-2-c-ii: 생물다양성 영향",
+            "name_en": "Disclosure 102-2-c-ii: Biodiversity impacts",
+            "description": "적응 조치가 생물다양성에 미치는 긍정적·부정적 영향과 관리 조치를 설명합니다. 맹그로브 식재, 외래종 조림, 기후 대응 인프라 등 예시를 포함할 수 있습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물다양성",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "GRI 101-2에 기술 시 참조 가능"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-101-2",
+                "GRI102-1-h-ii"
+            ],
+            "parent_indicator": "GRI102-2-c",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-2-d",
+            "dp_code": "GRI_102_DIS_2_D_NO_PLAN",
+            "name_ko": "공개 102-2-d: 적응 계획 부재 시 설명",
+            "name_en": "Disclosure 102-2-d: Explanation if no adaptation plan",
+            "description": "적응 계획이 없는 경우 부재 사유를 설명하고, 계획 수립을 위한 진행 중인 단계 및 예상 시기를 기술합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "계획 부재 설명",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "부재 이유·진행 단계·예상 시기 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI102-1-j"
+            ],
+            "parent_indicator": "GRI102-2",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-SEC-2",
+            "dp_code": "GRI_102_SEC_2_TOPIC_DISCLOSURES",
+            "name_ko": "섹션 2: 주제별 공개",
+            "name_en": "Section 2: Topic-specific disclosures",
+            "description": "GRI 기준에 따라 보고하는 조직은 기후 변화 관련 영향과 관련된 본 섹션(공개 102-3부터 공개 102-10까지)의 모든 공개 사항을 보고해야 합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "주제별 공개",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "공개 102-3~102-10 중 해당하는 모든 항목 보고"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102",
+            "child_dps": [
+                "GRI102-3",
+                "GRI102-4",
+                "GRI102-5",
+                "GRI102-6",
+                "GRI102-7",
+                "GRI102-8"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3",
+            "dp_code": "GRI_102_DIS_3_JUST_TRANSITION",
+            "name_ko": "공개 102-3: 공정 전환(Just Transition)",
+            "name_en": "Disclosure 102-3: Just transition",
+            "description": "전환 또는 적응 노력의 맥락에서 근로자·지역 사회·원주민에 대한 영향을 수치와 맥락으로 보고합니다. 신규·해고·재배치·교육 이수 인원, 종업원 외 근로자, 생활임금 대비 임금, 사업장 위치, 지역 협정 비율, 집계 방법론(요구 a~j)을 포함합니다. 인원·비율·서술이 한 요구 문장에 묶인 항목은 원문 구조에 맞춰 단일 dp_id로 둡니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "공정 전환",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-3-a~j 요건 충족",
+                "102-3-a~f 지역별 분해·추정 시 102-3-j 설명(지침) 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-3-a",
+                "GRI102-3-b",
+                "GRI102-3-c",
+                "GRI102-3-d",
+                "GRI102-3-e",
+                "GRI102-3-f",
+                "GRI102-3-g",
+                "GRI102-3-h",
+                "GRI102-3-i",
+                "GRI102-3-j"
+            ],
+            "financial_linkages": [
+                "재교육·재배치 비용",
+                "생활임금 관련 임금 정책"
+            ],
+            "financial_impact_type": "neutral",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-a",
+            "dp_code": "GRI_102_DIS_3_A_NEW_HIRES",
+            "name_ko": "공개 102-3-a: 전환·적응 관련 신규 채용",
+            "name_en": "Disclosure 102-3-a: New hires (transition/adaptation)",
+            "description": "전환 또는 적응 노력과 관련하여 신규 채용된 종업원 총수를 보고하고, 성별(GRI102-3-a-i) 및 종업원 유형(GRI102-3-a-ii)으로 세분합니다. 지침: 저탄소 제품·서비스·현장 등 관련 채용으로 해석하며, 102-3-a~f는 지역별 분해·부록 표 예시를 rulebook에 따릅니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용·전환",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "신규 채용 총수 제시",
+                "a-i 성별·a-ii 종업원 유형 분해",
+                "지침: 지역별 분해(102-3-a~f)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [
+                "GRI102-3-a-i",
+                "GRI102-3-a-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-a-i",
+            "dp_code": "GRI_102_DIS_3_A_I_GENDER",
+            "name_ko": "공개 102-3-a-i: 성별",
+            "name_en": "Disclosure 102-3-a (i): Gender",
+            "description": "102-3-a 신규 채용 인원의 성별 구분 내역을 보고합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "성별 분해 제시"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-a-ii",
+            "dp_code": "GRI_102_DIS_3_A_II_EMPLOYEE_TYPE",
+            "name_ko": "공개 102-3-a-ii: 종업원 유형",
+            "name_en": "Disclosure 102-3-a (ii): Employee type",
+            "description": "102-3-a 신규 채용 인원의 종업원 유형별 내역을 보고합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "종업원 유형 분해 제시"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-b",
+            "dp_code": "GRI_102_DIS_3_B_TERMINATIONS",
+            "name_ko": "공개 102-3-b: 해고(직무 종료)",
+            "name_en": "Disclosure 102-3-b: Terminated employees",
+            "description": "해고된 종업원 총수를 보고하고 성별(b-i)·종업원 유형(b-ii)으로 세분합니다. 지침: 조직 주도 직무 종료(대량 해고, GHG 집약 활동 축소·폐쇄에 따른 단계적 직무 제거 등)를 포함합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "해고(직무 종료) 총수",
+                "b-i·b-ii 분해",
+                "지역별 분해(지침, a~f 공통)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [
+                "GRI102-3-b-i",
+                "GRI102-3-b-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-b-i",
+            "dp_code": "GRI_102_DIS_3_B_I_GENDER",
+            "name_ko": "공개 102-3-b-i: 성별",
+            "name_en": "Disclosure 102-3-b (i): Gender",
+            "description": "102-3-b 해고 인원의 성별 구분 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "성별 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-b-ii",
+            "dp_code": "GRI_102_DIS_3_B_II_EMPLOYEE_TYPE",
+            "name_ko": "공개 102-3-b-ii: 종업원 유형",
+            "name_en": "Disclosure 102-3-b (ii): Employee type",
+            "description": "102-3-b 해고 인원의 종업원 유형별 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "종업원 유형 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-b",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-c",
+            "dp_code": "GRI_102_DIS_3_C_REDEPLOYED",
+            "name_ko": "공개 102-3-c: 재배치된 종업원",
+            "name_en": "Disclosure 102-3-c: Redeployed employees",
+            "description": "재배치된 종업원 총수를 보고하고 성별(c-i)·종업원 유형(c-ii)으로 세분합니다. 지침: 고배출 활동 종업원의 재교육 후 동일 조직 내 저배출 활동으로의 이동 등을 포함합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "재배치 총수·c-i·c-ii",
+                "지역별 분해(지침)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [
+                "GRI102-3-c-i",
+                "GRI102-3-c-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-c-i",
+            "dp_code": "GRI_102_DIS_3_C_I_GENDER",
+            "name_ko": "공개 102-3-c-i: 성별",
+            "name_en": "Disclosure 102-3-c (i): Gender",
+            "description": "102-3-c 재배치 인원의 성별 구분 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "성별 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-c",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-c-ii",
+            "dp_code": "GRI_102_DIS_3_C_II_EMPLOYEE_TYPE",
+            "name_ko": "공개 102-3-c-ii: 종업원 유형",
+            "name_en": "Disclosure 102-3-c (ii): Employee type",
+            "description": "102-3-c 재배치 인원의 종업원 유형별 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "고용",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "종업원 유형 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-c",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-d",
+            "dp_code": "GRI_102_DIS_3_D_UPSKILLING",
+            "name_ko": "공개 102-3-d: 업·리스킬링 교육 이수",
+            "name_en": "Disclosure 102-3-d: Upskilling and reskilling training",
+            "description": "업스킬링·리스킬링 교육을 받은 종업원 총수를 보고하고 성별(d-i)·종업원 유형(d-ii)으로 세분합니다. 지침: 고용 안정·기본급 상승 등 영향 설명에 활용할 수 있습니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "교육",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "교육 이수 총수·d-i·d-ii",
+                "지역별 분해(지침)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [
+                "GRI102-3-d-i",
+                "GRI102-3-d-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-d-i",
+            "dp_code": "GRI_102_DIS_3_D_I_GENDER",
+            "name_ko": "공개 102-3-d-i: 성별",
+            "name_en": "Disclosure 102-3-d (i): Gender",
+            "description": "102-3-d 교육 이수 인원의 성별 구분 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "교육",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "성별 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-d-ii",
+            "dp_code": "GRI_102_DIS_3_D_II_EMPLOYEE_TYPE",
+            "name_ko": "공개 102-3-d-ii: 종업원 유형",
+            "name_en": "Disclosure 102-3-d (ii): Employee type",
+            "description": "102-3-d 교육 이수 인원의 종업원 유형별 내역입니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "교육",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "종업원 유형 분해"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-e",
+            "dp_code": "GRI_102_DIS_3_E_NON_EMPLOYEE_WORKERS",
+            "name_ko": "공개 102-3-e: 종업원이 아닌 신규 근로자",
+            "name_en": "Disclosure 102-3-e: New workers who are not employees",
+            "description": "종업원이 아닌 신규 근로자 총수를 보고하고 성별로 세분합니다. 지침: 조직이 업무를 통제하나 공식 고용관계에 있지 않은 근로자 정의는 GRI 2 공개 2-8-a 지침을 참조합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "근로자",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "비종업원 신규 근로자 총수",
+                "성별 분해(요구문에 로마숫자 하위 항목 없음—한 DP 내)",
+                "지역별 분해(지침)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-f",
+            "dp_code": "GRI_102_DIS_3_F_NON_REGULAR_ENDED",
+            "name_ko": "공개 102-3-f: 고용 종료된 비정규직(비종업원) 근로자",
+            "name_en": "Disclosure 102-3-f: Non-regular non-employee workers whose employment ended",
+            "description": "고용 관계가 종료된 비정규직 근로자 총수를 성별로 구분하여 보고합니다. 지침: 102-3-b와 함께 조직 주도 직무·고용 종료 맥락으로 해석합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "근로자",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "종료 인원 총수·성별 분해",
+                "지역별 분해(지침)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-g",
+            "dp_code": "GRI_102_DIS_3_G_LIVING_WAGE",
+            "name_ko": "공개 102-3-g: 생활임금 대비 기본급 및 격차 해소",
+            "name_en": "Disclosure 102-3-g: Living wage vs basic pay and bridging actions",
+            "description": "신규 채용 종업원 중 기본급이 해당 지역 생활비 추정치 이상인 인원 수와 비율을 보고하고, 102-3-a 및 102-3-e에 보고된 근로자에 대해 기본급과 생활비 추정치 간 격차를 해소하기 위한 조치·약속을 기술합니다. 생활비 추정치는 식료·주거·의료 등 기본 생활비를 개인·가구 단위로 추정한 금액(지침). 원문이 한 항목(g)으로 규정하므로 인원·비율·서술을 분리 dp_id로 쪼개지 않습니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "임금",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기본급 ≥ 생활임금 추정 인원 수 및 비율",
+                "102-3-a·102-3-e 근로자 대상 격차 해소 조치·약속 서술"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-h",
+            "dp_code": "GRI_102_DIS_3_H_OPERATION_LOCATIONS",
+            "name_ko": "공개 102-3-h: 지역사회·원주민 영향 사업장 위치",
+            "name_en": "Disclosure 102-3-h: Locations affecting communities and indigenous peoples",
+            "description": "전환·적응 노력으로 지역 사회 및 원주민에게 영향을 미치는 사업장(운영) 위치를 열거합니다. 지침: 주·도·시 등 구체적 지역, 원주민 권리(UN DRIP) 관련 영향 맥락을 포함할 수 있습니다. 102-3-i 비율 산정의 분모·분자 목록으로 사용됩니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "지역·원주민",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "영향 사업장·운영 지역 목록",
+                "102-3-i와 목록 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-i",
+            "dp_code": "GRI_102_DIS_3_I_AGREEMENT_COVERAGE_PCT",
+            "name_ko": "공개 102-3-i: 이익 보호 협정 체결 운영지역 비율",
+            "name_en": "Disclosure 102-3-i: Share of operating areas with agreements",
+            "description": "102-3-h에 열거된 운영 지역 중, 영향받거나 잠재적 영향이 있는 지역 사회 또는 원주민 이익 보호를 위한 협정이 체결된 지역의 비율(%)을 보고합니다. 지침: 비율 산정 시 102-3-h 목록을 사용; 협정이 있는 각 운영지에서 협정 상대가 영향받는 전체 지역사회·원주민인지 일부인지 보고합니다. FPIC 등 GRI 411·413 지침 참조.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "지역·원주민",
+            "dp_type": "quantitative",
+            "unit": "percentage",
+            "validation_rules": [
+                "102-3-h 기반 비율",
+                "협정별 전체 vs 일부 이해관계자 명시(지침)"
+            ],
+            "value_range": {
+                "min": 0,
+                "max": 100
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-j",
+            "dp_code": "GRI_102_DIS_3_J_CONTEXT_METHODOLOGY",
+            "name_ko": "공개 102-3-j: 맥락·집계 방법·보고 방식",
+            "name_en": "Disclosure 102-3-j: Context, aggregation methodology, reporting basis",
+            "description": "102-3 데이터 이해에 필요한 맥락, 집계 방법론·가정, 수치 보고 방식을 보고합니다. 하위: (j-i) 인원 수·FTE·기타 방법론 여부, (j-ii) 보고기간 말·기간 평균·기타 방법론 여부. a~f를 직접 산정할 수 없어 추정치를 쓴 경우 그 설명은 본 항목(102-3-j)에 둡니다(지침).",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "맥락·방법론·가정",
+                "j-i·j-ii 반영",
+                "a~f 추정 시 본 항목에 설명(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3",
+            "child_dps": [
+                "GRI102-3-j-i",
+                "GRI102-3-j-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-j-i",
+            "dp_code": "GRI_102_DIS_3_J_I_HEADCOUNT_FTE",
+            "name_ko": "공개 102-3-j-i: 인원·FTE·기타",
+            "name_en": "Disclosure 102-3-j (i): Head count, FTE or other",
+            "description": "수치가 인원 수(헤드카운트), 정규직 환산(FTE) 또는 다른 방법론으로 보고되었는지 명시합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "헤드카운트 vs FTE vs 기타 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-j",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-3-j-ii",
+            "dp_code": "GRI_102_DIS_3_J_II_PERIOD_BASIS",
+            "name_ko": "공개 102-3-j-ii: 시점·평균·기타",
+            "name_en": "Disclosure 102-3-j (ii): Period-end, average or other",
+            "description": "수치가 보고 기간 말 기준, 보고 기간 평균, 또는 다른 방법론에 따른 것인지 명시합니다.",
+            "standard": "GRI",
+            "category": "S",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기간 말 vs 기간 평균 vs 기타 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-3-j",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4",
+            "dp_code": "GRI_102_DIS_4_GHG_REDUCTION_TARGETS",
+            "name_ko": "공개 102-4: 온실가스 배출 감축 목표 및 진행 상황",
+            "name_en": "Disclosure 102-4: GHG emission reduction targets and progress",
+            "description": "단기·중기·장기 총 범위 1·2·3 온실가스 배출 감축 목표와 진척을 CO₂e 및 기준 연도 배출량 대비 백분율로 보고합니다(요구 a~k). 본 공개에 따라 보고된 목표는 공개 102-1-f 전환 계획 달성 목표 보고에 사용됩니다. 제3자 검증 등 요구문에 문자 항목으로 없는 내용은 별도 dp_id를 만들지 않고 rulebook 지침으로만 둡니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "GHG 감축 목표",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-4-a~k 요건 충족",
+                "102-5·102-6·102-7·102-1-f와 교차 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI102-1-f-i"
+            ],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-4-a",
+                "GRI102-4-b",
+                "GRI102-4-c",
+                "GRI102-4-d",
+                "GRI102-4-e",
+                "GRI102-4-f",
+                "GRI102-4-g",
+                "GRI102-4-h",
+                "GRI102-4-i",
+                "GRI102-4-j",
+                "GRI102-4-k"
+            ],
+            "financial_linkages": [
+                "탄소배출권",
+                "배출권거래"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-a",
+            "dp_code": "GRI_102_DIS_4_A_SML_GROSS_TARGETS",
+            "name_ko": "공개 102-4-a: 단·중·장기 총 범위 1·2·3 감축 목표",
+            "name_en": "Disclosure 102-4-a: Short/medium/long-term gross Scope 1, 2 and 3 targets",
+            "description": "단기·중기·장기 총 범위 1·2·3 온실가스 배출 감축 목표를 CO₂e(t)와 기준 연도 배출량의 백분율로 보고합니다. (i) 총 목표는 범위별 별도 또는 범위 1·2 합산으로 구분 (ii) 합산 시 공개 102-5·102-6에 보고된 총 스코프 1·2 배출 포함 (iii) 온실가스 흡수량·거래량·회피 배출은 제외합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "감축 목표·범위",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "단기·중기·장기별 CO₂e 및 기준연도 대비 % 명시",
+                "a-i: 별도 보고 vs 범위 1+2 합산 구분",
+                "a-ii: 합산 시 102-5·102-6 총 스코프 1·2 포함",
+                "a-iii: 흡수·거래(크레딧)·회피 배출 목표에서 제외"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [
+                "GRI102-4-a-i",
+                "GRI102-4-a-ii",
+                "GRI102-4-a-iii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-a-i",
+            "dp_code": "GRI_102_DIS_4_A_I_SEPARATE_OR_COMBINED_S12",
+            "name_ko": "공개 102-4-a-i: 범위 1·2·3 별도 또는 1+2 합산",
+            "name_en": "Disclosure 102-4-a (i): Separate or combined Scope 1 and 2",
+            "description": "총 범위 1·2·3 감축 목표가 별도로 보고되는지, 범위 1 및 2가 합산된 경우인지 구분합니다. 통합(범위 1·2·3) 목표를 보고하는 경우 지침에 따라 관련성 이유와 목표에 포함된 총 배출 대비 각 범위 비율(%)을 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표 구조",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "별도 vs 범위 1+2 합산 명시",
+                "통합 S1+2+3 목표 시 관련성·범위별 비율 보고"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-a-ii",
+            "dp_code": "GRI_102_DIS_4_A_II_S12_INCLUDES_102_5_6",
+            "name_ko": "공개 102-4-a-ii: 102-5·102-6 총 스코프 1·2 포함",
+            "name_en": "Disclosure 102-4-a (ii): Combined S1+2 includes 102-5 and 102-6 totals",
+            "description": "총 스코프 1 및 스코프 2 감축 목표는 공개 102-5·102-6에 보고된 총 스코프 1·2 온실가스 배출량을 포함합니다. 포함하지 않으면 이유, 총 배출 대비 목표 적용 비율, 총량 포함을 위한 일정·단계를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표·인벤토리 정합",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "합산 목표 시 102-5·102-6 총량과 정합",
+                "부분 포함 시 이유·비율·로드맵"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-a-iii",
+            "dp_code": "GRI_102_DIS_4_A_III_EXCLUSIONS",
+            "name_ko": "공개 102-4-a-iii: 흡수·거래·회피 제외",
+            "name_en": "Disclosure 102-4-a (iii): Exclusions from gross reduction targets",
+            "description": "온실가스 제거량, 온실가스 거래(탄소 크레딧 포함), 회피된 온실가스 배출은 102-4에 따른 총 온실가스 배출 감축 목표에서 제외됩니다. 순감축 허용 부문 프로그램 등에서는 감축 목표와 제거량을 별도 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표 경계",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "흡수·거래·회피가 목표에서 제외됨을 명시",
+                "진척(102-4-i) 산정에서도 동일 제외"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-a",
+            "child_dps": [],
+            "financial_linkages": [
+                "탄소배출권"
+            ],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-b",
+            "dp_code": "GRI_102_DIS_4_B_BIOGENIC_CO2",
+            "name_ko": "공개 102-4-b: 생물 기원 CO₂ 목표 포함 여부",
+            "name_en": "Disclosure 102-4-b: Biogenic CO₂ inclusion per target",
+            "description": "각 총 온실가스 배출 감축 목표에 생물 기원 CO₂ 배출량이 포함되는지 여부를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표별 생물 기원 CO₂ 포함 여부 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-c",
+            "dp_code": "GRI_102_DIS_4_C_SCOPE2_BASIS",
+            "name_ko": "공개 102-4-c: 범위 2 목표 위치·시장 기반",
+            "name_en": "Disclosure 102-4-c: Scope 2 targets — location-based or market-based",
+            "description": "각 총 범위 2 온실가스 배출 감축 목표에 대해 위치 기반 방식 또는 시장 기반 방식 사용 여부를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2 회계",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "범위 2 목표별 위치 vs 시장 기반 명시",
+                "시장 기반 사용 시 위치 기반 목표 별도 보고(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-d",
+            "dp_code": "GRI_102_DIS_4_D_SCOPE3_CATEGORIES",
+            "name_ko": "공개 102-4-d: 범위 3 목표 적용 범주",
+            "name_en": "Disclosure 102-4-d: Scope 3 categories covered",
+            "description": "각 총 범위 3 온실가스 배출 감축 목표에 적용되는 범위 3 범주를 열거합니다. 목표 적용 범주는 공개 102-7 적용 범주와 일관되어야 합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표별 적용 범위 3 범주 열거",
+                "102-7 보고 범주와 일관성"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-e",
+            "dp_code": "GRI_102_DIS_4_E_GASES",
+            "name_ko": "공개 102-4-e: 목표 적용 가스",
+            "name_en": "Disclosure 102-4-e: Gases covered by each target",
+            "description": "각 온실가스 총 배출량 감축 목표에 적용되는 가스를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "온실가스 종류",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표별 적용 GHG 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-f",
+            "dp_code": "GRI_102_DIS_4_F_15C_SCIENCE",
+            "name_ko": "공개 102-4-f: 1.5°C 최신 과학적 증거 부합",
+            "name_en": "Disclosure 102-4-f: Alignment with latest science for 1.5°C",
+            "description": "온실가스 총 배출량 감축 목표가 지구 온난화를 1.5°C로 제한하는 데 필요한 노력에 관한 최신 과학적 증거와 어떻게 부합하는지 설명합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "과학 기반 목표",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "1.5°C 경로와의 부합 논리·근거 설명"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-g",
+            "dp_code": "GRI_102_DIS_4_G_TARGET_MODIFICATION_POLICY",
+            "name_ko": "공개 102-4-g: 총 감축 목표 수정 정책",
+            "name_en": "Disclosure 102-4-g: Policy to modify gross reduction targets",
+            "description": "총 온실가스 배출 감축 목표 수정 정책을 기술합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표 거버넌스",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "목표 수정·갱신 정책 서술"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-h",
+            "dp_code": "GRI_102_DIS_4_H_BASELINE_YEAR",
+            "name_ko": "공개 102-4-h: 기준 연도",
+            "name_en": "Disclosure 102-4-h: Baseline year per target",
+            "description": "각 온실가스 총 배출량 감축 목표에 대해 기준 연도를 보고하며, 하위 h-i~h-iv를 포함합니다. 중대한 변화로 목표 적절성이 훼손되면 재계산하고 GRI 2 공개 2-4에 따라 재공시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준 연도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기준 연도 및 h-i~h-iv 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [
+                "GRI102-4-h-i",
+                "GRI102-4-h-ii",
+                "GRI102-4-h-iii",
+                "GRI102-4-h-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-h-i",
+            "dp_code": "GRI_102_DIS_4_H_I_BASELINE_RATIONALE",
+            "name_ko": "공개 102-4-h-i: 기준 연도 선정 근거",
+            "name_en": "Disclosure 102-4-h (i): Baseline year selection rationale",
+            "description": "기준 연도 선정 근거를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준 연도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기준 연도 선정 근거 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-h",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-h-ii",
+            "dp_code": "GRI_102_DIS_4_H_II_BASELINE_TCO2E",
+            "name_ko": "공개 102-4-h-ii: 기준 연도 배출량(CO₂e)",
+            "name_en": "Disclosure 102-4-h (ii): Baseline emissions (tCO₂e)",
+            "description": "기준 연도 배출량을 이산화탄소 환산 톤 단위로 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준 연도",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "기준 연도 CO₂e 수치 제시"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-h",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-h-iii",
+            "dp_code": "GRI_102_DIS_4_H_III_RECALC_CONTEXT",
+            "name_ko": "공개 102-4-h-iii: 재계산 유발 중대 변화",
+            "name_en": "Disclosure 102-4-h (iii): Material changes triggering baseline recalculation",
+            "description": "기준년도 배출량 재계산을 유발한 배출량의 중대한 변화 배경을 설명합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준 연도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "재계산 사유·중대 변화 설명(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-h",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-h-iv",
+            "dp_code": "GRI_102_DIS_4_H_IV_PRIOR_BASELINE",
+            "name_ko": "공개 102-4-h-iv: 재계산 시 이전 기준 연도 배출량",
+            "name_en": "Disclosure 102-4-h (iv): Previously reported baseline if recalculated",
+            "description": "기준 연도 배출량이 재계산된 경우 이전에 보고된 기준 연도 배출량을 제시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준 연도",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "재계산 시 이전 보고 기준 연도 CO₂e 명시(해당 시)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-h",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-i",
+            "dp_code": "GRI_102_DIS_4_I_PROGRESS_INVENTORY",
+            "name_ko": "공개 102-4-i: 인벤토리 방법 진척(CO₂e·%)",
+            "name_en": "Disclosure 102-4-i: Progress using inventory method",
+            "description": "각 온실가스 총 배출량 감축 목표에 대한 진척을 인벤토리 방법으로 CO₂e 및 기준 연도 배출량의 백분율로 보고합니다. 배출량 변화 = 당해 연도 배출량 − 기준 연도 배출량. 진전률(%) = (배출량 변화 / 기준년도 배출량) × 100. 제거·거래·회피는 제외합니다. 목표 달성 장애 요인과 고정 배출의 역할은 102-1-f 지침과 연계합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "목표 진척",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "인벤토리 방식으로 기준 연도와 비교",
+                "CO₂e와 기준 연도 배출량 대비 백분율(진전률) 모두 제시",
+                "진전률 % = (당해−기준 배출 변화) ÷ 기준년도 배출량 × 100",
+                "진척 산정 시 흡수·거래·회피 제외",
+                "장애 요인·고정 배출 역할 설명(102-1-f)",
+                "수치·가정이 102-4-k와 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-j",
+            "dp_code": "GRI_102_DIS_4_J_PROGRESS_DRIVERS",
+            "name_ko": "공개 102-4-j: 진척 달성 방식·원인",
+            "name_en": "Disclosure 102-4-j: How progress was achieved",
+            "description": "각 목표에 대해 목표 달성 진척도가 어떻게 이루어졌는지 설명하고, 원인이 (i) 조직의 이니셔티브에 의한 감축인지 (ii) 기타 요인인지 명시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "진척 요인",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "j-i·j-ii 구분 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [
+                "GRI102-4-j-i",
+                "GRI102-4-j-ii"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-j-i",
+            "dp_code": "GRI_102_DIS_4_J_I_INITIATIVES",
+            "name_ko": "공개 102-4-j-i: 조직 이니셔티브에 의한 감축",
+            "name_en": "Disclosure 102-4-j (i): Reductions from organizational initiatives",
+            "description": "공정 재설계, 장비 전환·개조, 연료 전환, 행동 변화 등 조직 이니셔티브에 의한 감축을 구체화합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "조직 이니셔티브",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "조직 주도 감축 기여 명시(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-j",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-j-ii",
+            "dp_code": "GRI_102_DIS_4_J_II_OTHER_FACTORS",
+            "name_ko": "공개 102-4-j-ii: 기타 요인에 의한 변화",
+            "name_en": "Disclosure 102-4-j (ii): Other factors",
+            "description": "전력망 탈탄소화, 공급업체 주도 탈탄소, 폐기물 정책, 소비자 행동 변화 등 기타 요인에 의한 배출 변화를 명시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "외부 요인",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기타 요인 기여 시 성격 명시(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4-j",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-4-k",
+            "dp_code": "GRI_102_DIS_4_K_STANDARDS_TOOLS",
+            "name_ko": "공개 102-4-k: 기준·방법론·가정·계산 도구",
+            "name_en": "Disclosure 102-4-k: Standards, methodologies, assumptions and calculation tools",
+            "description": "사용된 기준, 방법론, 가정 및 계산 도구를 보고합니다(요구사항 k). 기준서 「102-4-k 지침」(제3자 검증)은 요구 항목 k와 별개이므로 별도 dp_id 없이 RULE_GRI102_4_GUIDANCE_K_VERIFICATION rulebook에만 둡니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "채택 기준·방법론·가정·계산 도구 명시",
+                "102-4-i 진척·진전률 산정과 논리 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-4",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5",
+            "dp_code": "GRI_102_DIS_5_SCOPE1_GHG",
+            "name_ko": "공개 102-5: 범위 1 온실가스 배출량",
+            "name_en": "Disclosure 102-5: Scope 1 GHG emissions",
+            "description": "조직이 소유하거나 통제하는 배출원에서의 범위 1 온실가스 배출을 CO₂e(톤)로 보고합니다. 총량 산정(a 및 a-i~a-iv), 가스별 분해(b), 생물 기원 CO₂ 별도(c), 기준년(d 및 d-i~d-iv), 연결 방식(e), 기준·방법론·배출계수 출처(f)를 포함합니다. GRI 103 에너지 103-2-a와의 관계·비교 가능성(당기 및 이전 2기) 등은 rulebook에 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 1 배출",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-5-a~f 요건 충족",
+                "102-5-a와 102-5-c 생물 기원 CO₂ 이중 집계 방지(102-5-c 지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-305-1",
+                "GHG-Protocol-Scope1"
+            ],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-5-a",
+                "GRI102-5-b",
+                "GRI102-5-c",
+                "GRI102-5-d",
+                "GRI102-5-e",
+                "GRI102-5-f"
+            ],
+            "financial_linkages": [
+                "탄소비용",
+                "배출권·배출량 보고"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-a",
+            "dp_code": "GRI_102_DIS_5_A_TOTAL_SCOPE1_TCO2E",
+            "name_ko": "공개 102-5-a: 범위 1 총 온실가스 배출량(CO₂e)",
+            "name_en": "Disclosure 102-5-a: Total Scope 1 GHG emissions (tCO₂e)",
+            "description": "범위 1 온실가스 배출 총량을 이산화탄소 환산 톤(CO₂e)으로 보고합니다. 산정 시 a-i~a-iv를 반영합니다. 지침: 투명성 제고를 위해 사업부·시설·국가·배출원 유형 등 추가 분해는 선택(rulebook)이며 별도 dp_id를 두지 않습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 1 총량",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "a-i: CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃ 포함",
+                "a-ii: 조직 소유·통제 바이오매스 연소·생분해 생물 기원 CO₂ 처리(102-5-c 지침과 합계 정합)",
+                "a-iii: 제거·거래·회피 배출 제외",
+                "a-iv: 최신 IPCC 평가보고서 GWP 값 사용"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [
+                "GRI102-5-a-i",
+                "GRI102-5-a-ii",
+                "GRI102-5-a-iii",
+                "GRI102-5-a-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-a-i",
+            "dp_code": "GRI_102_DIS_5_A_I_SEVEN_GASES",
+            "name_ko": "공개 102-5-a-i: 산정에 포함할 기체",
+            "name_en": "Disclosure 102-5-a (i): Gases included in calculation",
+            "description": "산정에 CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃ 배출을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 1",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "교토 의정서 7가지 기체 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-a-ii",
+            "dp_code": "GRI_102_DIS_5_A_II_BIOGENIC_CO2_INVENTORY",
+            "name_ko": "공개 102-5-a-ii: 생물 기원 CO₂(바이오매스)",
+            "name_en": "Disclosure 102-5-a (ii): Biogenic CO₂ from biomass",
+            "description": "조직이 소유하거나 통제하는 배출원에서 바이오매스 연소 또는 생분해로부터 발생하는 생물 기원 CO₂를 산정 경계에 포함하는 방식을 적용합니다. 102-5-c 지침: 생물 기원 CO₂ 총량은 102-5-c에 톤 단위로 별도 보고하며 102-5-a 총량과 이중 계상하지 않도록 기준서 해석을 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-5-a 총량·102-5-c 별도 보고와 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-a-iii",
+            "dp_code": "GRI_102_DIS_5_A_III_EXCLUSIONS",
+            "name_ko": "공개 102-5-a-iii: 제외(제거·거래·회피)",
+            "name_en": "Disclosure 102-5-a (iii): Exclusions",
+            "description": "온실가스 제거, 온실가스 거래, 회피 배출은 102-5-a 총 범위 1 배출량 산정에서 제외합니다. 제거 활동에서의 배출 보고는 지침에 따라 102-5-a와 연계하여 해석합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 1",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "제거·거래·회피 제외 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-a-iv",
+            "dp_code": "GRI_102_DIS_5_A_IV_IPCC_GWP",
+            "name_ko": "공개 102-5-a-iv: GWP(최신 IPCC)",
+            "name_en": "Disclosure 102-5-a (iv): IPCC GWP values",
+            "description": "가장 최근 IPCC 평가보고서의 지구온난화지수(GWP) 값을 사용합니다. 기간별로 다른 GWP를 쓴 경우 각 기간에 사용한 값을 보고합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "최신 IPCC GWP 명시",
+                "GWP 변경 시 과거 기간별 적용값 병기(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-b",
+            "dp_code": "GRI_102_DIS_5_B_BY_GAS",
+            "name_ko": "공개 102-5-b: 가스별 범위 1 배출 분해",
+            "name_en": "Disclosure 102-5-b: Scope 1 emissions by gas",
+            "description": "범위 1 총 온실가스 배출을 CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃별로 메트릭 톤 및 CO₂e(톤)로 분해하여 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 1",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "7가지 기체별 톤 및 CO₂e 제시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-c",
+            "dp_code": "GRI_102_DIS_5_C_BIOGENIC_CO2_SEPARATE",
+            "name_ko": "공개 102-5-c: 생물 기원 CO₂ 별도(톤)",
+            "name_en": "Disclosure 102-5-c: Biogenic CO₂ reported separately",
+            "description": "조직이 소유하거나 통제하는 배출원에서 바이오매스 연소·생분해로부터 발생한 생물 기원 CO₂를 범위 1 총 배출과 구분하여 메트릭 톤으로 보고합니다. 생물 기원이 아닌 CH₄·N₂O 등은 범위 1 총량에 포함(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "톤 단위 별도 표시",
+                "102-5-a 합계와 이중 계상 없음"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-d",
+            "dp_code": "GRI_102_DIS_5_D_BASE_YEAR",
+            "name_ko": "공개 102-5-d: 산정 기준년",
+            "name_en": "Disclosure 102-5-d: Base year for calculation",
+            "description": "산정 기준년을 보고하고 d-i~d-iv를 포함합니다. 기준년 배출 재계산 시 GHG Protocol 등 재계산 정책에 따라 범위 1을 일관되게 보고합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "d-i~d-iv 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [
+                "GRI102-5-d-i",
+                "GRI102-5-d-ii",
+                "GRI102-5-d-iii",
+                "GRI102-5-d-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-d-i",
+            "dp_code": "GRI_102_DIS_5_D_I_BASE_YEAR_RATIONALE",
+            "name_ko": "공개 102-5-d-i: 기준년 선정 근거",
+            "name_en": "Disclosure 102-5-d (i): Base year rationale",
+            "description": "기준년 선택 근거를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "선정 근거 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-d-ii",
+            "dp_code": "GRI_102_DIS_5_D_II_BASE_YEAR_EMISSIONS",
+            "name_ko": "공개 102-5-d-ii: 기준년 배출(총 범위 1 및 생물 기원 CO₂)",
+            "name_en": "Disclosure 102-5-d (ii): Base year emissions breakdown",
+            "description": "기준년 배출을 범위 1 총 온실가스 배출과 생물 기원 CO₂ 배출로 분해하여 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "총 범위 1·생물 기원 CO₂ 구분"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-d-iii",
+            "dp_code": "GRI_102_DIS_5_D_III_RECALC_CONTEXT",
+            "name_ko": "공개 102-5-d-iii: 재계산 유발 중대 변화 맥락",
+            "name_en": "Disclosure 102-5-d (iii): Context for recalculation-triggering changes",
+            "description": "기준년 배출 재계산을 유발한 배출의 중대한 변화에 대한 맥락을 설명합니다. 구조 변화(M&A, 매각, 아웃·인소싱), 배출계수·활동자료·방법론 변경, 중대 오류 등 예시는 지침·GHG Protocol 기업 회계 기준[14]을 참고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "재계산 사유·맥락",
+                "오류 재발 방지 절차(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-d-iv",
+            "dp_code": "GRI_102_DIS_5_D_IV_PRIOR_BASE_YEAR",
+            "name_ko": "공개 102-5-d-iv: 재계산 시 이전 보고 기준년 배출",
+            "name_en": "Disclosure 102-5-d (iv): Previously reported base year emissions",
+            "description": "기준년 배출이 재계산된 경우 이전에 보고된 기준년 배출량을 제시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "재계산 시 이전 보고치 제시(해당 시)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-e",
+            "dp_code": "GRI_102_DIS_5_E_CONSOLIDATION",
+            "name_ko": "공개 102-5-e: 연결(통합) 방식",
+            "name_en": "Disclosure 102-5-e: Consolidation approach",
+            "description": "지분율·재무 통제·운영 통제 중 사용한 연결 방식을 보고하고, 범위 1·2·3에 동일하게 적용했음을 밝힙니다. 선택 이유, 재무제표 연결 범위와 지속가능성 보고 경계 차이(GRI 2 공개 2-2), 비연결 법인 별도 보고, 경계 변경은 지침을 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "조직 경계",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "지분·재무·운영 통제 중 택일 및 일관 적용",
+                "범위 1·2·3 동일 연결 논리"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-5-f",
+            "dp_code": "GRI_102_DIS_5_F_METHODOLOGY_FACTORS",
+            "name_ko": "공개 102-5-f: 보고 기준·방법론·가정·도구·배출계수 출처",
+            "name_en": "Disclosure 102-5-f: Standards, methodologies, assumptions, tools, emission factors",
+            "description": "보고 기준, 방법론, 가정, 계산 도구를 보고하고 배출계수 출처를 포함합니다. 직접 측정 또는 활동자료×계수 산정 등 방법을 설명합니다. 102-5-a 및 102-5-c 산정 시 배출계수를 일관되게 적용합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기준·방법론·가정·도구·계수 출처",
+                "102-5-a·102-5-c 간 계수 일관성"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-5",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6",
+            "dp_code": "GRI_102_DIS_6_SCOPE2_GHG",
+            "name_ko": "공개 102-6: 범위 2 온실가스 배출량",
+            "name_en": "Disclosure 102-6: Scope 2 GHG emissions",
+            "description": "구매·취득 전력·열·냉방·증기 사용에 따른 범위 2 온실가스 배출을 위치 기반 및 해당 시 시장 기반으로 CO₂e(톤) 보고합니다. 총량(a·a-i~a-iv), 위치기준 가스별 분해(b), 전기 관련 생물 기원 CO₂ 별도(c), 기준년(d·d-i~d-iv), 범위 1·2·3에 걸친 통합 연결 방식(e), 기준·방법론·배출계수(f)를 포함합니다. GRI 103 에너지 103-2-b·비교가능성(당기+직전 2기)·시장기반 계약 유형 등은 rulebook에 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2 배출",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-6-a~f 요건 충족",
+                "102-6-a 총량과 102-6-c 생물 기원 CO₂ 이중 집계 방지(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-305-2",
+                "GHG-Protocol-Scope2"
+            ],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-6-a",
+                "GRI102-6-b",
+                "GRI102-6-c",
+                "GRI102-6-d",
+                "GRI102-6-e",
+                "GRI102-6-f"
+            ],
+            "financial_linkages": [
+                "전력·열 비용",
+                "REC·PPA"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-a",
+            "dp_code": "GRI_102_DIS_6_A_TOTAL_SCOPE2_LB_MB",
+            "name_ko": "공개 102-6-a: 위치·시장 기준 범위 2 총 배출(CO₂e)",
+            "name_en": "Disclosure 102-6-a: Scope 2 total (location-based and market-based)",
+            "description": "위치 기준 및 해당되는 경우 시장 기준 범위 2 온실가스 배출 총량을 CO₂e(톤)로 보고합니다. 산정 시 a-i~a-iv를 반영합니다. 시장 기준 보고 시 계약 유형·전력 조달 비중 등은 요구 문자에 별도 하위 항목이 없으므로 rulebook에만 기술합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2 총량",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "위치 기준 총량 필수",
+                "해당 시 시장 기준 총량",
+                "a-i: CO₂·CH₄·N₂O 포함",
+                "a-ii: 전기 사용 생물 기원 비CO₂ 온실가스 포함",
+                "a-iii: 흡수·거래·회피 제외",
+                "a-iv: 최신 IPCC 100년 GWP"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [
+                "GRI102-6-a-i",
+                "GRI102-6-a-ii",
+                "GRI102-6-a-iii",
+                "GRI102-6-a-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-a-i",
+            "dp_code": "GRI_102_DIS_6_A_I_CO2_CH4_N2O",
+            "name_ko": "공개 102-6-a-i: CO₂·CH₄·N₂O 포함",
+            "name_en": "Disclosure 102-6-a (i): CO2, CH4, N2O",
+            "description": "산정에 이산화탄소·메탄·아산화질소 배출을 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "CO₂·CH₄·N₂O 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-a-ii",
+            "dp_code": "GRI_102_DIS_6_A_II_BIOGENIC_NONCO2_ELEC",
+            "name_ko": "공개 102-6-a-ii: 전기 사용 생물 기원 비CO₂",
+            "name_en": "Disclosure 102-6-a (ii): Biogenic non-CO2 from electricity use",
+            "description": "전기 사용으로 인한 생물 기원 비이산화탄소 온실가스 배출을 산정에 포함합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "바이오에너지 가치사슬 관련 비CO₂ 포함(지침과 정합)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-a-iii",
+            "dp_code": "GRI_102_DIS_6_A_III_EXCLUSIONS",
+            "name_ko": "공개 102-6-a-iii: 흡수·거래·회피 제외",
+            "name_en": "Disclosure 102-6-a (iii): Exclusions",
+            "description": "온실가스 흡수량, 온실가스 거래량, 회피 배출은 102-6-a 총 범위 2 산정에서 제외합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "흡수·거래·회피 제외"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-a-iv",
+            "dp_code": "GRI_102_DIS_6_A_IV_IPCC_GWP100",
+            "name_ko": "공개 102-6-a-iv: GWP(최신 IPCC·100년)",
+            "name_en": "Disclosure 102-6-a (iv): IPCC 100-year GWP",
+            "description": "최신 IPCC 평가보고서의 100년 기준 GWP 값을 사용합니다. 기간별 GWP가 다르면 각 기간 적용값을 보고합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "100년 GWP·IPCC 출처",
+                "GWP 변경 시 기간별 값 병기(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-b",
+            "dp_code": "GRI_102_DIS_6_B_BY_GAS_LOCATION",
+            "name_ko": "공개 102-6-b: 위치 기준 총 범위 2 가스별 분해",
+            "name_en": "Disclosure 102-6-b: Location-based Scope 2 by gas",
+            "description": "총 위치 기준 범위 2 온실가스 배출을 CO₂, CH₄, N₂O로 구분하여 메트릭 톤 및 CO₂e(톤)로 제시합니다. 지침: 시장 기준 총량을 102-6-a에 보고하는 경우 위치 기준에 더해 시장 기준에 대해서도 가스별 분해를 제공합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 2",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "위치 기준 CO₂·CH₄·N₂O 톤 및 CO₂e",
+                "시장 기준 보고 시 가스별 분해 추가(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-c",
+            "dp_code": "GRI_102_DIS_6_C_BIOGENIC_CO2_ELEC",
+            "name_ko": "공개 102-6-c: 전기 관련 생물 기원 CO₂ 별도(톤)",
+            "name_en": "Disclosure 102-6-c: Biogenic CO2 from electricity separately",
+            "description": "전기 사용에 따른 위치 기준 및 해당 시 시장 기준 생물 기원 CO₂ 배출을 총 범위 2와 구분하여 메트릭 톤으로 보고합니다. 지침: 해당 생물 기원 CO₂는 102-6-a 산정에 포함하지 않으며, 생물 기원 비CO₂는 전력 관련 배출의 일부로 a에 포함됩니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "quantitative",
+            "unit": null,
+            "validation_rules": [
+                "톤 단위 별도",
+                "102-6-a 총량과 이중 계상 없음"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-d",
+            "dp_code": "GRI_102_DIS_6_D_BASE_YEAR",
+            "name_ko": "공개 102-6-d: 계산 기준 연도",
+            "name_en": "Disclosure 102-6-d: Base year for calculation",
+            "description": "계산 기준 연도를 보고하고 d-i~d-iv를 포함합니다. 이전 기간 재계산 세부는 102-5-d-iii 지침 및 GHG Protocol과 연계합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "d-i~d-iv 반영"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [
+                "GRI102-6-d-i",
+                "GRI102-6-d-ii",
+                "GRI102-6-d-iii",
+                "GRI102-6-d-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-d-i",
+            "dp_code": "GRI_102_DIS_6_D_I_BASE_YEAR_RATIONALE",
+            "name_ko": "공개 102-6-d-i: 기준 연도 선정 근거",
+            "name_en": "Disclosure 102-6-d (i): Base year rationale",
+            "description": "기준 연도 선정 근거를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "선정 근거 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-d-ii",
+            "dp_code": "GRI_102_DIS_6_D_II_BASE_YEAR_EMISSIONS",
+            "name_ko": "공개 102-6-d-ii: 기준 연도 배출(CO₂e) 분해",
+            "name_en": "Disclosure 102-6-d (ii): Base year emissions breakdown",
+            "description": "기준 연도 배출(CO₂e)을 총 범위 2 온실가스 배출과 생물 기원 CO₂ 배출로 구분하여 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "총 범위 2·생물 기원 CO₂ 구분"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-d-iii",
+            "dp_code": "GRI_102_DIS_6_D_III_RECALC_CONTEXT",
+            "name_ko": "공개 102-6-d-iii: 재계산 유발 중대 변화",
+            "name_en": "Disclosure 102-6-d (iii): Recalculation context",
+            "description": "기준 연도 배출 재계산을 유발한 배출의 중대한 변화에 대한 배경을 설명합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-5-d-iii 지침·GHG Protocol과 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-d-iv",
+            "dp_code": "GRI_102_DIS_6_D_IV_PRIOR_BASE_YEAR",
+            "name_ko": "공개 102-6-d-iv: 재계산 시 이전 보고 기준 연도 배출",
+            "name_en": "Disclosure 102-6-d (iv): Previously reported base year emissions",
+            "description": "기준 연도 배출이 재계산된 경우 이전에 보고된 기준 연도 배출량을 제시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "재계산 시 이전 보고치 제시(해당 시)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-e",
+            "dp_code": "GRI_102_DIS_6_E_CONSOLIDATION",
+            "name_ko": "공개 102-6-e: 범위 2 통합·연결 방식",
+            "name_en": "Disclosure 102-6-e: Scope 2 consolidation approach",
+            "description": "범위 1·2·3에 걸쳐 일관되게 적용되는 범위 2 통합 접근(지분율·재무 통제·운영 통제)을 보고합니다. 선택 이유, 재무제표 포함 법인의 범위 2 총량, 지속가능성 보고 경계와의 차이(GRI 2 공개 2-2), 비연결 법인 별도 보고, 경계 변경은 지침을 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "조직 경계",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "범위 1·2·3 동일 연결 논리와 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-6-f",
+            "dp_code": "GRI_102_DIS_6_F_METHODOLOGY_FACTORS",
+            "name_ko": "공개 102-6-f: 기준·방법론·가정·도구·배출계수",
+            "name_en": "Disclosure 102-6-f: Standards, methodologies, factors",
+            "description": "사용된 기준, 방법론, 가정, 계산 도구 및 배출계수 출처(공급자 등)를 보고합니다. 102-6-a 및 102-6-c 산정 시 배출계수를 일관되게 적용합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기준·방법론·가정·도구·계수 출처",
+                "102-6-a·102-6-c 계수 일관성"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-6",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7",
+            "dp_code": "GRI_102_DIS_7_SCOPE3_GHG",
+            "name_ko": "공개 102-7: 범위 3 온실가스 배출량",
+            "name_en": "Disclosure 102-7: Scope 3 GHG emissions",
+            "description": "상·하류 가치사슬의 간접 온실가스 배출(범위 2 제외)을 CO₂e(톤)로 보고합니다. 총량(a·a-i~a-v), 15개 범주별 분해(b), 생물 기원 CO₂ 별도·15개 범주별(c), 기준년(d·d-i~d-iv), 범위 1·2·3 일관 연결(e), 기준·방법론·계수(f)를 포함합니다. GHG Protocol Scope 3 Standard 15개 범주·1차 데이터 비율·누락 시 GRI 1 요구 6 등은 rulebook에 따르며, 범주 번호 1~15만으로 별도 dp_id를 만들지 않습니다(추출 가이드 §3.2.1).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3 배출",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-7-a~f 요건 충족",
+                "102-7-a 총량·102-7-c 생물 기원 CO₂ 이중 집계 방지(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [
+                "GRI-305-3",
+                "GHG-Protocol-Scope3"
+            ],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-7-a",
+                "GRI102-7-b",
+                "GRI102-7-c",
+                "GRI102-7-d",
+                "GRI102-7-e",
+                "GRI102-7-f"
+            ],
+            "financial_linkages": [
+                "가치사슬 배출",
+                "탄소회계"
+            ],
+            "financial_impact_type": "negative",
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a",
+            "dp_code": "GRI_102_DIS_7_A_TOTAL_SCOPE3_TCO2E",
+            "name_ko": "공개 102-7-a: 총 범위 3 온실가스 배출(CO₂e)",
+            "name_en": "Disclosure 102-7-a: Total Scope 3 GHG emissions (tCO₂e)",
+            "description": "총 범위 3 온실가스 배출을 CO₂e(톤)로 보고하며 산정 시 a-i~a-v를 반영합니다. 지침: 생물 기원 CO₂ 총량은 102-7-c에 별도 보고하고 102-7-a 합계와 이중 계상하지 않습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3 총량",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "a-i: 각 Scope 3 범주별 배출 반영(누락 시 지침·GRI 1 요구 6)",
+                "a-ii: CO₂·CH₄·N₂O·HFC·PFC·SF₆·NF₃",
+                "a-iii: 상·하류 바이오매스 연소·생분해 생물 기원 CO₂ 처리(102-7-c와 정합)",
+                "a-iv: 흡수·거래·회피 제외",
+                "a-v: 최신 IPCC 100년 GWP"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [
+                "GRI102-7-a-i",
+                "GRI102-7-a-ii",
+                "GRI102-7-a-iii",
+                "GRI102-7-a-iv",
+                "GRI102-7-a-v"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a-i",
+            "dp_code": "GRI_102_DIS_7_A_I_PER_CATEGORY",
+            "name_ko": "공개 102-7-a-i: 범주별 배출 포함",
+            "name_en": "Disclosure 102-7-a (i): Emissions by Scope 3 category",
+            "description": "각 범위 3 범주별 온실가스 배출량을 산정에 포함합니다. GHG Protocol 기업 가치사슬(Scope 3) 표준의 상류·하류 15개 범주를 전제로 합니다. 특정 범주 정보 부재 시 사유·누락 내용·조치·시기는 GRI 1 Foundation 2021 요구 6에 따라 서술합니다(별도 dp 분해 없음).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "15개 범주 인벤토리 관련성 유지",
+                "누락 시 ‘정보 없음/불완전’ 및 설명"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a-ii",
+            "dp_code": "GRI_102_DIS_7_A_II_SEVEN_GASES",
+            "name_ko": "공개 102-7-a-ii: 교토 7가지 기체",
+            "name_en": "Disclosure 102-7-a (ii): Seven GHGs",
+            "description": "CO₂, CH₄, N₂O, HFC, PFC, SF₆, NF₃ 배출을 포함합니다. 총 범위 3를 기체별(톤·CO₂e)로 추가 분해할 수 있으며(지침), 몬트리온 의정서 가스는 총량과 별도 보고 가능합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "교토 7기체 포함"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a-iii",
+            "dp_code": "GRI_102_DIS_7_A_III_BIOGENIC_CO2_VC",
+            "name_ko": "공개 102-7-a-iii: 가치사슬 바이오매스 생물 기원 CO₂",
+            "name_en": "Disclosure 102-7-a (iii): Biogenic CO2 from biomass in value chain",
+            "description": "상류·하류 가치사슬에서 바이오매스 연소·생분해로부터의 생물 기원 CO₂를 산정 경계에 반영합니다. 102-7-c 지침과 합쳐 이중 계상을 피합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-7-c 별도 보고와 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a-iv",
+            "dp_code": "GRI_102_DIS_7_A_IV_EXCLUSIONS",
+            "name_ko": "공개 102-7-a-iv: 흡수·거래·회피 제외",
+            "name_en": "Disclosure 102-7-a (iv): Exclusions",
+            "description": "온실가스 흡수량, 온실가스 거래, 회피 배출은 총 범위 3 산정에서 제외합니다. 제거 활동 관련 배출은 102-7-a에 따라 보고합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "흡수·거래·회피 제외"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-a-v",
+            "dp_code": "GRI_102_DIS_7_A_V_IPCC_GWP100",
+            "name_ko": "공개 102-7-a-v: GWP(최신 IPCC·100년)",
+            "name_en": "Disclosure 102-7-a (v): IPCC 100-year GWP",
+            "description": "최신 IPCC 평가보고서의 100년 기준 GWP를 사용합니다. 기간별 GWP가 다르면 각 보고기간 적용값을 보고합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "100년 GWP",
+                "GWP 변경 시 기간별 값 병기(해당 시)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-a",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-b",
+            "dp_code": "GRI_102_DIS_7_B_BY_15_CATEGORIES",
+            "name_ko": "공개 102-7-b: 15개 범주별 총 범위 3(CO₂e)",
+            "name_en": "Disclosure 102-7-b: Scope 3 by 15 categories",
+            "description": "총 범위 3 온실가스 배출을 GHG Protocol Scope 3 Standard의 15개 범주별로 CO₂e(톤) 세분화합니다. 지침: 범주별 1차 데이터(primary)로 산정된 배출이 해당 범주 총 배출에서 차지하는 비율(%)을 각 범주마다 보고합니다. 1차 데이터 비율(%) = (1차 데이터 범주 배출 mtCO₂e ÷ 해당 범주 총 배출 mtCO₂e) × 100.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "범위 3",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "15개 범주 모두 CO₂e 제시",
+                "범주별 1차 데이터 비율(%) 보고(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-c",
+            "dp_code": "GRI_102_DIS_7_C_BIOGENIC_CO2_15CAT",
+            "name_ko": "공개 102-7-c: 생물 기원 CO₂ 별도·15개 범주별(톤)",
+            "name_en": "Disclosure 102-7-c: Biogenic CO2 separate by 15 categories",
+            "description": "상·하류 가치사슬 바이오매스 연소·생분해로부터의 생물 기원 CO₂를 총 범위 3와 구분하여 톤으로 보고하고, 15개 Scope 3 범주별로 세분화합니다. 지침: 생물 기원 비CO₂(CH₄·N₂O 등)는 총 범위 3에 포함, 생물 기원 CO₂는 102-7-a 산정에 넣지 않습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "생물 기원 CO₂",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "톤 단위·15 범주 분해",
+                "102-7-a와 이중 계상 없음"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-d",
+            "dp_code": "GRI_102_DIS_7_D_BASE_YEAR",
+            "name_ko": "공개 102-7-d: 계산 기준 연도",
+            "name_en": "Disclosure 102-7-d: Base year for calculation",
+            "description": "계산 기준 연도를 보고하고 d-i~d-iv를 포함합니다. 지침: 기준년 배출은 15개 범주별 CO₂e로도 제시하고, 당기 및 직전 2개 보고기간 정보 제시(GRI 1 비교가능성). 재계산은 102-5-d-iii·GHG Protocol [14]과 연계합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "d-i~d-iv",
+                "기준년 15 범주별 CO₂e(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [
+                "GRI102-7-d-i",
+                "GRI102-7-d-ii",
+                "GRI102-7-d-iii",
+                "GRI102-7-d-iv"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-d-i",
+            "dp_code": "GRI_102_DIS_7_D_I_BASE_YEAR_RATIONALE",
+            "name_ko": "공개 102-7-d-i: 기준 연도 선정 근거",
+            "name_en": "Disclosure 102-7-d (i): Base year rationale",
+            "description": "기준 연도 선정 근거를 보고합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "선정 근거 명시"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-d-ii",
+            "dp_code": "GRI_102_DIS_7_D_II_BASE_YEAR_EMISSIONS",
+            "name_ko": "공개 102-7-d-ii: 기준 연도 배출(CO₂e) 분해",
+            "name_en": "Disclosure 102-7-d (ii): Base year emissions",
+            "description": "기준 연도 배출(CO₂e)을 총 범위 3 온실가스 배출과 생물 기원 CO₂ 배출로 구분합니다. 지침: 15개 Scope 3 범주별 CO₂e로도 제시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "총 범위 3·생물 기원 CO₂ 구분",
+                "15 범주별 CO₂e(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-d-iii",
+            "dp_code": "GRI_102_DIS_7_D_III_RECALC_CONTEXT",
+            "name_ko": "공개 102-7-d-iii: 재계산 유발 중대 변화",
+            "name_en": "Disclosure 102-7-d (iii): Recalculation context",
+            "description": "기준 연도 배출 재계산을 유발한 배출의 중대한 변화 배경을 설명합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-5-d-iii·GHG Protocol [14]와 정합"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-d-iv",
+            "dp_code": "GRI_102_DIS_7_D_IV_PRIOR_BASE_YEAR",
+            "name_ko": "공개 102-7-d-iv: 재계산 시 이전 보고 기준 연도 배출",
+            "name_en": "Disclosure 102-7-d (iv): Previously reported base year emissions",
+            "description": "기준 연도 배출이 재계산된 경우 이전에 보고된 기준 연도 배출량을 제시합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "기준년",
+            "dp_type": "quantitative",
+            "unit": "tco2e",
+            "validation_rules": [
+                "재계산 시 이전 보고치 제시(해당 시)"
+            ],
+            "value_range": {
+                "min": 0
+            },
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7-d",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-e",
+            "dp_code": "GRI_102_DIS_7_E_CONSOLIDATION",
+            "name_ko": "공개 102-7-e: 범위 3 통합·연결 방식",
+            "name_en": "Disclosure 102-7-e: Scope 3 consolidation approach",
+            "description": "범위 1·2·3 전반에 일관되게 적용되는 범위 3 통합 접근(지분·재무 통제·운영 통제)을 보고합니다. 선택 이유, 경계 변경 보고는 지침을 따릅니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "조직 경계",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "범위 1·2·3 동일 연결 논리"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-7-f",
+            "dp_code": "GRI_102_DIS_7_F_METHODOLOGY_FACTORS",
+            "name_ko": "공개 102-7-f: 기준·방법론·가정·도구·배출계수",
+            "name_en": "Disclosure 102-7-f: Standards, methodologies, factors",
+            "description": "보고 기준, 방법론, 가정, 계산 도구 및 배출계수 출처를 보고합니다. 102-7-a 및 102-7-c 산정 시 배출계수를 일관되게 적용합니다(지침).",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "방법론",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "기준·방법론·가정·도구·계수 출처",
+                "102-7-a·102-7-c 계수 일관성"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-7",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-8",
+            "dp_code": "GRI_102_DIS_8_GHG_INTENSITY",
+            "name_ko": "공개 102-8: 온실가스 배출 강도",
+            "name_en": "Disclosure 102-8: GHG emissions intensity",
+            "description": "조직의 온실가스 배출 강도 비율을 보고합니다. 분자로 사용한 총 온실가스 배출(CO₂e)과 분모로 사용한 조직별 측정 기준을 명시하고(102-8-a), 강도에 포함된 배출이 범위 1·2·3 중 어디에 해당하는지 구분합니다(102-8-b). 총 배출(102-5~102-7)과 병행하면 비교에 유리합니다. 분자·분모 경계 일관성, 분모 유형 예시·선택적 세분은 rulebook에 따르며 요구문에 없는 하위 dp_id는 두지 않습니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "배출 강도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "102-8-a·b 요건 충족",
+                "분자 CO₂e·분모 정의·범위(1/2/3) 명확"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-SEC-2",
+            "child_dps": [
+                "GRI102-8-a",
+                "GRI102-8-b"
+            ],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-8-a",
+            "dp_code": "GRI_102_DIS_8_A_INTENSITY_RATIO",
+            "name_ko": "공개 102-8-a: 배출 강도 비율·분자·분모",
+            "name_en": "Disclosure 102-8-a: Intensity ratio, numerator and denominator",
+            "description": "온실가스 배출 강도 비율을 보고합니다. 비율 계산에 사용한 총 온실가스 배출량(분자)을 CO₂e(톤)로 표시하고, 조직별 측정 기준(분모)을 포함합니다. 지침: 분자·분모에 동일한 조직 경계를 적용합니다. 분모 예—제품 단위, 생산량(톤·리터·MWh 등), 면적, FTE, 매출·매출액 등. 사업부·국가·배출원·활동·Scope 3 범주별 추가 분해는 선택이며 별도 dp_id 없음.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "배출 강도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "강도 비율 수치 또는 산식 제시",
+                "분자: CO₂e(톤) 명시",
+                "분모: 조직 정의 측정 기준 명시",
+                "분자·분모 경계 일관"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-8",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        },
+        {
+            "dp_id": "GRI102-8-b",
+            "dp_code": "GRI_102_DIS_8_B_SCOPES_IN_INTENSITY",
+            "name_ko": "공개 102-8-b: 강도에 포함된 배출 범위",
+            "name_en": "Disclosure 102-8-b: Scopes included in intensity",
+            "description": "강도 비율에 포함된 온실가스 배출 범위를 범위 1, 범위 2 또는 범위 3으로 구분하여 보고합니다. 지침: 범위 1·2·3을 각각 또는 범위 1+2 결합 등으로 보고할 수 있습니다. 분자에 생물 기원 CO₂ 배출을 포함했는지 여부를 보고해야 합니다.",
+            "standard": "GRI",
+            "category": "E",
+            "topic": "기후 변화",
+            "subtopic": "배출 강도",
+            "dp_type": "narrative",
+            "unit": null,
+            "validation_rules": [
+                "포함 범위: 1·2·3 또는 1+2 등 명시",
+                "생물 기원 CO₂ 분자 포함 여부 명시(지침)"
+            ],
+            "value_range": null,
+            "equivalent_dps": [],
+            "parent_indicator": "GRI102-8",
+            "child_dps": [],
+            "financial_linkages": [],
+            "financial_impact_type": null,
+            "disclosure_requirement": "필수",
+            "reporting_frequency": "연간"
+        }
+    ]
+}

@@ -6,7 +6,7 @@ from typing import List, Optional
 import numpy as np
 from loguru import logger
 
-from ifrs_agent.config.settings import get_settings
+from backend.core.config.settings import get_settings
 
 
 class EmbeddingService:

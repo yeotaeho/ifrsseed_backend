@@ -4,10 +4,13 @@
 제안 6개 테이블 구조 지원.
 """
 from typing import Dict, Any, Union
-from ifrs_agent.model.models import (
-    DataPoint, Glossary,
-    Rulebook, Standard, UnifiedColumnMapping,
-    SynonymGlossary  # 하위 호환성
+from backend.domain.v1.esg_data.models.bases import (
+    DataPoint,
+    Glossary,
+    Rulebook,
+    Standard,
+    SynonymGlossary,
+    UnifiedColumnMapping,
 )
 
 

@@ -62,10 +62,10 @@
 
 | 도구명 | 설명 | 주요 인자 (예시) | 반환 |
 |--------|------|------------------|------|
-| `save_historical_sr_report` | 보고서 메타 1건 INSERT | company_id, report_year, report_name, source, total_pages, index_page_numbers, pdf_file_path(optional) | report_id (UUID) |
+| `save_historical_sr_report` | 보고서 메타 1건 INSERT | company_id, report_year, report_name, source, total_pages, index_page_numbers | report_id (UUID) |
 | `save_sr_report_index` | 인덱스 행 1건 INSERT | report_id, index_type, index_page_number, dp_id, dp_name, page_numbers, section_title, remarks | id (UUID) |
 | `save_sr_report_body` | 본문 행 1건 INSERT | report_id, page_number, is_index_page, content_text, content_type, paragraphs(JSON) | id (UUID) |
-| `save_sr_report_image` | 이미지 행 1건 INSERT | report_id, page_number, image_index, image_file_path, image_type, caption_text, ... | id (UUID) |
+| `save_sr_report_image` | 이미지 행 1건 INSERT | report_id, page_number, image_index, image_type, caption_text, ... | id (UUID) |
 
 - `report_id`는 반드시 `save_historical_sr_report` 반환값을 사용하도록 프롬프트에 명시한다.
 
@@ -199,6 +199,6 @@
 - **historical_sr_reports**: id, company_id, report_year, report_name, pdf_file_path, source, total_pages, index_page_numbers, created_at  
 - **sr_report_index**: id, report_id(FK), index_type, index_page_number, dp_id, dp_name, page_numbers(ARRAY), section_title, remarks, parsed_at, parsing_method, confidence_score  
 - **sr_report_body**: id, report_id(FK), page_number, is_index_page, content_text, content_type, paragraphs(JSONB), embedding_id, embedding_status, parsed_at  
-- **sr_report_images**: id, report_id(FK), page_number, image_index, image_file_path, image_file_size, image_width, image_height, image_type, caption_text, caption_confidence, extracted_data(JSONB), caption_embedding_id, embedding_status, extracted_at  
+- **sr_report_images**: id, report_id(FK), page_number, image_index, image_width, image_height, image_type, caption_text, caption_confidence, extracted_data(JSONB), caption_embedding_id, embedding_status, extracted_at (선택 `image_blob`)  
 
 상세 스키마는 `backend/alembic/versions/012_drop_old_add_sr_report_tables.py` 및 ORM 모델을 참고한다.

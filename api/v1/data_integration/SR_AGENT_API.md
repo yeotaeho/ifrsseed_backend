@@ -145,7 +145,8 @@ POST /data-integration/sr-agent/extract-and-save/images
 **역할**:
 - SR 보고서에서 이미지 추출
 - `sr_report_images` 테이블에 메타데이터 저장
-- 이미지 파일은 요청 `image_output_dir` 또는 환경변수 `SR_IMAGE_OUTPUT_DIR`에 저장
+- 기본(`SR_IMAGE_STORAGE=memory`, 미설정 시 동일)은 로컬 파일 없이 메타만 저장. `SR_IMAGE_STORAGE=disk`일 때만 `image_output_dir` 또는 `SR_IMAGE_OUTPUT_DIR`에 파일 저장
+- 저장 성공 후 `OPENAI_API_KEY`가 있으면 **자동 VLM 보강**(캡션·타입 등). 끄려면 `SR_IMAGE_VLM_AUTO_AFTER_SAVE=0`. 응답 필드 `images_vlm_auto_*`
 
 #### 이미지 에이전트 직행 (LangGraph·재검색 없음)
 
@@ -162,10 +163,28 @@ POST /data-integration/sr-agent/extract-and-save/images-agentic
 }
 ```
 
-- `pdf_bytes_b64` 없음 → DB `historical_sr_reports.pdf_file_path`에서 PDF 로드 (본문 `body-agentic`과 동일).
-- `image_output_dir` 없음 → 환경변수 `SR_IMAGE_OUTPUT_DIR` 사용.
+- `pdf_bytes_b64` 없음 → **400** (DB에 PDF 로컬 경로는 저장하지 않음). 본문/이미지 agentic API는 **base64 PDF를 반드시** 보내야 합니다.
+- `SR_IMAGE_STORAGE=disk`일 때만 `image_output_dir` 또는 `SR_IMAGE_OUTPUT_DIR` 필요. 기본 memory는 불필요.
 
-**응답** (추가 필드): `db_sr_report_images_row_count`, `images_agent_success`, `images_agent_message` 등.
+**응답** (추가 필드): `db_sr_report_images_row_count`, `images_agent_success`, `images_agent_message`, `images_vlm_auto_*`(자동 보강) 등.
+
+#### 이미지 VLM 메타 보강 (2단계, OpenAI)
+
+저장된 `sr_report_images` 행에 대해 `image_type` / `caption_text` / `caption_confidence` 를 채웁니다. 바이트는 `image_blob` 또는 S3(`extracted_data`)에서 읽습니다.
+
+```http
+POST /data-integration/sr-agent/enrich-images-vlm
+```
+
+**환경**: `OPENAI_API_KEY`. VLM 모델명은 코드에서 `gpt-5-mini` 고정.
+
+**요청 본문**:
+```json
+{
+  "report_id": "1f0c9999-f5dd-46ca-86db-f34c24e6ab06",
+  "skip_if_caption_set": false
+}
+```
 
 ---
 
@@ -345,7 +364,6 @@ curl -X POST "http://localhost:9002/data-integration/sr-agent/extract-and-save/i
 - `source` (text)
 - `total_pages` (int)
 - `index_page_numbers` (int[])
-- `pdf_file_path` (text, nullable)
 - `created_at` (timestamp)
 
 ### 2. `sr_report_index`
@@ -378,8 +396,6 @@ curl -X POST "http://localhost:9002/data-integration/sr-agent/extract-and-save/i
 - `report_id` (UUID, FK to historical_sr_reports)
 - `page_number` (int)
 - `image_index` (int, nullable)
-- `image_file_path` (text)
-- `image_file_size` (int, nullable)
 - `image_width` (int, nullable)
 - `image_height` (int, nullable)
 - `image_type` (text, nullable)

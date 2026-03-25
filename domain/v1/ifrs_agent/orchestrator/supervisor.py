@@ -23,7 +23,7 @@ except ImportError:
     ChatGroq = None
 
 from ifrs_agent.orchestrator.state import IFRSAgentState
-from ifrs_agent.config.settings import get_settings
+from backend.core.config.settings import get_settings
 
 
 # IFRS Rulebook (기준서별 필수 DP 및 검증 규칙)

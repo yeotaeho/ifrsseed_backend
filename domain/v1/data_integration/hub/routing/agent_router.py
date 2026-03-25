@@ -171,6 +171,13 @@ class AgentRouter:
                 result = {"success": False, "message": f"Agent '{agent_name}'은 아직 구현되지 않았습니다."}
             
             logger.info(f"[Routing] {agent_name} 실행 완료: success={result.get('success')}")
+            if not result.get("success"):
+                logger.warning(
+                    "[Routing] {} 실패 상세: message={} errors={}",
+                    agent_name,
+                    result.get("message"),
+                    result.get("errors"),
+                )
             return result
             
         except Exception as e:

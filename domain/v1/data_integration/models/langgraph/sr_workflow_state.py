@@ -48,6 +48,11 @@ class SRWorkflowState(TypedDict, total=False):
     images_agent_success: Optional[bool]
     images_agent_errors: Optional[List[Dict[str, Any]]]
     sr_report_images_db_row_count: Optional[int]
+    # save_images 직후 자동 VLM 보강 (maybe_auto_enrich_after_image_save)
+    images_vlm_auto_success: Optional[bool]
+    images_vlm_auto_message: Optional[str]
+    images_vlm_auto_updated: Optional[int]
+    images_vlm_auto_skipped: Optional[int]
 
     # ----- parse_only 노드 출력 (DB 저장 없이 확인용) -----
     parsing_result: Optional[Dict[str, Any]]
